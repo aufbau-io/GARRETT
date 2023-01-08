@@ -70,9 +70,11 @@
 	}
 
 	picture {
+		z-index: 1;
 		min-height: 60vh;
 		padding: calc(2 * var(--margin));
 		border: solid 1px var(--primary);
+
 	}
 
 	 img {
