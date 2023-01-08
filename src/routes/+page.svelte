@@ -88,7 +88,7 @@
 	}
 
 	img.casual {
-		object-position: 0% 10%;
+		object-position: 0% 20%;
 	}
 
 	h1 {
