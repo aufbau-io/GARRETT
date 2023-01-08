@@ -14,10 +14,10 @@
 }
 
 :root.dark-mode {
-	--background: #232323;
-	--primary: #d0d0d0;
-	--primary-50: #23232380;
-	--accent: #232323;
+	--background: #008080;
+	--primary: #f4f4f4;
+	--primary-50: #f4f4f480;
+	--accent: #f4f4f4;
 }
 
 @font-face {
