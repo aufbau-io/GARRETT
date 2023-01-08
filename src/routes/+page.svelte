@@ -3,8 +3,8 @@
 	import headshot from '$lib/images/headshot.webp';
 	import headshot_fallback from '$lib/images/headshot.jpg';
 	
-	import casual from '$lib/images/casual2.webp';
-	import casual_fallback from '$lib/images/casual2.jpg';
+	import casual from '$lib/images/casual.webp';
+	import casual_fallback from '$lib/images/casual.jpg';
 	
 </script>
 
