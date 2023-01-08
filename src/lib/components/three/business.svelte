@@ -14,19 +14,6 @@
 	const gui = new dat.GUI()
 	const debugObject = {}
 
-	
-	debugObject.show3d = () =>
-	{
-		show3d.set(true);
-	}
-	gui.add(debugObject, 'show3d')
-
-	debugObject.hide3d = () =>
-	{
-		show3d.set(false);
-	}
-	gui.add(debugObject, 'hide3d')
-
 	debugObject.createSphere = () =>
 	{
 			createSphere(
@@ -41,20 +28,20 @@
 
 	gui.add(debugObject, 'createSphere')
 
-	debugObject.createBox = () =>
-	{
-			createBox(
-					Math.random(),
-					Math.random(),
-					Math.random(),
-					{
-							x: (Math.random() - 0.5) * 3,
-							y: 3,
-							z: (Math.random() - 0.5) * 3
-					}
-			)
-	}
-	gui.add(debugObject, 'createBox')
+	// debugObject.createBox = () =>
+	// {
+	// 		createBox(
+	// 				Math.random(),
+	// 				Math.random(),
+	// 				Math.random(),
+	// 				{
+	// 						x: (Math.random() - 0.5) * 3,
+	// 						y: 3,
+	// 						z: (Math.random() - 0.5) * 3
+	// 				}
+	// 		)
+	// }
+	// gui.add(debugObject, 'createBox')
 
 	// Reset
 	debugObject.reset = () =>
@@ -208,7 +195,7 @@
 			objectsToUpdate.push({ mesh, body })
 	}
 
-	createBox(1, 1.5, 2, { x: 0, y: 3, z: 0 })
+	// createBox(1, 1.5, 2, { x: 0, y: 3, z: 0 })
 
 
 	// ---------------------------------------------------------------------------
