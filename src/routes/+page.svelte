@@ -15,13 +15,16 @@
 	<link rel="preload" href={headshot} as="image/webp" />
 	<link rel="preload" href={casual} as="image/webp" />
 
-	<link
+	<link rel="preload" href={headshot_fallback} as="image/jpg" />
+	<link rel="preload" href={casual_fallback} as="image/jpg" />
+
+	<!-- <link
 		rel="preload"
 		as="font"
 		href="/fonts/NB-Architekt-Pro-Bold.woff"
 		type="font/woff"
 		crossorigin="anonymous"
-	/>
+	/> -->
 	<link
 		rel="preload"
 		as="font"
@@ -29,13 +32,13 @@
 		type="font/woff"
 		crossorigin="anonymous"
 	/>
-	<link
+	<!-- <link
 		rel="preload"
 		as="font"
 		href="/fonts/NB-Architekt-Pro-Light.woff"
 		type="font/woff"
 		crossorigin="anonymous"
-	/>
+	/> -->
 </svelte:head>
 
 <section>

@@ -33,7 +33,6 @@
 	footer a,
 	footer p {
 		font-size: 14px;
-		font-weight: 300;
 
 		letter-spacing: 0.15em;
 		font-family: nb-architekt;
