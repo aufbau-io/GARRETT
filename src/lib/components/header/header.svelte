@@ -66,7 +66,7 @@
 		align-items: center;
 
 		font-size: 14px;
-		height: calc(15vh);
+		height: calc(10vh + 2 * var(--margin));
 		font-family: nb-architekt;
 		font-weight: 500;
 	}
