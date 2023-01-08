@@ -7,11 +7,11 @@
 	import Header from '$lib/components/header/header.svelte';
 	import Footer from '$lib/components/footer/footer.svelte';
 
-	let Geometry;
+	// let Geometry;
 	onMount(async () => {
 
-		const module = await import('$lib/components/three/lorentz.svelte');
-		Geometry = module.default;
+		// const module = await import('$lib/components/three/lorentz.svelte');
+		// Geometry = module.default;
 
 		// ---------------------------------------------------------------------------
 		// SCREEN
@@ -37,7 +37,7 @@
 	});
 </script>
 
-<svelte:component this={Geometry} />
+<!-- <svelte:component this={Geometry} /> -->
 
 <div class="app">
 	{#if $screenType}
