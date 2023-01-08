@@ -1,15 +1,32 @@
-<script>
+<script>	
+	import { darkMode } from '$lib/store/store';
+	import headshot from '$lib/images/headshot.webp';
+	import headshot_fallback from '$lib/images/headshot.jpg';
+	
+	import casual from '$lib/images/casual.webp';
+	import casual_fallback from '$lib/images/casual.jpg';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Garrett “All Business” Musar</title>
+	<meta name="description" content="I have a degree from an accredited business school." />
 </svelte:head>
 
 <section>
-	<h1>
-		DAS AUFBAUZEUG
-	</h1>
+	{#if $darkMode}
+	<picture>
+		<source srcset={headshot} type="image/webp" />
+		<img src={headshot_fallback} alt="Headshot" class="headshot" />
+	</picture>
+	{:else }
+
+	<picture>
+		<source srcset={casual} type="image/webp"  />
+		<img src={casual_fallback} alt="Headshot" class="casual" />
+	</picture>
+	{/if}
+
+
 
 </section>
 
@@ -19,9 +36,30 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 1;
-		background: var(--background);
+		flex: .6;
+	
+	}
+
+	picture {
+		min-height: 60vh;
+		padding: calc(2 * var(--margin));
 		border: solid 1px var(--primary);
+	}
+
+	 img {
+		height: 60vh;
+		width: 60vh;
+		margin: auto;
+		object-fit: cover;
+		border: solid 1px var(--primary);
+	}
+
+	img.headshot {
+		object-position: 0% 30%;
+	}
+
+	img.casual {
+		object-position: 25% 0%;
 	}
 
 	h1 {
@@ -29,5 +67,18 @@
 		color: var(--primary);
 		font-family: var(--font-header);
 	}
+
+@media (max-width: 760px) {
+		picture {
+		min-width: none;
+		min-height: 80vw;
+		padding: calc(1 * var(--margin));
+	}
+
+	 img {
+		height: 80vw;
+		width: 80vw;
+	}
+}
 
 </style>

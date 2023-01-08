@@ -25,19 +25,26 @@
 		darkMode.set(!$darkMode);
 		document.querySelector(':root').classList.toggle('dark-mode');
 	};
+
+	function handleClick() {
+		alert('navigate to site')
+	}
 </script>
 
 <header>
 	<main>
-	{#if $screenType == 3}
+	<!-- {#if $screenType == 3}
 		<Nav {navItems} />
-	{/if}
+	{/if} -->
+
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<h2 on:click={handleClick}>ENTER SITE</h2>
 
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div on:click={() => toggleDarkMode()} class="darkMode">
-		<p class:selected={$darkMode == false}>day</p>
+		<p class:selected={$darkMode == true}>business</p>
 		<p class="selected">/</p>
-		<p class:selected={$darkMode == true}>night</p>
+		<p class:selected={$darkMode == false}>casual</p>
 	</div>
 </main>
 </header>
@@ -53,14 +60,13 @@
 
 	main {
 		margin: auto;
-		max-width: 100vw;
+		max-width: calc(60vh + 4.5 * var(--margin));
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
-		padding: 0 16px 0 8px;
 		font-size: 14px;
-		height: 60px;
+		height: calc(15vh);
 		font-family: nb-architekt;
 		font-weight: 500;
 	}
@@ -89,10 +95,15 @@
 		padding: 10px;
 		cursor: pointer;
 		opacity: 0.4;
+		transform: translate(10px);
 	}
 
 	.darkMode p.selected {
 		opacity: 1;
+	}
+
+	h2 {
+		cursor: pointer;
 	}
 
 	@media only screen and (max-width: 768px) {

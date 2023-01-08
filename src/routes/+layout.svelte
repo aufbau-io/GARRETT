@@ -39,7 +39,6 @@
 
 <svelte:component this={Geometry} />
 
-
 <div class="app">
 	{#if $screenType}
 	<header>
@@ -80,7 +79,7 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: calc(4 * var(--margin));
+		padding: calc(4 * var(--margin)) 0;
 		width: 100%;
 		max-width: 64rem;
 		margin: 0 auto;

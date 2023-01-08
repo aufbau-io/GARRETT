@@ -1,38 +1,45 @@
 <script>
+	import { darkMode } from '$lib/store/store';
 </script>
 
 <footer>
-	<a href="https://aufbau.io" class="">EIN AUFBAU DING</a>
-	<a href="https://www.websitecarbon.com/website/iota-health/">0.03G CO2 / VISIT</a>
-	<!-- <p class="">COPYRIGHT 2022</p> -->
+	{#if $darkMode}
+	<p>“I have a degree from an accredited business school.”</p>
+	{:else}
+	<p>“I do not have a degree from an accredited casual school.”</p>
+	{/if}
+	<p>~ Garrett “All Business” Musar</p>
 </footer>
 
 <style>
 	footer {
 		width: 100%;
-		min-height: 50px;
+		height: calc(22vh - 2 * var(--margin));
 		z-index: 10;
 		gap: 10px;
 
-		padding: 20px 32px;
+		padding: 10vh 32px;
 		background: var(--background-alt);
 		border-top: solid 1px var(--accent-50);
 		text-transform: none;
 		color: var(--accent);
 
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: column nowrap;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	footer a,
 	footer p {
-		font-size: 13px;
+		font-size: 14px;
 		font-weight: 300;
 
 		letter-spacing: 0.15em;
 		font-family: nb-architekt;
+
+		text-align: center;
+		line-height: 24px;
 	}
 
 	@media only screen and (max-width: 768px) {

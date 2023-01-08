@@ -3,9 +3,10 @@
 :root {
 	--font-body: untitled-sans, sans-serif;
 	--font-header: dahlia, sans-serif;
-	--background: #232323;
-	--primary: #f0f0f0;
-	--primary-50: #f0f0f080;
+	--background: #f6f6f6;
+	--primary: #232323;
+	--primary-50: #23232380;
+	--accent: #232323;
 	--column-width: 42rem;
 	--margin: 20px;
 	font-family: var(--font-body);
@@ -13,9 +14,10 @@
 }
 
 :root.dark-mode {
-	--background: #f0f0f0;
-	--primary: #232323;
+	--background: #232323;
+	--primary: #d0d0d0;
 	--primary-50: #23232380;
+	--accent: #232323;
 }
 
 @font-face {
@@ -143,7 +145,7 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-@media (min-width: 720px) {
+@media (max-width: 760px) {
 	h1 {
 		font-size: 2.4rem;
 	}
