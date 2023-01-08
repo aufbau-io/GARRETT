@@ -5,11 +5,37 @@
 	
 	import casual from '$lib/images/casual.webp';
 	import casual_fallback from '$lib/images/casual.jpg';
+	
 </script>
 
 <svelte:head>
 	<title>Garrett “All Business” Musar</title>
 	<meta name="description" content="I have a degree from an accredited business school." />
+
+	<link rel="preload" href={headshot} as="image/webp" />
+	<link rel="preload" href={casual} as="image/webp" />
+
+	<link
+		rel="preload"
+		as="font"
+		href="/fonts/NB-Architekt-Pro-Bold.woff"
+		type="font/woff"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		as="font"
+		href="/fonts/NB-Architekt-Pro-Regular.woff"
+		type="font/woff"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		as="font"
+		href="/fonts/NB-Architekt-Pro-Light.woff"
+		type="font/woff"
+		crossorigin="anonymous"
+	/>
 </svelte:head>
 
 <section>
