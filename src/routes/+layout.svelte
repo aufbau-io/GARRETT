@@ -40,6 +40,7 @@
 <!-- <svelte:component this={Geometry} /> -->
 
 <div class="app">
+	{#key $screenType}
 	{#if $screenType}
 	<header>
 		<Header />
@@ -53,6 +54,7 @@
 		<Footer />
 	</footer>
 	{/if}
+	{/key}
 </div>
 
 
