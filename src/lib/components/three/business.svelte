@@ -1,5 +1,6 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
+	import { show3d } from '$lib/store/store';
 
 	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 	import * as THREE from 'three';
@@ -12,6 +13,19 @@
 		
 	const gui = new dat.GUI()
 	const debugObject = {}
+
+	
+	debugObject.show3d = () =>
+	{
+		show3d.set(true);
+	}
+	gui.add(debugObject, 'show3d')
+
+	debugObject.hide3d = () =>
+	{
+		show3d.set(false);
+	}
+	gui.add(debugObject, 'hide3d')
 
 	debugObject.createSphere = () =>
 	{
@@ -326,7 +340,7 @@
   tick()
 </script>
 
-<div bind:this={container} class:geometry={true} />
+<div bind:this={container} class:geometry={true} class:hide="{!$show3d}" />
 
 <style>
 	.geometry {
@@ -335,5 +349,9 @@
 		left: 0;
 		overflow: hidden;
 		z-index: 1;
+	}
+
+	.geometry.hide {
+		opacity: 0;
 	}
 </style>
