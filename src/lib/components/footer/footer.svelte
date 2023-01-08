@@ -6,7 +6,7 @@
 	{#if $darkMode}
 	<p>“I have a degree from an accredited business school.”</p>
 	{:else}
-	<p>“I do not have a degree from an accredited casual school.”</p>
+	<p>Look! That's none of my business”</p>
 	{/if}
 	<p>~ Garrett “All Business” Musar</p>
 </footer>
