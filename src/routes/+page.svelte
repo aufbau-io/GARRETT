@@ -78,7 +78,7 @@
 
 		width: 100%;
 
-		font-size: 120px;
+		font-size: 100px;
 		color: var(--white);
 		-webkit-text-stroke: 2px;
 		-webkit-text-stroke-color: var(--primary);
