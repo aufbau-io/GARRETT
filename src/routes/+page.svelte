@@ -79,7 +79,7 @@
 		width: 100%;
 
 		font-size: 100px;
-		color: var(--white);
+		color: var(--background);
 		-webkit-text-stroke: 2px;
 		-webkit-text-stroke-color: var(--primary);
 		letter-spacing: 6px;
@@ -91,26 +91,27 @@
 		width: 60vh;
 		margin-top: 3vh;
 		height: 8vh;
-		background: var(--white);
-		border: solid 2px var(--primary);
+		background: var(--primary);
+		border: solid 2px var(--background);
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		color: var(--primary);
+		color: var(--background);
 		cursor: pointer;
 		box-shadow: 0 0 10px var(--primary);
 	}
 
 	.entry:hover {
-		background: var(--primary);
-		color: var(--white)
+		background-color: var(--background);
+		border-color: var(--primary);
+		color: var(--primary)
 	}
 
 	.entry:active {
-		background: var(--background);
-		color: var(--primary)
+		box-shadow: 0 0 10px var(--white);
+		color: var(--white);
 	}
 
 	h2 {
