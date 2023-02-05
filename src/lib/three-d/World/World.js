@@ -11,12 +11,12 @@ export default class World {
 		// Wait for resources
 		this.resources.on('ready', () => {
 			// Setup
-			this.mouse = new Mac();
+			this.mac = new Mac();
 			this.environment = new Environment();
 		});
 	}
 
 	update() {
-		if (this.mouse) this.mouse.update();
+		if (this.mac) this.mac.update();
 	}
 }

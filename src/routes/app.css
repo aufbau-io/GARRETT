@@ -1,11 +1,11 @@
 @tailwind base;
 
 :root {
-	--background: #f6f6f6;
-	--primary: #008080;
+	--background: teal;
+	--primary: black;
 	--primary-50: #23232380;
 	--accent: #232323;
-	--white: #008080;
+	--white: #f6f6f6;
 	--column-width: 42rem;
 	--margin: 20px;
 	color: var(--color-text);

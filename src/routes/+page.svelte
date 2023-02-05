@@ -78,7 +78,7 @@
 		width: 100%;
 
 		font-size: 120px;
-		color: var(--background);
+		color: var(--white);
 		-webkit-text-stroke: 2px;
 		-webkit-text-stroke-color: var(--primary);
 		letter-spacing: 6px;
@@ -90,21 +90,21 @@
 		width: 60vh;
 		margin-top: 3vh;
 		height: 8vh;
-		background: var(--background);
+		background: teal;
 		border: solid 2px var(--primary);
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		color: var(--primary);
+		color: var(--white);
 		cursor: pointer;
 		box-shadow: 0 0 10px var(--primary);
 	}
 
 	.entry:hover {
-		background: var(--primary);
-		color: var(--background);
+		background: var(--white);
+		color: var(--primary)
 	}
 
 	h2 {
