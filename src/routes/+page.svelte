@@ -23,7 +23,7 @@
 <section>
 
 	<picture>
-		<h1>BUSINESS IN&nbsp;THE FRONT</h1>
+		<h1>BUSINESS IN THE FRONT</h1>
 		<source srcset={casual} type="image/webp"  />
 		<img src={casual_fallback} alt="Headshot" />
 	</picture>
@@ -70,7 +70,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		min-width: 100vw;
+		min-width: 80vw;
 		z-index: 10;
 
 
