@@ -18,8 +18,16 @@ export default class Mac {
 	setModel() {
 		this.model = this.resource.scene;
 		this.model.scale.set(0.05, 0.05, 0.05);
-		this.model.position.y -= 1;
+		// this.model.position.y -= 1;
 		this.scene.add(this.model);
+
+		const x = Math.random() * 2;
+		const y = Math.random() * 2;
+		const z = Math.random() * 2;
+
+		this.model.position.x = x;
+		this.model.position.y = y;
+		this.model.position.z = z;
 
 		// tmpwireframe
 		this.model.traverse(function (child) {
@@ -41,5 +49,6 @@ export default class Mac {
 
 	update() {
 		// this.animation.mixer.update(this.time.delta * 0.001);
+		// this.model.position.z += 0.01;
 	}
 }

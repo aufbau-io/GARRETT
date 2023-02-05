@@ -12,11 +12,11 @@
 	<title>Garrett “All Business” Musar</title>
 	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
 
-	<link rel="preload" href={headshot} as="image/webp" />
+	<!-- <link rel="preload" href={headshot} as="image/webp" />
 	<link rel="preload" href={casual} as="image/webp" />
 
 	<link rel="preload" href={headshot_fallback} as="image/jpg" />
-	<link rel="preload" href={casual_fallback} as="image/jpg" />
+	<link rel="preload" href={casual_fallback} as="image/jpg" /> -->
 
 </svelte:head>
 
@@ -32,7 +32,6 @@
 	<div class="entry">
 		<h2>COME ON BACK</h2>
 	</div>
-
 
 </section>
 
@@ -67,11 +66,12 @@
 	}
 	
 	h1 {
+		min-width: 80vw;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		min-width: 80vw;
+
 		z-index: 10;
 
 
@@ -91,20 +91,20 @@
 		width: 60vh;
 		margin-top: 3vh;
 		height: 8vh;
-		background: teal;
+		background: var(--white);
 		border: solid 2px var(--primary);
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		color: var(--white);
+		color: var(--primary);
 		cursor: pointer;
 		box-shadow: 0 0 10px var(--primary);
 	}
 
 	.entry:hover {
-		background: var(--white);
+		background: var(--background);
 		color: var(--primary)
 	}
 

@@ -1,7 +1,7 @@
 @tailwind base;
 
 :root {
-	--background: teal;
+	--background: lightblue;
 	--primary: black;
 	--primary-50: #23232380;
 	--accent: #232323;

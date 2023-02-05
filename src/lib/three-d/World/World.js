@@ -11,12 +11,20 @@ export default class World {
 		// Wait for resources
 		this.resources.on('ready', () => {
 			// Setup
-			this.mac = new Mac();
+			this.macs = [];
+			for (let i = 0; i < 10; i++) {
+				let mac = new Mac();
+				this.macs.push(mac);
+			}
+
 			this.environment = new Environment();
 		});
 	}
 
 	update() {
-		if (this.mac) this.mac.update();
+		// if (this.mac) this.mac.update();
+		// for (let i = 0; i < 10; i++) {
+		// 	this.macs[i].update();
+		// }
 	}
 }
