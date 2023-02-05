@@ -1,71 +1,14 @@
 @tailwind base;
 
 :root {
-	--font-body: untitled-sans, sans-serif;
-	--font-header: dahlia, sans-serif;
 	--background: #f6f6f6;
-	--primary: #232323;
+	--primary: #008080;
 	--primary-50: #23232380;
 	--accent: #232323;
+	--white: #008080;
 	--column-width: 42rem;
 	--margin: 20px;
-	font-family: var(--font-body);
 	color: var(--color-text);
-}
-
-:root.dark-mode {
-	--background: #008080;
-	--primary: #f4f4f4;
-	--primary-50: #f4f4f480;
-	--accent: #f4f4f4;
-}
-
-@font-face {
-	font-family: dahlia;
-	src: url(/fonts/dahlia-regular.woff) format('woff');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: dahlia;
-	src: url(/fonts/dahlia-medium.woff) format('woff');
-	font-weight: 500;
-}
-
-@font-face {
-	font-family: untitled-sans;
-	src: url(/fonts/test-untitled-sans-medium.woff2) format('woff2');
-	font-weight: 500;
-}
-
-@font-face {
-	font-family: untitled-sans;
-	src: url(/fonts/test-untitled-sans-regular.woff2) format('woff2');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: untitled-sans;
-	src: url(/fonts/test-untitled-sans-light.woff2) format('woff2');
-	font-weight: 300;
-}
-
-@font-face {
-	font-family: nb-architekt;
-	src: url(/fonts/NB-Architekt-Pro-Bold.woff) format('woff');
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: nb-architekt;
-	src: url(/fonts/NB-Architekt-Pro-Regular.woff) format('woff');
-	font-weight: 500;
-}
-
-@font-face {
-	font-family: nb-architekt;
-	src: url(/fonts/NB-Architekt-Pro-Light.woff) format('woff');
-	font-weight: 400;
 }
 
 body {
@@ -80,6 +23,11 @@ body {
 		var(--background) 15%,
 		var(--background) 50%
 	);
+
+	font-family: 'degular', serif;
+	font-weight: 400;
+
+	user-select: none;
 }
 
 h1,
@@ -92,6 +40,12 @@ p,
 a {
 	color: var(--primary);
 	font-weight: 500;
+}
+
+h1 {
+	font-family: 'degular-display', sans-serif;
+	font-weight: 800;
+	text-align: center;
 }
 
 p {
@@ -117,7 +71,6 @@ h2 {
 
 pre {
 	font-size: 16px;
-	font-family: var(--font-mono);
 	background-color: rgba(255, 255, 255, 0.45);
 	border-radius: 3px;
 	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);

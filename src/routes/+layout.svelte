@@ -2,16 +2,16 @@
 	import './app.css';
 
 	import { onMount } from 'svelte';
-	import { screenType, is_iframe } from '$lib/store/store';
+	import { screenType, iframe } from '$lib/store/store';
 
 	import Header from '$lib/components/header/header.svelte';
 	import Footer from '$lib/components/footer/footer.svelte';
+	import Experience from '$lib/three-d/Experience.js'
 
-	let Geometry;
+	let experience;
 	onMount(async () => {
 
-		const module = await import('$lib/components/three/business.svelte');
-		Geometry = module.default;
+		const experience = new Experience(document.querySelector('canvas.webgl'))
 
 		// ---------------------------------------------------------------------------
 		// SCREEN
@@ -32,27 +32,27 @@
 
 		if (window.location !== window.parent.location) {
 			// The page is in an iframe
-			is_iframe.set(true);
+			iframe.set(true);
 		}
 	});
 </script>
 
-<svelte:component this={Geometry} />
+<canvas class="webgl"></canvas>
 
 <div class="app">
 	{#key $screenType}
 	{#if $screenType}
-	<header>
+	<!-- <header>
 		<Header />
-	</header>
+	</header> -->
 
 	<main>
 		<slot />
 	</main>
 
-	<footer>
+	<!-- <footer>
 		<Footer />
-	</footer>
+	</footer> -->
 	{/if}
 	{/key}
 </div>
@@ -63,6 +63,11 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+	}
+
+	.webgl {
+		position: absolute;
+		z-index: -1;
 	}
 
 	header {
@@ -85,7 +90,6 @@
 		flex-direction: column;
 		padding: calc(4 * var(--margin)) 0;
 		width: 100%;
-		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}

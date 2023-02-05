@@ -35,7 +35,6 @@
 		font-size: 14px;
 
 		letter-spacing: 0.15em;
-		font-family: nb-architekt;
 
 		text-align: center;
 		line-height: 24px;

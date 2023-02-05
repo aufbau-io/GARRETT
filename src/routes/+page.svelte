@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<title>Garrett “All Business” Musar</title>
-	<meta name="description" content="I have a degree from an accredited business school." />
+	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
 
 	<link rel="preload" href={headshot} as="image/webp" />
 	<link rel="preload" href={casual} as="image/webp" />
@@ -18,43 +18,20 @@
 	<link rel="preload" href={headshot_fallback} as="image/jpg" />
 	<link rel="preload" href={casual_fallback} as="image/jpg" />
 
-	<!-- <link
-		rel="preload"
-		as="font"
-		href="/fonts/NB-Architekt-Pro-Bold.woff"
-		type="font/woff"
-		crossorigin="anonymous"
-	/> -->
-	<link
-		rel="preload"
-		as="font"
-		href="/fonts/NB-Architekt-Pro-Regular.woff"
-		type="font/woff"
-		crossorigin="anonymous"
-	/>
-	<!-- <link
-		rel="preload"
-		as="font"
-		href="/fonts/NB-Architekt-Pro-Light.woff"
-		type="font/woff"
-		crossorigin="anonymous"
-	/> -->
 </svelte:head>
 
 <section>
-	{#if $darkMode}
-	<picture>
-		<source srcset={headshot} type="image/webp" />
-		<img src={headshot_fallback} alt="Headshot" class="headshot" />
-	</picture>
-	{:else }
 
 	<picture>
+		<h1>BUSINESS IN&nbsp;THE FRONT</h1>
 		<source srcset={casual} type="image/webp"  />
-		<img src={casual_fallback} alt="Headshot" class="casual" />
+		<img src={casual_fallback} alt="Headshot" />
 	</picture>
-	{/if}
 
+
+	<div class="entry">
+		<h2>COME ON BACK</h2>
+	</div>
 
 
 </section>
@@ -70,11 +47,11 @@
 	}
 
 	picture {
-		z-index: 1;
-		min-height: 60vh;
+		/* min-height: 60vh; */
+		/* background: var(--white);
 		padding: calc(2 * var(--margin));
-		border: solid 1px var(--primary);
-
+		border: solid 1px var(--primary); */
+		position: relative;
 	}
 
 	 img {
@@ -82,22 +59,61 @@
 		width: 60vh;
 		margin: auto;
 		object-fit: cover;
-		border: solid 1px var(--primary);
-	}
+		border: solid 2px var(--primary);
 
-	img.headshot {
-		object-position: 0% 30%;
-	}
-
-	img.casual {
 		object-position: 0% 22.5%;
+		box-shadow: 0 0 10px var(--primary);
+	}
+	
+	h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100vw;
+		z-index: 10;
+
+
+
+		width: 100%;
+
+		font-size: 120px;
+		color: var(--background);
+		-webkit-text-stroke: 2px;
+		-webkit-text-stroke-color: var(--primary);
+		letter-spacing: 6px;
+
+		text-shadow: 0 0 10px var(--primary);
 	}
 
-	h1 {
-		width: 100%;
+	.entry {
+		width: 60vh;
+		margin-top: 3vh;
+		height: 8vh;
+		background: var(--background);
+		border: solid 2px var(--primary);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
 		color: var(--primary);
-		font-family: var(--font-header);
+		cursor: pointer;
+		box-shadow: 0 0 10px var(--primary);
 	}
+
+	.entry:hover {
+		background: var(--primary);
+		color: var(--background);
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: 600;
+		color: inherit;
+		letter-spacing: 3px;
+	}
+
 
 @media (max-width: 760px) {
 		picture {

@@ -67,7 +67,6 @@
 
 		font-size: 14px;
 		height: calc(10vh + 1 * var(--margin));
-		font-family: nb-architekt;
 		font-weight: 500;
 	}
 
