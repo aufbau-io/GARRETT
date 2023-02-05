@@ -104,8 +104,8 @@
 	}
 
 	.entry:hover {
-		background: var(--background);
-		color: var(--primary)
+		background: var(--primary);
+		color: var(--white)
 	}
 
 	h2 {
