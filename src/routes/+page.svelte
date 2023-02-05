@@ -42,8 +42,9 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: .6;
 	
+		width: 100%;
+		height: 100%;
 	}
 
 	picture {
@@ -116,7 +117,7 @@
 
 
 @media (max-width: 760px) {
-		picture {
+	picture {
 		min-width: none;
 		min-height: 80vw;
 		padding: calc(1 * var(--margin));

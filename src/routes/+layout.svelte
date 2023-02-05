@@ -61,35 +61,32 @@
 <style>
 	.app {
 		display: flex;
-		flex-direction: column;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+		height: 100%;
+
+		width: 100vw;
 		min-height: 100vh;
 	}
 
 	.webgl {
 		position: absolute;
 		z-index: -1;
-	}
 
-	header {
-		position: absolute;
-		top: 0;
 		width: 100%;
-		z-index: 10;
-	}
-
-	footer {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		z-index: 10;
+		height: 100%;
 	}
 
 	main {
 		flex: 1;
 		display: flex;
-		flex-direction: column;
-		padding: calc(4 * var(--margin)) 0;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
+		height: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
