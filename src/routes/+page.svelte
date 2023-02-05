@@ -108,6 +108,11 @@
 		color: var(--white)
 	}
 
+	.entry:active {
+		background: var(--background);
+		color: var(--primary)
+	}
+
 	h2 {
 		font-size: 24px;
 		font-weight: 600;
