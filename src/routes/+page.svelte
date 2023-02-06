@@ -84,8 +84,8 @@
 		border: double 6px var(--background);
 		
 		min-width: 60vh;
-		height: 80px;
-		line-height: 70px;
+		height: 75px;
+		line-height: 65px;
 		
 		position: absolute;
 		bottom: 10%;
