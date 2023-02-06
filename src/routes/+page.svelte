@@ -82,7 +82,7 @@
 	}
 
 	header {
-		width: 50vh;
+		width: 48vh;
 		height: 30px;
 		padding-bottom: 4px;
 		display: flex;
@@ -103,8 +103,8 @@
 
 
 	 .headshot {
-		height: 50vh;
-		width: 50vh;
+		height: 48vh;
+		width: 48vh;
 		margin: auto;
 		object-fit: cover;
 		border: double 6px var(--primary);
@@ -119,7 +119,7 @@
 		background: var(--primary);
 		border: double 6px var(--background);
 		
-		min-width: 60vh;
+		min-width: 54vh;
 		height: 75px;
 		line-height: 65px;
 		
@@ -134,7 +134,7 @@
 
 		width: 100%;
 
-		font-size: 32px;
+		font-size: 30px;
 		color: var(--background);
 		/* -webkit-text-stroke:1px; */
 		/* -webkit-text-stroke-color: var(--background); */
@@ -144,7 +144,7 @@
 	}
 
 	.entry {
-		width: 50vh;
+		width: 48vh;
 		margin-top: 2vh;
 		height: 6vh;
 		background: var(--background);
