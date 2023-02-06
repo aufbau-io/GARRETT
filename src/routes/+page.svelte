@@ -22,11 +22,14 @@
 
 <section>
 
-	<picture>
-		<h1>Business&nbsp;In The&nbsp;Front</h1>
+	<div class="square">
+			<h1>Business&nbsp;In&nbsp;The&nbsp;Front</h1>
+		</div>
+	<!-- <picture>
+
 		<source srcset={casual} type="image/webp"  />
 		<img src={casual_fallback} alt="Headshot" />
-	</picture>
+	</picture> -->
 
 
 	<div class="entry">
@@ -44,6 +47,14 @@
 	
 		width: 100%;
 		height: 100%;
+	}
+
+	.square {
+		width: 50vh;
+		height: 50vh;
+		background: none;
+		border: solid 2px var(--primary);
+		position: relative;
 	}
 
 	picture {
@@ -68,11 +79,13 @@
 	h1 {
 		/* height: 50vh;
 		width: 50vh; */
-		/* background: #f6f6f6a0;
-		border: solid 2px var(--primary); */
+		background: var(--primary);
+		border-top: solid 2px var(--primary);
+		border-bottom: solid 2px var(--primary);
 		
-		min-width: 40vw;
-		line-height: 6vw;
+		min-width: 60vh;
+		height: 60px;
+		line-height: 60px;
 		
 		position: absolute;
 		top: 50%;
@@ -85,10 +98,10 @@
 
 		width: 100%;
 
-		font-size: 60px;
-		color: var(--primary);
-		/* -webkit-text-stroke:1px;
-		-webkit-text-stroke-color: var(--primary); */
+		font-size: 36px;
+		color: var(--background);
+		/* -webkit-text-stroke:1px; */
+		/* -webkit-text-stroke-color: var(--background); */
 		letter-spacing: 3px;
 
 		/* text-shadow: 2px 2px 0px var(--background); */
@@ -98,25 +111,25 @@
 		width: 50vh;
 		margin-top: 2vh;
 		height: 5vh;
-		background: var(--primary);
+		background: var(--background);
 		border: solid 2px var(--primary);
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		color: var(--background);
+		color: var(--primary);
 		cursor: pointer;
 		/* box-shadow: 0 0 10px var(--primary); */
 	}
 
 	.entry:hover {
-		background-color: var(--background);
-		color: var(--primary)
+		background-color: var(--primary);
+		color: var(--background)
 	}
 
 	.entry:active {
-		box-shadow: 0 0 10px var(--white);
+		background: var(--background);
 		color: var(--white);
 	}
 

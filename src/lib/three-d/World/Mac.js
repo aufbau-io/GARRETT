@@ -17,17 +17,18 @@ export default class Mac {
 
 	setModel() {
 		this.model = this.resource.scene;
-		this.model.scale.set(0.05, 0.05, 0.05);
-		// this.model.position.y -= 1;
+		this.model.scale.set(0.04, 0.04, 0.04);
+		this.model.position.y -= 0.05;
+		this.model.position.x += 0.05;
 		this.scene.add(this.model);
 
-		const x = Math.random() * 2;
-		const y = Math.random() * 2;
-		const z = Math.random() * 2;
+		// const x = Math.random() * 2;
+		// const y = Math.random() * 2;
+		// const z = Math.random() * 2;
 
-		this.model.position.x = x;
-		this.model.position.y = y;
-		this.model.position.z = z;
+		// this.model.position.x = x;
+		// this.model.position.y = y;
+		// this.model.position.z = z;
 
 		// tmpwireframe
 		this.model.traverse(function (child) {
