@@ -84,8 +84,8 @@
 		border: double 5px var(--background);
 		
 		min-width: 60vh;
-		height: 70px;
-		line-height: 62px;
+		height: 68px;
+		line-height: 60px;
 		
 		position: absolute;
 		top: 50%;
@@ -98,11 +98,11 @@
 
 		width: 100%;
 
-		font-size: 36px;
+		font-size: 32px;
 		color: var(--background);
 		/* -webkit-text-stroke:1px; */
 		/* -webkit-text-stroke-color: var(--background); */
-		letter-spacing: 3px;
+		letter-spacing: 1px;
 
 		/* text-shadow: 2px 2px 0px var(--background); */
 	}
@@ -130,7 +130,7 @@
 
 	.entry:active {
 		background: var(--background);
-		color: var(--white);
+		color: var(--primary);
 		border-color: var(--white);
 	}
 
