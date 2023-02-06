@@ -23,7 +23,7 @@
 <section>
 
 	<picture>
-		<h1>BUSINESS IN THE FRONT</h1>
+		<h1>Business&nbsp;In The&nbsp;Front</h1>
 		<source srcset={casual} type="image/webp"  />
 		<img src={casual_fallback} alt="Headshot" />
 	</picture>
@@ -62,7 +62,7 @@
 		border: solid 2px var(--primary);
 
 		object-position: 0% 22.5%;
-		box-shadow: 0 0 10px var(--primary);
+		/* box-shadow: 0 0 10px var(--primary); */
 	}
 	
 	h1 {
@@ -78,21 +78,21 @@
 
 		width: 100%;
 
-		font-size: 100px;
-		color: var(--background);
-		-webkit-text-stroke: 2px;
-		-webkit-text-stroke-color: var(--primary);
-		letter-spacing: 6px;
+		font-size: 80px;
+		color: var(--primary);
+		-webkit-text-stroke: 1px;
+		-webkit-text-stroke-color: var(--background);
+		letter-spacing: 3px;
 
-		text-shadow: 0 0 10px var(--primary);
+		/* text-shadow: 0 0 10px var(--primary); */
 	}
 
 	.entry {
 		width: 60vh;
-		margin-top: 3vh;
-		height: 8vh;
+		margin-top: 2vh;
+		height: 6vh;
 		background: var(--primary);
-		border: solid 2px var(--background);
+		border: solid 2px var(--primary);
 
 		display: flex;
 		align-items: center;
@@ -100,12 +100,11 @@
 
 		color: var(--background);
 		cursor: pointer;
-		box-shadow: 0 0 10px var(--primary);
+		/* box-shadow: 0 0 10px var(--primary); */
 	}
 
 	.entry:hover {
 		background-color: var(--background);
-		border-color: var(--primary);
 		color: var(--primary)
 	}
 
@@ -115,7 +114,7 @@
 	}
 
 	h2 {
-		font-size: 24px;
+		font-size: 18px;
 		font-weight: 600;
 		color: inherit;
 		letter-spacing: 3px;
