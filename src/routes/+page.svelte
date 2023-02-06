@@ -3,8 +3,8 @@
 	import headshot from '$lib/images/headshot.webp';
 	import headshot_fallback from '$lib/images/headshot.jpg';
 	
-	import casual from '$lib/images/casual.webp';
-	import casual_fallback from '$lib/images/casual.jpg';
+	// import casual from '$lib/images/casual.webp';
+	import casual from '$lib/images/casual-removebg.png';
 	
 </script>
 
@@ -24,8 +24,8 @@
 
 	<picture>
 		<h1>Business&nbsp;In The&nbsp;Front</h1>
-		<source srcset={casual} type="image/webp"  />
-		<img src={casual_fallback} alt="Headshot" />
+		<!-- <source srcset={casual} type="image/webp"  /> -->
+		<img src={casual} alt="Headshot" />
 	</picture>
 
 
@@ -52,6 +52,7 @@
 		padding: calc(2 * var(--margin));
 		border: solid 1px var(--primary); */
 		position: relative;
+		background: var(--background);
 	}
 
 	 img {
