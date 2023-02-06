@@ -79,6 +79,7 @@
 		padding: calc(2 * var(--margin));
 		border: solid 1px var(--primary); */
 		position: relative;
+		background: var(--background);
 	}
 
 	header {
