@@ -17,11 +17,15 @@
 	<title>Garrett “All Business” Musar</title>
 	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
 
-	<!-- <link rel="preload" href={headshot} as="image/webp" />
-	<link rel="preload" href={casual} as="image/webp" />
+	<link rel="preload" href={casual} as="image/jpg" />
 
-	<link rel="preload" href={headshot_fallback} as="image/jpg" />
-	<link rel="preload" href={casual_fallback} as="image/jpg" /> -->
+	<link
+	rel="preload"
+	as="font"
+	href="/fonts/test-heldance-display.bold.woff2"
+	type="font/woff2"
+	crossorigin="anonymous"
+/>
 
 </svelte:head>
 
