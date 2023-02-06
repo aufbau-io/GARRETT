@@ -7,7 +7,7 @@
 	import casual from '$lib/images/casual-removebg.png';
 
 	import instagram from '$lib/images/icons/Instagram.svg';
-	import linkedin from '$lib/images/icons/Linkedin.svg';
+	import linkedin from '$lib/images/icons/LinkedIn.svg';
 	import mail from '$lib/images/icons/Mail.svg';
 	import twitter from '$lib/images/icons/Twitter.svg';
 	
