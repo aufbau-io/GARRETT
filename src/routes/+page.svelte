@@ -3,8 +3,8 @@
 	import headshot from '$lib/images/headshot.webp';
 	import headshot_fallback from '$lib/images/headshot.jpg';
 	
-	import casual from '$lib/images/casual.webp';
-	import casual_fallback from '$lib/images/casual.jpg';
+	// import casual from '$lib/images/casual.png';
+	import casual from '$lib/images/casual-removebg.png';
 	
 </script>
 
@@ -23,12 +23,13 @@
 <section>
 
 	<div class="square">
-			<h1>Business&nbsp;In&nbsp;The&nbsp;Front</h1>
+		<h1>Business&nbsp;In&nbsp;The&nbsp;Front</h1>
 		</div>
+
 	<!-- <picture>
 
 		<source srcset={casual} type="image/webp"  />
-		<img src={casual_fallback} alt="Headshot" />
+		<img src={casual} alt="Headshot" />
 	</picture> -->
 
 
@@ -80,12 +81,11 @@
 		/* height: 50vh;
 		width: 50vh; */
 		background: var(--primary);
-		border-top: solid 2px var(--primary);
-		border-bottom: solid 2px var(--primary);
+		border: double 5px var(--background);
 		
 		min-width: 60vh;
-		height: 60px;
-		line-height: 60px;
+		height: 70px;
+		line-height: 62px;
 		
 		position: absolute;
 		top: 50%;
@@ -131,6 +131,7 @@
 	.entry:active {
 		background: var(--background);
 		color: var(--white);
+		border-color: var(--white);
 	}
 
 	h2 {
