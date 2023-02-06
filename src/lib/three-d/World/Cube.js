@@ -13,7 +13,7 @@ export default class Mac {
 	}
 
 	setModel() {
-		this.size = 2;
+		this.size = 2.5;
 
 		const x = Math.random() * this.size * 3 - this.size * 1.5;
 		const y = Math.random() * this.size - this.size / 2;
@@ -53,8 +53,8 @@ export default class Mac {
 	update() {
 		// this.animation.mixer.update(this.time.delta * 0.001);
 		this.model.position.y += 0.0005;
-		if (this.model.position.y > this.size) {
-			this.model.position.y = -this.size;
+		if (this.model.position.y > this.size * 0.8) {
+			this.model.position.y = -this.size * 0.8;
 		}
 
 		this.model.rotation.x += 0.001;
