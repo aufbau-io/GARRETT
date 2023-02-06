@@ -55,8 +55,8 @@
 	}
 
 	 img {
-		height: 60vh;
-		width: 60vh;
+		height: 50vh;
+		width: 50vh;
 		margin: auto;
 		object-fit: cover;
 		border: solid 2px var(--primary);
@@ -78,19 +78,19 @@
 
 		width: 100%;
 
-		font-size: 80px;
+		font-size: 60px;
 		color: var(--primary);
-		-webkit-text-stroke: 1px;
-		-webkit-text-stroke-color: var(--background);
+		/* -webkit-text-stroke:1px;
+		-webkit-text-stroke-color: var(--primary); */
 		letter-spacing: 3px;
 
-		/* text-shadow: 0 0 10px var(--primary); */
+		text-shadow: 2px 2px 0px var(--background);
 	}
 
 	.entry {
-		width: 60vh;
+		width: 50vh;
 		margin-top: 2vh;
-		height: 6vh;
+		height: 5vh;
 		background: var(--primary);
 		border: solid 2px var(--primary);
 
@@ -114,8 +114,7 @@
 	}
 
 	h2 {
-		font-size: 18px;
-		font-weight: 600;
+		font-size: 14px;
 		color: inherit;
 		letter-spacing: 3px;
 	}

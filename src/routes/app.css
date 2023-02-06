@@ -11,6 +11,24 @@
 	color: var(--color-text);
 }
 
+@font-face {
+	font-family: financier;
+	src: url(/fonts/test-financier-display-black.woff2) format('woff2');
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: financier;
+	src: url(/fonts/test-financier-display-bold.woff2) format('woff2');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: heldane;
+	src: url(/fonts/test-heldane-display-bold.woff2) format('woff2');
+	font-weight: 700;
+}
+
 body {
 	min-height: 100vh;
 	margin: 0;
@@ -24,8 +42,8 @@ body {
 		var(--background) 50%
 	);
 
-	font-family: 'degular', serif;
-	font-weight: 400;
+	font-family: sans-serif;
+	font-weight: 300;
 
 	user-select: none;
 }
@@ -44,7 +62,7 @@ a {
 
 h1 {
 	font-family: 'degular-display', sans-serif;
-	font-weight: 800;
+	font-weight: 700;
 	text-align: center;
 }
 
