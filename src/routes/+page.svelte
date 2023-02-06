@@ -71,7 +71,7 @@
 		/* background: #f6f6f6a0;
 		border: solid 2px var(--primary); */
 		
-		min-width: 90vw;
+		min-width: 40vw;
 		line-height: 6vw;
 		
 		position: absolute;
