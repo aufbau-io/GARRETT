@@ -71,8 +71,7 @@
 		/* background: #f6f6f6a0;
 		border: solid 2px var(--primary); */
 		
-		min-width: 40vw;
-		max-width: 40vw;
+		min-width: 90vw;
 		line-height: 6vw;
 		
 		position: absolute;
@@ -92,7 +91,7 @@
 		-webkit-text-stroke-color: var(--primary); */
 		letter-spacing: 3px;
 
-		/* text-shadow: 2px 2px 0px var(--background); */
+		text-shadow: 2px 2px 0px var(--background);
 	}
 
 	.entry {
