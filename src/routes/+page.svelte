@@ -164,7 +164,8 @@
 
 	.entry:hover {
 		background-color: var(--primary);
-		color: var(--background)
+		color: var(--background);
+		border-color: var(--background);
 	}
 
 	.entry:active {
