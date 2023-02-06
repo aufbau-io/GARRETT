@@ -91,7 +91,7 @@
 		-webkit-text-stroke-color: var(--primary); */
 		letter-spacing: 3px;
 
-		text-shadow: 2px 2px 0px var(--background);
+		/* text-shadow: 2px 2px 0px var(--background); */
 	}
 
 	.entry {
