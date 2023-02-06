@@ -85,12 +85,11 @@
 	header {
 		width: 48vh;
 		height: 30px;
-		padding-bottom: 4px;
+		padding-bottom: 3px;
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
+		align-items: center;
 	}
-
 
 	.icons {
 		display: flex;
