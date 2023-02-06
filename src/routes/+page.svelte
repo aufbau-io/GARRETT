@@ -26,6 +26,9 @@
 
 		</div> -->
 
+		<div >
+
+		</div>
 	<picture>
 		<h1>Business&nbsp;In&nbsp;The&nbsp;Front</h1>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
@@ -51,7 +54,7 @@
 	}
 
 	.square {
-		width: 50vh;
+		width: 48vh;
 		height: 50vh;
 		background: none;
 		border: solid 2px var(--primary);
