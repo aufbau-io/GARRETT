@@ -151,7 +151,7 @@
 		background: var(--background);
 		border: double 6px var(--primary);
 
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 
 		display: flex;
 		align-items: center;
