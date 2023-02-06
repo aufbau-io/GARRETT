@@ -4,7 +4,7 @@
 	import headshot_fallback from '$lib/images/headshot.jpg';
 	
 	// import casual from '$lib/images/casual.png';
-	import casual from '$lib/images/casual-removebg.png';
+	import casual from '$lib/images/mac.jpg';
 	
 </script>
 
@@ -22,15 +22,15 @@
 
 <section>
 
-	<div class="square">
+	<!-- <div class="square">
+
+		</div> -->
+
+	<picture>
 		<h1>Business&nbsp;In&nbsp;The&nbsp;Front</h1>
-		</div>
-
-	<!-- <picture>
-
-		<source srcset={casual} type="image/webp"  />
+		<!-- <source srcset={casual} type="image/webp"  /> -->
 		<img src={casual} alt="Headshot" />
-	</picture> -->
+	</picture>
 
 
 	<div class="entry">
