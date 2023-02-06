@@ -15,14 +15,14 @@ export default class Mac {
 	setModel() {
 		this.base_size = 2.5;
 
-		const x = Math.random() * this.base_size * 3 - this.base_size * 1.5;
-		const y = Math.random() * this.base_size - this.base_size / 2;
+		const x = Math.random() * this.base_size * 2 - this.base_size;
+		const y = Math.random() * this.base_size * 2 - this.base_size;
 		const z = (Math.random() * this.base_size) / 2;
 
 		this.size = z;
 
 		const geometry = new THREE.BoxGeometry(z / 2, z / 2, z / 2);
-		const material = new THREE.MeshNormalMaterial({});
+		const material = new THREE.MeshToonMaterial({ color: 0x0b0b0b });
 
 		// let loader = new THREE.TextureLoader();
 		// let materialArray = [

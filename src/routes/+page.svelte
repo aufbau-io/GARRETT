@@ -5,6 +5,11 @@
 	
 	// import casual from '$lib/images/casual.png';
 	import casual from '$lib/images/casual-removebg.png';
+
+	import instagram from '$lib/images/icons/Instagram.svg';
+	import linkedin from '$lib/images/icons/Linkedin.svg';
+	import mail from '$lib/images/icons/Mail.svg';
+	import twitter from '$lib/images/icons/Twitter.svg';
 	
 </script>
 
@@ -22,17 +27,24 @@
 
 <section>
 
-	<!-- <div class="square">
+
+
+		<header>
+			<h6>GARRETT MUSAR</h6>
+		<div class="icons">
+			<img src={instagram} alt="instagram" class="icon" />
+			<img src={linkedin} alt="linkedin" class="icon" />
+			<img src={mail} alt="mail" class="icon" />
+			<img src={twitter} alt="twitter" class="icon" />
+		</div>
+	</header>
+		<!-- <div class="square">
 
 		</div> -->
-
-		<div >
-
-		</div>
 	<picture>
 		<h1>Business&nbsp;In&nbsp;The&nbsp;Front</h1>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
-		<img src={casual} alt="Headshot" />
+		<img src={casual} alt="Headshot" class="headshot" />
 	</picture>
 
 
@@ -69,7 +81,28 @@
 		position: relative;
 	}
 
-	 img {
+	header {
+		width: 50vh;
+		height: 30px;
+		padding-bottom: 4px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+
+	.icons {
+		display: flex;
+		gap: 4px;
+	}
+
+	.icon {
+		height: 25px;
+		width: 25px;
+	}
+
+
+	 .headshot {
 		height: 50vh;
 		width: 50vh;
 		margin: auto;
