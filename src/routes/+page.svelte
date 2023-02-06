@@ -131,7 +131,7 @@
 	.entry:active {
 		background: var(--background);
 		color: var(--primary);
-		border-color: var(--white);
+		border-color: var(--primary);
 	}
 
 	h2 {
