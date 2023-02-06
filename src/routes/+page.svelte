@@ -127,6 +127,7 @@
 		bottom: 10%;
 		left: 50%;
 		transform: translate(-50%, 0%);
+		text-transform: uppercase;
 
 		z-index: 10;
 
@@ -134,11 +135,11 @@
 
 		width: 100%;
 
-		font-size: 30px;
+		font-size: 24px;
 		color: var(--background);
 		/* -webkit-text-stroke:1px; */
 		/* -webkit-text-stroke-color: var(--background); */
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 
 		/* text-shadow: 2px 2px 0px var(--background); */
 	}
