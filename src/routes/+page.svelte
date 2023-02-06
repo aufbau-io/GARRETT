@@ -4,7 +4,7 @@
 	import headshot_fallback from '$lib/images/headshot.jpg';
 	
 	// import casual from '$lib/images/casual.png';
-	import casual from '$lib/images/mac.jpg';
+	import casual from '$lib/images/casual-removebg.png';
 	
 </script>
 
@@ -71,7 +71,7 @@
 		width: 50vh;
 		margin: auto;
 		object-fit: cover;
-		border: solid 2px var(--primary);
+		border: double 6px var(--primary);
 
 		object-position: 0% 22.5%;
 		/* box-shadow: 0 0 10px var(--primary); */
@@ -81,16 +81,16 @@
 		/* height: 50vh;
 		width: 50vh; */
 		background: var(--primary);
-		border: double 5px var(--background);
+		border: double 6px var(--background);
 		
 		min-width: 60vh;
-		height: 68px;
-		line-height: 60px;
+		height: 80px;
+		line-height: 70px;
 		
 		position: absolute;
-		top: 50%;
+		bottom: 10%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, 0%);
 
 		z-index: 10;
 
@@ -110,9 +110,9 @@
 	.entry {
 		width: 50vh;
 		margin-top: 2vh;
-		height: 5vh;
+		height: 6vh;
 		background: var(--background);
-		border: solid 2px var(--primary);
+		border: double 6px var(--primary);
 
 		display: flex;
 		align-items: center;
@@ -135,7 +135,7 @@
 	}
 
 	h2 {
-		font-size: 14px;
+		font-size: 16px;
 		color: inherit;
 		letter-spacing: 3px;
 	}

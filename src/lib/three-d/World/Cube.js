@@ -20,19 +20,19 @@ export default class Mac {
 		const z = Math.random() * this.size - this.size / 2;
 
 		const geometry = new THREE.BoxGeometry(z / 2, z / 2, z / 2);
-		// const material = new THREE.MeshNormalMaterial({ color: 0x232323 });
+		const material = new THREE.MeshNormalMaterial({});
 
-		let loader = new THREE.TextureLoader();
-		let materialArray = [
-			new THREE.MeshBasicMaterial({ map: loader.load('xpos.png') }),
-			new THREE.MeshBasicMaterial({ map: loader.load('xneg.png') }),
-			new THREE.MeshBasicMaterial({ map: loader.load('ypos.png') }),
-			new THREE.MeshBasicMaterial({ map: loader.load('yneg.png') }),
-			new THREE.MeshBasicMaterial({ map: loader.load('zpos.png') }),
-			new THREE.MeshBasicMaterial({ map: loader.load('zneg.png') })
-		];
+		// let loader = new THREE.TextureLoader();
+		// let materialArray = [
+		// 	new THREE.MeshBasicMaterial({ map: loader.load('xpos.png') }),
+		// 	new THREE.MeshBasicMaterial({ map: loader.load('xneg.png') }),
+		// 	new THREE.MeshBasicMaterial({ map: loader.load('ypos.png') }),
+		// 	new THREE.MeshBasicMaterial({ map: loader.load('yneg.png') }),
+		// 	new THREE.MeshBasicMaterial({ map: loader.load('zpos.png') }),
+		// 	new THREE.MeshBasicMaterial({ map: loader.load('zneg.png') })
+		// ];
 
-		this.model = new THREE.Mesh(geometry, materialArray);
+		this.model = new THREE.Mesh(geometry, material);
 		this.scene.add(this.model);
 
 		this.model.position.x = x;
