@@ -53,9 +53,9 @@
 
 
 	<div class="entry">
-		<h2 class="arrow">→</h2>
+		<h2 class="arrow">$</h2>
 		<h2>COME ON BACK</h2>
-		<h2 class="arrow">←</h2>
+		<h2 class="arrow">$</h2>
 	</div>
 
 </section>
@@ -156,7 +156,7 @@
 	}
 
 	.entry {
-		width: 48vh;
+		width: 36vh;
 		margin-top: 1.5vh;
 		height: 6vh;
 		background: var(--background);
