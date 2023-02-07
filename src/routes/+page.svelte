@@ -34,7 +34,7 @@
 
 
 		<header>
-			<h6>GARRETT MUSAR</h6>
+			<h2>GARRETT MUSAR</h2>
 		<div class="icons">
 			<img src={instagram} alt="instagram" class="icon" />
 			<img src={linkedin} alt="linkedin" class="icon" />
@@ -53,7 +53,9 @@
 
 
 	<div class="entry">
+		<h2 class="arrow">→</h2>
 		<h2>COME ON BACK</h2>
+		<h2 class="arrow">←</h2>
 	</div>
 
 </section>
@@ -155,7 +157,7 @@
 
 	.entry {
 		width: 48vh;
-		margin-top: 2vh;
+		margin-top: 1.5vh;
 		height: 6vh;
 		background: var(--background);
 		border: double 6px var(--primary);
@@ -164,9 +166,9 @@
 
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-around;
 
-		color: var(--primary);
+		color: var(--background);
 		cursor: pointer;
 		/* box-shadow: 0 0 10px var(--primary); */
 	}
@@ -184,9 +186,19 @@
 	}
 
 	h2 {
-		font-size: 16px;
+		font-size: 15px;
 		color: inherit;
 		letter-spacing: 3px;
+	}
+
+.arrow {
+		font-family: heldane;
+		font-size: 30px;
+		color: var(--primary);
+	}
+
+.entry:hover .arrow {
+		color: var(--background);
 	}
 
 
