@@ -95,6 +95,11 @@
 		align-items: center;
 	}
 
+	header h6 {
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
+
 	.icons {
 		display: flex;
 		gap: 4px;
