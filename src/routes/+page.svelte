@@ -192,7 +192,7 @@
 	}
 
 .arrow {
-		font-family: heldane;
+		font-family: heldane, serif;
 		font-size: 30px;
 		color: var(--primary);
 	}
