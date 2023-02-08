@@ -209,90 +209,90 @@
 
 	.fade-1 {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out .1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out .1s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out .1s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out .1s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out .1s;
+		-webkit-animation: fadein 0s ease-out 0s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out 0s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out 0s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out 0s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out 0s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-2 {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out .2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out .2s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out .2s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out .2s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out .2s;
+		-webkit-animation: fadein 0s ease-out .2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .2s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .2s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .2s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .2s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-3a {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out .3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out .3s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out .3s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out .3s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out .3s;
+		-webkit-animation: fadein 0s ease-out .3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .3s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .3s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .3s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .3s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-3b {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out .333s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out .333s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out .333s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out .333s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out .333s;
+		-webkit-animation: fadein 0s ease-out .333s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .333s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .333s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .333s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .333s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-3c {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out .4s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out .4s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out .4s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out .4s;
+		-webkit-animation: fadein 0s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .4s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .4s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .4s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .4s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-3d {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out .45s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out .45s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out .45s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out .45s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out .45s;
+		-webkit-animation: fadein 0s ease-out .45s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .45s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .45s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .45s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .45s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-4 {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out .4s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out .4s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out .4s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out .4s;
+		-webkit-animation: fadein 0s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .4s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .4s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .4s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .4s;
 						animation-fill-mode: forwards;
 	}
 
 	.color-change {
-		-webkit-animation: colorChange .1s ease-out .85s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: colorChange .1s ease-out .85s; /* Firefox < 16 */
-        -ms-animation: colorChange .1s ease-out .85s; /* Internet Explorer */
-         -o-animation: colorChange .1s ease-out .85s; /* Opera < 12.1 */
-            animation: colorChange .1s ease-out .85s;
+		-webkit-animation: colorChange 0s ease-out .85s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: colorChange 0s ease-out .85s; /* Firefox < 16 */
+        -ms-animation: colorChange 0s ease-out .85s; /* Internet Explorer */
+         -o-animation: colorChange 0s ease-out .85s; /* Opera < 12.1 */
+            animation: colorChange 0s ease-out .85s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-5 {
 		opacity: 0;
-		-webkit-animation: fadein .1s ease-out 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein .1s ease-out 1s; /* Firefox < 16 */
-        -ms-animation: fadein .1s ease-out 1s; /* Internet Explorer */
-         -o-animation: fadein .1s ease-out 1s; /* Opera < 12.1 */
-            animation: fadein .1s ease-out 1s;
+		-webkit-animation: fadein 0s ease-out 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out 1s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out 1s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out 1s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out 1s;
 						animation-fill-mode: forwards;
 	}
 
