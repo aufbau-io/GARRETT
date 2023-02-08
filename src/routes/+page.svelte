@@ -209,16 +209,6 @@
 
 	.fade-1 {
 		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .1s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .1s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .1s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .1s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-2 {
-		opacity: 0;
 		-webkit-animation: fadein 0s ease-out .2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 0s ease-out .2s; /* Firefox < 16 */
         -ms-animation: fadein 0s ease-out .2s; /* Internet Explorer */
@@ -227,7 +217,7 @@
 						animation-fill-mode: forwards;
 	}
 
-	.fade-3a {
+	.fade-2 {
 		opacity: 0;
 		-webkit-animation: fadein 0s ease-out .3s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 0s ease-out .3s; /* Firefox < 16 */
@@ -237,53 +227,63 @@
 						animation-fill-mode: forwards;
 	}
 
+	.fade-3a {
+		opacity: 0;
+		-webkit-animation: fadein 0s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .4s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .4s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .4s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .4s;
+						animation-fill-mode: forwards;
+	}
+
 	.fade-3b {
 		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .333s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .333s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .333s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .333s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .333s;
+		-webkit-animation: fadein 0s ease-out .433s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .433s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .433s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .433s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .433s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-3c {
 		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .4s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .4s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .4s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .4s;
+		-webkit-animation: fadein 0s ease-out .5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .5s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .5s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .5s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .5s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-3d {
 		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .45s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .45s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .45s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .45s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .45s;
+		-webkit-animation: fadein 0s ease-out .65s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .65s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .65s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .65s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .65s;
 						animation-fill-mode: forwards;
 	}
 
 	.fade-4 {
 		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .4s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .4s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .4s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .4s;
+		-webkit-animation: fadein 0s ease-out .5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .5s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .5s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .5s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .5s;
 						animation-fill-mode: forwards;
 	}
 
 	.color-change {
 		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .85s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .85s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .85s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .85s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .85s;
+		-webkit-animation: fadein 0s ease-out .8s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .8s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .8s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .8s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .8s;
 						animation-fill-mode: forwards;
 	}
 
