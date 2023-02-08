@@ -209,11 +209,11 @@
 
 	.fade-1 {
 		opacity: 0;
-		-webkit-animation: fadein 0s ease-out 0s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out 0s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out 0s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out 0s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out 0s;
+		-webkit-animation: fadein 0s ease-out .1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .1s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .1s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .1s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .1s;
 						animation-fill-mode: forwards;
 	}
 
