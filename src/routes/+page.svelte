@@ -159,8 +159,8 @@
 		width: 48vh;
 		margin-top: 1vh;
 		height: 6vh;
-		background: var(--background);
-		border: double 6px var(--primary);
+		background: var(--primary);
+		border: double 6px var(--background);
 
 		margin-bottom: 30px;
 
@@ -169,22 +169,22 @@
 		align-items: center;
 		justify-content: space-around;
 
-		color: var(--primary);
+		color: var(--background);
 		cursor: pointer;
 		/* box-shadow: 0 0 10px var(--primary); */
 
 	}
 
 	.entry:hover {
-		background-color: var(--primary);
-		color: var(--background);
-		border-color: var(--background);
+		background-color: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
 	}
 
 	.entry:active {
-		background: var(--background);
-		color: var(--primary);
-		border-color: var(--primary);
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
 
 		
 	}
@@ -278,11 +278,12 @@
 	}
 
 	.color-change {
-		-webkit-animation: colorChange 0s ease-out .85s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: colorChange 0s ease-out .85s; /* Firefox < 16 */
-        -ms-animation: colorChange 0s ease-out .85s; /* Internet Explorer */
-         -o-animation: colorChange 0s ease-out .85s; /* Opera < 12.1 */
-            animation: colorChange 0s ease-out .85s;
+		opacity: 0;
+		-webkit-animation: fadein 0s ease-out .85s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0s ease-out .85s; /* Firefox < 16 */
+        -ms-animation: fadein 0s ease-out .85s; /* Internet Explorer */
+         -o-animation: fadein 0s ease-out .85s; /* Opera < 12.1 */
+            animation: fadein 0s ease-out .85s;
 						animation-fill-mode: forwards;
 	}
 
