@@ -278,11 +278,11 @@
 	}
 
 	.color-change {
-		-webkit-animation: colorChange .1s ease-out .8s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: colorChange .1s ease-out .8s; /* Firefox < 16 */
-        -ms-animation: colorChange .1s ease-out .8s; /* Internet Explorer */
-         -o-animation: colorChange .1s ease-out .8s; /* Opera < 12.1 */
-            animation: colorChange .1s ease-out .8s;
+		-webkit-animation: colorChange .1s ease-out .85s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: colorChange .1s ease-out .85s; /* Firefox < 16 */
+        -ms-animation: colorChange .1s ease-out .85s; /* Internet Explorer */
+         -o-animation: colorChange .1s ease-out .85s; /* Opera < 12.1 */
+            animation: colorChange .1s ease-out .85s;
 						animation-fill-mode: forwards;
 	}
 
