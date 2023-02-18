@@ -122,8 +122,8 @@
 	h1 {
 		/* height: 50vh;
 		width: 50vh; */
-		background: var(--primary);
-		border: double 6px var(--background);
+		background: var(--background);
+		border: double 6px var(--primary);
 		
 		min-width: 54vh;
 		height: 75px;
@@ -142,7 +142,7 @@
 		width: 100%;
 
 		font-size: 24px;
-		color: var(--background);
+		color: var(--primary);
 		letter-spacing: 3px;
 	}
 
