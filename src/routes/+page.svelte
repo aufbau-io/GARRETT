@@ -160,8 +160,8 @@
 		width: 48vh;
 		margin-top: 1vh;
 		height: 6vh;
-		background: var(--primary);
-		border: double 6px var(--background);
+		background: var(--background);
+		border: double 6px var(--primary);
 
 		margin-bottom: 30px;
 
@@ -170,22 +170,22 @@
 		align-items: center;
 		justify-content: space-around;
 
-		color: var(--background);
+		color: var(--primary);
 		cursor: pointer;
 		/* box-shadow: 0 0 10px var(--primary); */
 
 	}
 
 	.entry:hover {
-		background-color: var(--background);
-		color: var(--primary);
-		border-color: var(--primary);
+		background-color: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
 	}
 
 	.entry:active {
-		background: var(--primary);
-		color: var(--background);
-		border-color: var(--background);
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
 
 		
 	}
