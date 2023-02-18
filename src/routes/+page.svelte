@@ -155,9 +155,9 @@ crossorigin="anonymous"
 	}
 
 	.entry {
-		width: 48vh;
-		margin-top: 1vh;
-		height: 6vh;
+		width: 44vh;
+		margin-top: 1.25vh;
+		height: 5.5vh;
 		background: var(--background);
 		border: double 6px var(--primary);
 
