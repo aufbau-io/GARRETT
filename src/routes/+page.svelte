@@ -51,9 +51,9 @@
 
 
 	<div class="entry fase-a">
-		<!-- <h2 class="arrow">$</h2> -->
+		<h2 class="arrow">$</h2>
 		<h2 class="fade-a">COME ON BACK</h2>
-		<!-- <h2 class="arrow">$</h2> -->
+		<h2 class="arrow">$</h2>
 	</div>
 
 </section>
@@ -170,7 +170,7 @@
 		align-items: center;
 		justify-content: space-around;
 
-		color: var(--primary);
+		color: var(--background);
 		cursor: pointer;
 		/* box-shadow: 0 0 10px var(--primary); */
 
