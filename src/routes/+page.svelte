@@ -51,9 +51,9 @@
 
 
 	<div class="entry fase-a">
-		<h2 class="arrow">$</h2>
+		<h2 class="arrow">▢</h2>
 		<h2 class="fade-a">COME ON BACK</h2>
-		<h2 class="arrow">$</h2>
+		<h2 class="arrow">▢</h2>
 	</div>
 
 </section>
