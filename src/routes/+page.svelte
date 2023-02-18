@@ -51,9 +51,9 @@
 
 
 	<div class="entry fase-a">
-		<h2 class="arrow">▢</h2>
+		<!-- <h2 class="arrow">▢</h2> -->
 		<h2 class="fade-a">COME ON BACK</h2>
-		<h2 class="arrow">▢</h2>
+		<!-- <h2 class="arrow">▢</h2> -->
 	</div>
 
 </section>
@@ -128,8 +128,8 @@
 	h1 {
 		/* height: 50vh;
 		width: 50vh; */
-		background: var(--primary);
-		border: double 6px var(--background);
+		background: var(--background);
+		border: double 6px var(--primary);
 		
 		min-width: 54vh;
 		height: 75px;
@@ -147,8 +147,8 @@
 
 		width: 100%;
 
-		font-size: 24px;
-		color: var(--background);
+		font-size: 22px;
+		color: var(--primary);
 		/* -webkit-text-stroke:1px; */
 		/* -webkit-text-stroke-color: var(--background); */
 		letter-spacing: 2px;

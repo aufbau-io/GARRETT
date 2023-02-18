@@ -36,7 +36,7 @@ export default class Mac {
 		this.gradientTexture.magFilter = THREE.NearestFilter;
 
 		let material = new THREE.MeshToonMaterial({
-			color: 0x1b1b1b,
+			color: 0xe0e0d0,
 			gradientMap: this.gradientTexture
 		});
 
