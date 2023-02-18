@@ -97,12 +97,6 @@
 		color: var(--accent);
 	}
 
-	header h6 {
-		font-size: 16px;
-		letter-spacing: 2px;
-		
-	}
-
 	.icons {
 		display: flex;
 		gap: 4px;
@@ -128,8 +122,8 @@
 	h1 {
 		/* height: 50vh;
 		width: 50vh; */
-		background: var(--background);
-		border: double 6px var(--primary);
+		background: var(--primary);
+		border: double 6px var(--background);
 		
 		min-width: 54vh;
 		height: 75px;
@@ -147,13 +141,9 @@
 
 		width: 100%;
 
-		font-size: 22px;
-		color: var(--primary);
-		/* -webkit-text-stroke:1px; */
-		/* -webkit-text-stroke-color: var(--background); */
-		letter-spacing: 2px;
-
-		/* text-shadow: 2px 2px 0px var(--background); */
+		font-size: 24px;
+		color: var(--background);
+		letter-spacing: 3px;
 	}
 
 	.entry {
@@ -191,7 +181,7 @@
 	}
 
 	h2 {
-		font-size: 15px;
+		font-size: 16px;
 		color: inherit;
 		letter-spacing: 3px;
 		font-family: untitled, sans-serif;
