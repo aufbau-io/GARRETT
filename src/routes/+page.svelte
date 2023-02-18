@@ -22,9 +22,17 @@
 	<link
 	rel="preload"
 	as="font"
-	href="/fonts/test-heldance-display.bold.woff2"
+	href="/fonts/test-financier-display.bold.woff2"
 	type="font/woff2"
 	crossorigin="anonymous"
+/>
+
+<link
+rel="preload"
+as="font"
+href="/fonts/test-untitled-sans.regular.woff2"
+type="font/woff2"
+crossorigin="anonymous"
 />
 
 </svelte:head>
