@@ -22,7 +22,7 @@ export default class Mac {
 		this.size = z;
 
 		const geometry = new THREE.BoxGeometry(z / 2, z / 2, z / 2);
-		const material = new THREE.MeshToonMaterial({ color: 0x0b0b0b });
+		const material = new THREE.MeshToonMaterial({ color: 0x1b1b1b });
 
 		// let loader = new THREE.TextureLoader();
 		// let materialArray = [

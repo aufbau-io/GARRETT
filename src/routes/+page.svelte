@@ -31,15 +31,13 @@
 
 <section>
 
-
-
 		<header >
-			<h2 class="fade-2">GARRETT MUSAR</h2>
+			<h2 class="fade-a">GARRETT MUSAR</h2>
 		<div class="icons ">
-			<img src={instagram} alt="instagram" class="icon fade-3a" />
-			<img src={linkedin} alt="linkedin" class="icon fade-3b" />
-			<img src={mail} alt="mail" class="icon fade-3c" />
-			<img src={twitter} alt="twitter" class="icon fade-3d" />
+			<img src={instagram} alt="instagram" class="icon fade-a" />
+			<img src={linkedin} alt="linkedin" class="icon fade-a" />
+			<img src={mail} alt="mail" class="icon fade-a" />
+			<img src={twitter} alt="twitter" class="icon fade-a" />
 		</div>
 	</header>
 		<!-- <div class="square">
@@ -48,13 +46,13 @@
 	<picture>
 		<h1 class="fade">Business&nbsp;In&nbsp;The&nbsp;Front</h1>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
-		<img src={casual} alt="Headshot" class="headshot fade-1" />
+		<img src={casual} alt="Headshot" class="headshot fade-a" />
 	</picture>
 
 
-	<div class="entry color-change">
+	<div class="entry fase-a">
 		<!-- <h2 class="arrow">$</h2> -->
-		<h2 class="fade-5">COME ON BACK</h2>
+		<h2 class="fade-a">COME ON BACK</h2>
 		<!-- <h2 class="arrow">$</h2> -->
 	</div>
 
@@ -69,6 +67,7 @@
 	
 		width: 100%;
 		height: 100%;
+		/* opacity: 0; */
 	}
 
 	.square {
@@ -95,11 +94,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		color: var(--accent);
 	}
 
 	header h6 {
 		font-size: 16px;
 		letter-spacing: 2px;
+		
 	}
 
 	.icons {
@@ -193,7 +194,8 @@
 		font-size: 15px;
 		color: inherit;
 		letter-spacing: 3px;
-		font-weight: 600;
+		font-family: untitled, sans-serif;
+		font-weight: 400;
 	}
 
 .arrow {
