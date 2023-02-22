@@ -239,8 +239,13 @@
 		width: 80vw;
 	}
 	
-	picture, .square, .headshot {
-		height: 72vw;
+.headshot {
+		height: 76vw;
+	}
+
+	picture, .square {
+		margin: 0 !important;
+		padding: 0 !important;
 	}
 
 	h1 {
