@@ -11,6 +11,18 @@
 	let experience;
 	onMount(async () => {
 
+		// ---------------------------------------------------------------------------
+		// HEIGHT
+		// ---------------------------------------------------------------------------
+
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+		window.addEventListener('resize', () => {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+
 		const experience = new Experience(document.querySelector('canvas.webgl'))
 
 		// ---------------------------------------------------------------------------
@@ -67,9 +79,9 @@
 
 		width: 100%;
 		height: 100%;
+		height: calc(var(--vh, 1vh) * 100);
 
 		width: 100vw;
-		min-height: 100vh;
 	}
 
 	.webgl {
@@ -77,7 +89,9 @@
 		z-index: -10;
 
 		width: 100%;
+		
 		height: 100%;
+		height: calc(var(--vh, 1vh) * 100);
 	}
 
 	main {
