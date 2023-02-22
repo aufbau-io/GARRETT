@@ -73,14 +73,14 @@ crossorigin="anonymous"
 		justify-content: center;
 		align-items: center;
 	
-		width: 100%;
+		width: 48vh;
 		height: 100%;
 		/* opacity: 0; */
 	}
 
 	.square {
-		width: 48vh;
-		height: 50vh;
+		width: 100%;
+		height: 100%;
 		background: none;
 		border: solid 2px var(--primary);
 		position: relative;
@@ -93,10 +93,11 @@ crossorigin="anonymous"
 		border: solid 1px var(--primary); */
 		position: relative;
 		background: var(--background);
+		border: double 6px var(--primary)
 	}
 
 	header {
-		width: 48vh;
+		width: 100%;
 		height: 30px;
 		padding-bottom: 3px;
 		display: flex;
@@ -115,14 +116,11 @@ crossorigin="anonymous"
 		width: 25px;
 	}
 
-
-	 .headshot {
-		height: 48vh;
-		width: 48vh;
+	.headshot {
+		height: 52vh;
+		width: 52vh;
 		margin: auto;
 		object-fit: cover;
-		border: double 6px var(--primary);
-
 		object-position: 0% 22.5%;
 		/* box-shadow: 0 0 10px var(--primary); */
 	}
@@ -133,7 +131,7 @@ crossorigin="anonymous"
 		background: var(--primary);
 		border: double 6px var(--background);
 		
-		min-width: 54vh;
+		min-width: 120%;
 		height: 75px;
 		line-height: 65px;
 		
@@ -155,7 +153,7 @@ crossorigin="anonymous"
 	}
 
 	.entry {
-		width: 44vh;
+		width: 100%;
 		margin-top: 1.25vh;
 		height: 5.5vh;
 		background: var(--background);
@@ -206,111 +204,6 @@ crossorigin="anonymous"
 		color: var(--background);
 	}
 
-
-	.fade-1 {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .2s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .2s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .2s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .2s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-2 {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .3s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .3s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .3s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .3s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-3a {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .4s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .4s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .4s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .4s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-3b {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .433s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .433s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .433s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .433s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .433s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-3c {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .5s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .5s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .5s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .5s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-3d {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .65s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .65s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .65s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .65s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .65s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-4 {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .5s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .5s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .5s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .5s;
-						animation-fill-mode: forwards;
-	}
-
-	.color-change {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out .8s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out .8s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out .8s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out .8s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out .8s;
-						animation-fill-mode: forwards;
-	}
-
-	.fade-5 {
-		opacity: 0;
-		-webkit-animation: fadein 0s ease-out 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 0s ease-out 1s; /* Firefox < 16 */
-        -ms-animation: fadein 0s ease-out 1s; /* Internet Explorer */
-         -o-animation: fadein 0s ease-out 1s; /* Opera < 12.1 */
-            animation: fadein 0s ease-out 1s;
-						animation-fill-mode: forwards;
-	}
-
-	@keyframes colorChange {
-    from { 
-			background: var(--background); 
-			border-color: var(--primary);
-			color: var(--primary);
-		}
-    to   { 
-			background: var(--primary); 
-			border-color: var(--background);
-			color: var(--background);
-		}
-	}
-
-
 	@keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -342,6 +235,14 @@ crossorigin="anonymous"
 
 
 @media (max-width: 760px) {
+	section {
+		width: 80vw;
+	}
+	
+	picture, .square, .headshot {
+		height: 72vw;
+	}
+
 	picture {
 		min-width: none;
 		min-height: 80vw;
