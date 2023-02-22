@@ -14,6 +14,20 @@ export default class World {
 		this.n_cubes = 18;
 		let third_cubes = this.n_cubes / 3;
 		this.positions = this.make_positions(this.n_cubes);
+		let positions_1 = [];
+		let positions_2 = [];
+		let positions_3 = [];
+
+		// console.log(this.positions);
+		for (let i = 0; i < this.n_cubes; i++) {
+			if (i % 3 == 0) {
+				positions_1.push(this.positions[i]);
+			} else if ((i - 1) % 3 == 0) {
+				positions_2.push(this.positions[i]);
+			} else {
+				positions_3.push(this.positions[i]);
+			}
+		}
 
 		// Wait for resources
 		this.resources.on('ready', () => {
@@ -22,15 +36,13 @@ export default class World {
 			// this.mac = new Mac();
 			this.environment = new Environment();
 
-			this.fax_machine = new FaxMachine(third_cubes, this.positions.slice(0, third_cubes));
-			this.briefcase = new Briefcase(
-				third_cubes,
-				this.positions.slice(third_cubes, third_cubes * 2)
-			);
-			this.handshake = new Handshake(
-				third_cubes,
-				this.positions.slice(third_cubes * 2, this.n_cubes)
-			);
+			console.log(positions_1);
+			console.log(positions_2);
+			console.log(positions_3);
+
+			this.fax_machine = new FaxMachine(third_cubes, positions_1);
+			this.briefcase = new Briefcase(third_cubes, positions_2);
+			this.handshake = new Handshake(third_cubes, positions_3);
 
 			for (let i = 0; i < this.n_cubes; i++) {
 				// this.cubes[i] = new Cube();
@@ -40,7 +52,7 @@ export default class World {
 
 	make_positions(n_cubes) {
 		let a = [...Array(n_cubes / 3).keys()];
-		console.log(a);
+
 		// a = a.flatMap((i) => [i, i, i]);
 
 		// let b = [...Array(n_cubes).keys()];
@@ -78,6 +90,7 @@ export default class World {
 			//z = z / 6;
 			//z += 1;
 			// if (z > 3) z = 4;
+			// let z = i % 2 == 0 ? 1.5 : 2;
 			let z = 1.5;
 			// c.splice(zi, 1);
 

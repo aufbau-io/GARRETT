@@ -58,9 +58,9 @@ export default class Handshake {
 			model_clone.position.y = y;
 			model_clone.position.z = z;
 
-			// model_clone.rotation.x = Math.random() * 2;
-			model_clone.rotation.y = Math.random() * 2;
-			// model_clone.rotation.z = Math.random() * 2;
+			model_clone.rotation.x = Math.random() * 6;
+			model_clone.rotation.y = Math.random() * 6;
+			model_clone.rotation.z = Math.random() * 6;
 
 			this.models.push(model_clone);
 		}
@@ -74,9 +74,9 @@ export default class Handshake {
 				this.models[i].position.y = -this.base_size;
 			}
 
-			this.models[i].rotation.x += 0.001;
-			this.models[i].rotation.y += 0.001;
-			this.models[i].rotation.z += 0.001;
+			this.models[i].rotation.x += 0.0003;
+			this.models[i].rotation.y += 0.0003;
+			this.models[i].rotation.z += 0.0003;
 
 			// console.log('x', this.models[i].position.x);
 			// console.log('y', this.models[i].position.y);
