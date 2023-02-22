@@ -4,11 +4,8 @@
 	import { onMount } from 'svelte';
 	import { screenType, iframe } from '$lib/store/store';
 
-	import Header from '$lib/components/header/header.svelte';
-	import Footer from '$lib/components/footer/footer.svelte';
 	import Experience from '$lib/three-d/Experience.js'
 
-	let experience;
 	onMount(async () => {
 
 		// ---------------------------------------------------------------------------
@@ -48,6 +45,30 @@
 		}
 	});
 </script>
+
+<svelte:head>
+	<title>Garrett “All Business” Musar</title>
+	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
+
+	<link rel="preload" href={casual} as="image/jpg" />
+
+	<link
+	rel="preload"
+	as="font"
+	href="/fonts/test-financier-display-medium.woff2"
+	type="font/woff2"
+	crossorigin="anonymous"
+	/>
+
+	<link
+	rel="preload"
+	as="font"
+	href="/fonts/test-untitled-sans-regular.woff2"
+	type="font/woff2"
+	crossorigin="anonymous"
+	/>
+
+</svelte:head>
 
 <canvas class="webgl"></canvas>
 
