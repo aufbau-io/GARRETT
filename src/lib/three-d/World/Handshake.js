@@ -58,9 +58,9 @@ export default class Handshake {
 			model_clone.position.y = y;
 			model_clone.position.z = z;
 
-			// model_clone.rotation.x = Math.random() * 2;
+			model_clone.rotation.x = Math.random() * 2;
 			model_clone.rotation.y = Math.random() * 2;
-			// model_clone.rotation.z = Math.random() * 2;
+			model_clone.rotation.z = Math.random() * 2;
 
 			this.models.push(model_clone);
 		}
