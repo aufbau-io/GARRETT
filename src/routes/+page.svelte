@@ -133,7 +133,7 @@ crossorigin="anonymous"
 		
 		min-width: 120%;
 		height: 75px;
-		line-height: 65px;
+		line-height: 64px;
 		
 		position: absolute;
 		bottom: 10%;
