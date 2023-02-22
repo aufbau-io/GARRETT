@@ -22,7 +22,7 @@ export default class Handshake {
 		// this.size = 1 / this.positions[0][2];
 
 		this.model = this.resource.scene;
-		this.model.scale.set(0.5, 0.5, 0.5);
+		this.model.scale.set(0.75, 0.75, 0.75);
 		this.scene.add(this.model);
 		this.models = [this.model];
 
@@ -52,7 +52,7 @@ export default class Handshake {
 			let y = this.positions[i][1];
 			let z = this.positions[i][2];
 
-			model_clone.scale.set(1 / z, 1 / z, 1 / z);
+			// model_clone.scale.set(1 / z, 1 / z, 1 / z);
 
 			model_clone.position.x = x;
 			model_clone.position.y = y;
@@ -74,9 +74,9 @@ export default class Handshake {
 				this.models[i].position.y = -this.base_size;
 			}
 
-			this.models[i].rotation.x += 0.0003;
-			this.models[i].rotation.y += 0.0003;
-			this.models[i].rotation.z += 0.0003;
+			this.models[i].rotation.x += 0.0002;
+			this.models[i].rotation.y += 0.0002;
+			this.models[i].rotation.z += 0.0002;
 
 			// console.log('x', this.models[i].position.x);
 			// console.log('y', this.models[i].position.y);

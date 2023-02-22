@@ -73,26 +73,12 @@ export default class World {
 
 			let xi = Math.floor(Math.random() * a.length);
 			let x = a[xi];
-			// x = x * 2 - this.n_cubes / 9;
-			x = x * 0.75 - 0.5;
+			x = x * 0.75 - 1;
 			a.splice(xi, 1);
 
-			// let yi = Math.floor(Math.random() * b.length);
-			// let y = b[yi];
 			let y = i / 3 - 3;
-			// b.splice(yi, 1);
 
-			// let zi = Math.floor(Math.random() * c.length);
-			// let z = c[zi];
-			// z = z * 2 - this.n_cubes / 9;
-			// z = z - this.n_cubes / 9;
-			// z = z / 2;
-			//z = z / 6;
-			//z += 1;
-			// if (z > 3) z = 4;
-			// let z = i % 2 == 0 ? 1.5 : 2;
-			let z = 1.5;
-			// c.splice(zi, 1);
+			let z = i % 3;
 
 			positions.push([x, y, z]);
 			console.log(a);
