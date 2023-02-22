@@ -92,7 +92,7 @@
 		padding: calc(2 * var(--margin));
 		border: solid 1px var(--primary); */
 		position: relative;
-		background: var(--background);
+		/* background: #e0e0d0; */
 		border: double 6px var(--primary)
 	}
 
@@ -156,7 +156,7 @@
 		width: 100%;
 		margin-top: 1.25vh;
 		height: 5.5vh;
-		background: var(--background);
+		/* background: var(--background); */
 		border: double 6px var(--primary);
 
 		margin-bottom: 30px;
