@@ -243,6 +243,19 @@ crossorigin="anonymous"
 		height: 72vw;
 	}
 
+	h1 {
+		font-size: 24px;
+	}
+
+	.entry {
+		height: 6vh;
+		margin-top: 1.5vh;;
+	}
+
+	header {
+		margin-bottom: .5vh;;
+	}
+
 	picture {
 		min-width: none;
 		min-height: 80vw;
