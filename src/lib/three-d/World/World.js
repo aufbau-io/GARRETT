@@ -39,39 +39,47 @@ export default class World {
 	}
 
 	make_positions(n_cubes) {
-		let a = [...Array(n_cubes).keys()];
+		let a = [...Array(n_cubes / 3).keys()];
 		console.log(a);
 		// a = a.flatMap((i) => [i, i, i]);
 
-		let b = [...Array(n_cubes).keys()];
+		// let b = [...Array(n_cubes).keys()];
 		// b = b.flatMap((i) => [i, i, i]);
 
-		let c = [...Array(n_cubes).keys()];
+		// let c = [...Array(n_cubes).keys()];
 		// c = c.flatMap((i) => [i, i, i]);
 
 		let positions = [];
 		for (let i = 0; i <= n_cubes; i++) {
+			if (i == 6) {
+				a = [...Array(n_cubes / 3).keys()];
+			}
+
+			if (i == 12) {
+				a = [...Array(n_cubes / 3).keys()];
+			}
+
 			let xi = Math.floor(Math.random() * a.length);
 			let x = a[xi];
 			// x = x * 2 - this.n_cubes / 9;
-			x = x / 4 - 0.5;
+			x = x * 0.75 - 0.5;
 			a.splice(xi, 1);
 
-			let yi = Math.floor(Math.random() * b.length);
-			let y = b[yi];
-			y = i / 3 - 3;
-			b.splice(yi, 1);
+			// let yi = Math.floor(Math.random() * b.length);
+			// let y = b[yi];
+			let y = i / 3 - 3;
+			// b.splice(yi, 1);
 
-			let zi = Math.floor(Math.random() * c.length);
-			let z = c[zi];
+			// let zi = Math.floor(Math.random() * c.length);
+			// let z = c[zi];
 			// z = z * 2 - this.n_cubes / 9;
 			// z = z - this.n_cubes / 9;
 			// z = z / 2;
 			//z = z / 6;
 			//z += 1;
 			// if (z > 3) z = 4;
-			z = 2;
-			c.splice(zi, 1);
+			let z = 1.5;
+			// c.splice(zi, 1);
 
 			positions.push([x, y, z]);
 			console.log(a);
