@@ -79,6 +79,7 @@ export default class World {
 			let y = i / 3 + 1 - 3.5;
 
 			let z = i % 3;
+			// let z = Math.floor(Math.random() * 3);
 
 			positions.push([x, y, z]);
 			console.log(a);
