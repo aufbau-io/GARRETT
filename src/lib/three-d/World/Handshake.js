@@ -74,9 +74,9 @@ export default class Handshake {
 				this.models[i].position.y = -this.base_size;
 			}
 
-			// this.models[i].rotation.x += 0.001;
+			this.models[i].rotation.x += 0.001;
 			this.models[i].rotation.y += 0.001;
-			// this.models[i].rotation.z += 0.001;
+			this.models[i].rotation.z += 0.001;
 
 			// console.log('x', this.models[i].position.x);
 			// console.log('y', this.models[i].position.y);
