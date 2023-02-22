@@ -247,6 +247,10 @@ crossorigin="anonymous"
 		font-size: 24px;
 	}
 
+	h2 {
+		font-size: 14px;
+	}
+
 	.entry {
 		height: 6vh;
 		margin-top: 1.5vh;;
