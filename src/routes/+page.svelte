@@ -117,8 +117,8 @@ crossorigin="anonymous"
 	}
 
 	.headshot {
-		height: 52vh;
-		width: 52vh;
+		height: 48vh;
+		width: 48vh;
 		margin: auto;
 		object-fit: cover;
 		object-position: 0% 22.5%;
