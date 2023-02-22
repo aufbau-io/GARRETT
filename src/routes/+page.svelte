@@ -1,7 +1,7 @@
 <script>	
-	import { darkMode } from '$lib/store/store';
-	import headshot from '$lib/images/headshot.webp';
-	import headshot_fallback from '$lib/images/headshot.jpg';
+	// import { darkMode } from '$lib/store/store';
+	// import headshot from '$lib/images/headshot.webp';
+	// import headshot_fallback from '$lib/images/headshot.jpg';
 	
 	// import casual from '$lib/images/casual.png';
 	import casual from '$lib/images/casual-removebg.png';
@@ -12,6 +12,30 @@
 	import twitter from '$lib/images/icons/Twitter.svg';
 	
 </script>
+
+<svelte:head>
+	<title>Garrett “All Business” Musar</title>
+	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
+
+	<link rel="preload" href={casual} as="image/jpg" />
+
+	<link
+	rel="preload"
+	as="font"
+	href="/fonts/test-financier-display-medium.woff2"
+	type="font/woff2"
+	crossorigin="anonymous"
+	/>
+
+	<link
+	rel="preload"
+	as="font"
+	href="/fonts/test-untitled-sans-regular.woff2"
+	type="font/woff2"
+	crossorigin="anonymous"
+	/>
+
+</svelte:head>
 
 <section>
 
