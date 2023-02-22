@@ -27,7 +27,7 @@
 body {
 	min-height: 100vh;
 	margin: 0;
-	background: var(--background-50);
+	/* background: var(--background-50); */
 	background-attachment: fixed;
 	background-size: 100vw 100vh;
 	font-family: sans-serif;

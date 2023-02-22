@@ -11,7 +11,9 @@ export default class World {
 		this.scene = this.experience.scene;
 		this.resources = this.experience.resources;
 
-		this.n_cubes = 20;
+		this.n_cubes = 18;
+		let third_cubes = this.n_cubes / 3;
+		this.positions = this.make_positions(this.n_cubes);
 
 		// Wait for resources
 		this.resources.on('ready', () => {
@@ -20,14 +22,62 @@ export default class World {
 			// this.mac = new Mac();
 			this.environment = new Environment();
 
-			this.fax_machine = new FaxMachine();
-			this.briefcase = new Briefcase();
-			this.handshake = new Handshake();
+			this.fax_machine = new FaxMachine(third_cubes, this.positions.slice(0, third_cubes));
+			this.briefcase = new Briefcase(
+				third_cubes,
+				this.positions.slice(third_cubes, third_cubes * 2)
+			);
+			this.handshake = new Handshake(
+				third_cubes,
+				this.positions.slice(third_cubes * 2, this.n_cubes)
+			);
 
 			for (let i = 0; i < this.n_cubes; i++) {
 				// this.cubes[i] = new Cube();
 			}
 		});
+	}
+
+	make_positions(n_cubes) {
+		let a = [...Array(n_cubes).keys()];
+		console.log(a);
+		// a = a.flatMap((i) => [i, i, i]);
+
+		let b = [...Array(n_cubes).keys()];
+		// b = b.flatMap((i) => [i, i, i]);
+
+		let c = [...Array(n_cubes).keys()];
+		// c = c.flatMap((i) => [i, i, i]);
+
+		let positions = [];
+		for (let i = 0; i <= n_cubes; i++) {
+			let xi = Math.floor(Math.random() * a.length);
+			let x = a[xi];
+			// x = x * 2 - this.n_cubes / 9;
+			x = x / 4 - 0.5;
+			a.splice(xi, 1);
+
+			let yi = Math.floor(Math.random() * b.length);
+			let y = b[yi];
+			y = i / 3 - 3;
+			b.splice(yi, 1);
+
+			let zi = Math.floor(Math.random() * c.length);
+			let z = c[zi];
+			// z = z * 2 - this.n_cubes / 9;
+			// z = z - this.n_cubes / 9;
+			// z = z / 2;
+			//z = z / 6;
+			//z += 1;
+			// if (z > 3) z = 4;
+			z = 2;
+			c.splice(zi, 1);
+
+			positions.push([x, y, z]);
+			console.log(a);
+		}
+
+		return positions;
 	}
 
 	update() {
