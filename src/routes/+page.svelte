@@ -155,7 +155,7 @@
 	.entry {
 		width: 100%;
 		margin-top: 1.25vh;
-		height: 5.5vh;
+		height: 6vh;
 		background: var(--background-50);
 		border: double 6px var(--primary);
 
