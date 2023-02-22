@@ -17,7 +17,7 @@ export default class Handshake {
 	}
 
 	setModel() {
-		this.base_size = 3;
+		this.base_size = 3.5;
 
 		// this.size = 1 / this.positions[0][2];
 

@@ -76,7 +76,7 @@ export default class World {
 			x = x * 0.75 - 1;
 			a.splice(xi, 1);
 
-			let y = i / 3 - 3;
+			let y = i / 3 + 1 - 3.5;
 
 			let z = i % 3;
 
