@@ -253,7 +253,7 @@ crossorigin="anonymous"
 
 	.entry {
 		height: 7vh;
-		margin-top: 1.5vh;;
+		margin-top: 2vh;;
 	}
 
 	header {
