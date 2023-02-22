@@ -244,7 +244,9 @@ crossorigin="anonymous"
 	}
 
 	h1 {
-		font-size: 23px;
+		height: 70px;
+		line-height: 58px;
+		font-size: 22px;
 	}
 
 	h2 {
