@@ -1,9 +1,9 @@
 import Experience from '../Experience.js';
 import Environment from './Environment.js';
+
 import FaxMachine from './FaxMachine.js';
 import Briefcase from './Briefcase.js';
 import Handshake from './Handshake.js';
-import Cube from './Cube.js';
 
 export default class World {
 	constructor() {
