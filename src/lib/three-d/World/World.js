@@ -76,7 +76,7 @@ export default class World {
 			x = x * 0.75 - 1;
 			a.splice(xi, 1);
 
-			let y = i / 3 + 1 - 3.5;
+			let y = i / (18 / 7) - 3.5;
 
 			let z = i % 3;
 			// let z = Math.floor(Math.random() * 3);
