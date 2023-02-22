@@ -257,7 +257,7 @@ crossorigin="anonymous"
 	}
 
 	header {
-		margin-bottom: .5vh;;
+		margin-bottom: .4vh;;
 	}
 
 	picture {
