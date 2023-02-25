@@ -92,7 +92,7 @@
 		padding: calc(2 * var(--margin));
 		border: solid 1px var(--primary); */
 		position: relative;
-		background: var(--background-50);
+		background: var(--background);
 		border: double 6px var(--primary)
 	}
 
@@ -156,7 +156,7 @@
 		width: 100%;
 		margin-top: 1.25vh;
 		height: 6vh;
-		background: var(--background-50);
+		background: var(--background);
 		border: double 6px var(--primary);
 
 		margin-bottom: 30px;
@@ -166,9 +166,12 @@
 		align-items: center;
 		justify-content: space-around;
 
-		color: var(--background);
+		color: var(--primary);
 		cursor: pointer;
 		/* box-shadow: 0 0 10px var(--primary); */
+		opacity: 0;
+		animation: fadein .25s 2.25s ease-out;
+		animation-fill-mode: forwards;
 
 	}
 
@@ -246,6 +249,7 @@
 	picture, .square {
 		margin: 0 !important;
 		padding: 0 !important;
+		background: var(--background-50);
 	}
 
 	h1 {
@@ -261,6 +265,7 @@
 	.entry {
 		height: 7vh;
 		margin-top: 2vh;;
+		background: var(--background-50);
 	}
 
 	header {
