@@ -170,7 +170,7 @@
 		cursor: pointer;
 		/* box-shadow: 0 0 10px var(--primary); */
 		opacity: 0;
-		animation: fadein .25s 2.25s ease-out;
+		animation: fadein .4s 2.6s ease-out;
 		animation-fill-mode: forwards;
 
 	}
