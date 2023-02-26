@@ -180,6 +180,7 @@
 .entry:hover:before {
 	color: var(--primary);
   content: "COME ON BACK";
+	position: absolute;
 
 	font-size: 18px;
 		color: inherit;
@@ -302,11 +303,12 @@
 		font-size: 14px;
 	}
 
-	/* .entry {
-		height: 7vh;
-		margin-top: 2vh;;
-		background: var(--background-50);
-	} */
+	.entry {
+		height: 10vh;
+		margin-top: 2vh;
+
+	}
+
 
 	header {
 		margin-bottom: .4vh;;
