@@ -302,11 +302,11 @@
 		font-size: 14px;
 	}
 
-	.entry {
+	/* .entry {
 		height: 7vh;
 		margin-top: 2vh;;
 		background: var(--background-50);
-	}
+	} */
 
 	header {
 		margin-bottom: .4vh;;
