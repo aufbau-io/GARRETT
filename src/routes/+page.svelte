@@ -101,7 +101,9 @@
 		border: solid 1px var(--primary); */
 		position: relative;
 		background: var(--background);
-		border: double 6px var(--primary)
+		border: double 6px var(--primary);
+
+		margin-bottom: 1.5rem;
 	}
 
 	header {
