@@ -151,17 +151,16 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
 				
 		position: absolute;
 		bottom: 10%;
-		left: 50%;
-		transform: translate(-50%, 0%);
+		left: -10%;
+
 		text-transform: uppercase;
 		color: var(--background);
 		cursor: pointer;
 
-
+		transition: transform ease .1s, box-shadow ease .1s;
 	}
 	
 	h1 {
@@ -182,7 +181,7 @@
 		content: "COME ON BACK";
 		position: absolute;
 
-		font-size: 18px;
+		font-size: 20px;
 			color: inherit;
 			letter-spacing: 3px;
 			font-family: untitled, sans-serif;
@@ -218,6 +217,9 @@
 		background-color: var(--background);
 		color: var(--primary);
 		border-color: var(--primary);
+
+		box-shadow: 5px 5px var(--primary) ;
+		transform: translate(-5px, -5px);
 	}
 
 	.entry:active {
@@ -225,7 +227,8 @@
 		color: var(--background);
 		border-color: var(--background);
 
-		
+		box-shadow: none;
+		transform: translateY(0px);
 	}
 
 	h2 {
@@ -234,8 +237,6 @@
 		letter-spacing: 3px;
 		font-family: untitled, sans-serif;
 		font-weight: 400;
-
-		
 	}
 
 .arrow {
