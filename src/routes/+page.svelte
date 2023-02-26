@@ -312,6 +312,11 @@
 
 	}
 
+	.entry:active {
+		background-color: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
 
 	header {
 		margin-bottom: .4vh;;
