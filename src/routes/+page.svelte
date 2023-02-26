@@ -40,13 +40,8 @@
 <section>
 
 		<header >
-			<h2 class="fade-a">GARRETT MUSAR</h2>
-		<div class="icons ">
-			<img src={instagram} alt="instagram" class="icon fade-a" />
-			<img src={linkedin} alt="linkedin" class="icon fade-a" />
-			<img src={mail} alt="mail" class="icon fade-a" />
-			<img src={twitter} alt="twitter" class="icon fade-a" />
-		</div>
+			<!-- <h2 class="fade-a">GARRETT MUSAR</h2> -->
+
 	</header>
 		<!-- <div class="square">
 
@@ -58,6 +53,15 @@
 		<!-- <source srcset={casual} type="image/webp"  /> -->
 		<img src={casual} alt="Headshot" class="headshot fade-a" />
 	</picture>
+
+	<h2 class="tmp">GARRETT MUSAR</h2>
+	<div class="icons tmp">
+		<img src={instagram} alt="instagram" class="icon fade-a" />
+		<img src={linkedin} alt="linkedin" class="icon fade-a" />
+		<img src={mail} alt="mail" class="icon fade-a" />
+		<img src={twitter} alt="twitter" class="icon fade-a" />
+	</div>
+
 
 
 	<!-- <div class="entry fase-a">
@@ -100,21 +104,28 @@
 	header {
 		width: 100%;
 		height: 30px;
-		padding-bottom: 3px;
+		padding-bottom: 1rem;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-items: center;
 		color: var(--accent);
 	}
 
+	.tmp {
+		padding-top: .5rem;
+	}
+
 	.icons {
+		padding-top: .2rem;
 		display: flex;
+		width: 30%;
 		gap: 4px;
+		justify-content: space-evenly;
 	}
 
 	.icon {
-		height: 25px;
-		width: 25px;
+		height: 30px;
+		width: 30px;
 	}
 
 	.headshot {
@@ -217,7 +228,7 @@
 	}
 
 	h2 {
-		font-size: 16px;
+		font-size: 18px;
 		color: inherit;
 		letter-spacing: 3px;
 		font-family: untitled, sans-serif;
