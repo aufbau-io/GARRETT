@@ -112,7 +112,7 @@
 	}
 
 	.tmp {
-		padding-top: .5rem;
+		padding-top: .6rem;
 	}
 
 	.icons {
