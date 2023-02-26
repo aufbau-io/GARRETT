@@ -302,7 +302,7 @@
 		font-size: 22px;
 	}
 
-	h2 {
+	h2, .entry:hover:before {
 		font-size: 14px;
 	}
 
