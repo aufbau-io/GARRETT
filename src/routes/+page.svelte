@@ -294,8 +294,8 @@
 	}
 
 	h1 {
-		height: 70px;
-		line-height: 58px;
+		/* height: 70px; */
+		/* line-height: 58px; */
 		font-size: 22px;
 	}
 
