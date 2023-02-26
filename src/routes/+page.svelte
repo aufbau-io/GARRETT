@@ -115,7 +115,6 @@
 
 	.icons {
 		display: flex;
-
 		gap: 4px;
 		justify-content: space-evenly;
 	}
@@ -295,6 +294,12 @@
 		padding: 0 !important;
 		background: var(--background-50);
 	}
+
+	.icon {
+		height: 25px;
+		width: 25px;
+	}
+
 
 	h1 {
 		/* height: 70px; */
