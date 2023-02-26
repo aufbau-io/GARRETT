@@ -304,7 +304,7 @@
 	}
 
 	.entry {
-		height: 10vh;
+		height: 8.5vh;
 		margin-top: 2vh;
 
 	}
