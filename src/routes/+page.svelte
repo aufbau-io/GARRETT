@@ -64,9 +64,6 @@
 	</picture>
 
 
-
-
-
 	<!-- <div class="entry fase-a">
 	</div> -->
 
@@ -118,7 +115,7 @@
 
 	.icons {
 		display: flex;
-		width: 30%;
+
 		gap: 4px;
 		justify-content: space-evenly;
 	}
