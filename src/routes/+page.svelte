@@ -52,17 +52,18 @@
 
 		</div> -->
 	<picture>
-		<h1 class="fade">Business&nbsp;In&nbsp;The&nbsp;Front</h1>
+		<div class="entry">
+			<h1 class="fade"><span>Business&nbsp;In&nbsp;The&nbsp;Front</span></h1>
+		</div>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
 		<img src={casual} alt="Headshot" class="headshot fade-a" />
 	</picture>
 
 
-	<div class="entry fase-a">
-		<!-- <h2 class="arrow">▢</h2> -->
-		<h2 class="fade-a">COME ON BACK</h2>
-		<!-- <h2 class="arrow">▢</h2> -->
-	</div>
+	<!-- <div class="entry fase-a">
+	</div> -->
+
+
 
 </section>
 
@@ -124,35 +125,66 @@
 		object-position: 0% 22.5%;
 		/* box-shadow: 0 0 10px var(--primary); */
 	}
-	
-	h1 {
+
+	.entry {
 		/* height: 50vh;
 		width: 50vh; */
 		background: var(--primary);
 		border: double 6px var(--background);
 		
 		min-width: 120%;
-		height: 75px;
-		line-height: 63px;
-		
+		height: 80px;
+		line-height: 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+				
 		position: absolute;
 		bottom: 10%;
 		left: 50%;
 		transform: translate(-50%, 0%);
 		text-transform: uppercase;
+		color: var(--background);
+		cursor: pointer;
+
+
+	}
+	
+	h1 {
 
 		z-index: 10;
-
-
-
-		width: 100%;
-
-		font-size: 26px;
 		color: var(--background);
+		width: 100%;
+		font-size: 26px;
 		letter-spacing: 3px;
 	}
 
-	.entry {
+.entry:hover span {
+  display: none
+}
+
+.entry:hover:before {
+	color: var(--primary);
+  content: "COME ON BACK";
+
+	font-size: 18px;
+		color: inherit;
+		letter-spacing: 3px;
+		font-family: untitled, sans-serif;
+		font-weight: 400;
+
+}
+
+	.entry h2 {
+		opacity: 0;
+		animation: fadein .4s 2.6s ease-out;
+		animation-fill-mode: forwards;
+	}
+
+	/* .entry {
 		width: 100%;
 		margin-top: 1.25vh;
 		height: 6vh;
@@ -168,23 +200,18 @@
 
 		color: var(--primary);
 		cursor: pointer;
-		/* box-shadow: 0 0 10px var(--primary); */
-		opacity: 0;
-		animation: fadein .4s 2.6s ease-out;
-		animation-fill-mode: forwards;
-
-	}
+	} */
 
 	.entry:hover {
-		background-color: var(--primary);
-		color: var(--background);
-		border-color: var(--background);
+		background-color: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
 	}
 
 	.entry:active {
-		background: var(--background);
-		color: var(--primary);
-		border-color: var(--primary);
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
 
 		
 	}
@@ -195,6 +222,8 @@
 		letter-spacing: 3px;
 		font-family: untitled, sans-serif;
 		font-weight: 400;
+
+		
 	}
 
 .arrow {
