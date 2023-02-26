@@ -39,13 +39,22 @@
 
 <section>
 
-		<header >
+
 			<!-- <h2 class="fade-a">GARRETT MUSAR</h2> -->
 
-	</header>
+
 		<!-- <div class="square">
 
 		</div> -->
+		<header >
+			<h2>GARRETT MUSAR</h2>
+			<div class="icons tmp">
+				<img src={instagram} alt="instagram" class="icon fade-a" />
+				<img src={linkedin} alt="linkedin" class="icon fade-a" />
+				<img src={mail} alt="mail" class="icon fade-a" />
+				<img src={twitter} alt="twitter" class="icon fade-a" />
+			</div>
+		</header>
 	<picture>
 		<div class="entry">
 			<h1 class="fade"><span>Business&nbsp;In&nbsp;The&nbsp;Front</span></h1>
@@ -54,13 +63,7 @@
 		<img src={casual} alt="Headshot" class="headshot fade-a" />
 	</picture>
 
-	<h2 class="tmp">GARRETT MUSAR</h2>
-	<div class="icons tmp">
-		<img src={instagram} alt="instagram" class="icon fade-a" />
-		<img src={linkedin} alt="linkedin" class="icon fade-a" />
-		<img src={mail} alt="mail" class="icon fade-a" />
-		<img src={twitter} alt="twitter" class="icon fade-a" />
-	</div>
+
 
 
 
@@ -106,17 +109,12 @@
 		height: 30px;
 		padding-bottom: 1rem;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		align-items: center;
 		color: var(--accent);
 	}
 
-	.tmp {
-		padding-top: .6rem;
-	}
-
 	.icons {
-		padding-top: .2rem;
 		display: flex;
 		width: 30%;
 		gap: 4px;
@@ -165,7 +163,6 @@
 	}
 	
 	h1 {
-
 		z-index: 10;
 		color: var(--background);
 		width: 100%;
@@ -173,28 +170,29 @@
 		letter-spacing: 3px;
 	}
 
-.entry:hover span {
-  display: none
-}
+	.entry:hover span {
+		display: none
+	}
 
-.entry:hover:before {
-	color: var(--primary);
-  content: "COME ON BACK";
-	position: absolute;
 
-	font-size: 18px;
-		color: inherit;
-		letter-spacing: 3px;
-		font-family: untitled, sans-serif;
-		font-weight: 400;
+	.entry:hover:before {
+		color: var(--primary);
+		content: "COME ON BACK";
+		position: absolute;
 
-}
+		font-size: 18px;
+			color: inherit;
+			letter-spacing: 3px;
+			font-family: untitled, sans-serif;
+			font-weight: 400;
 
-	.entry h2 {
+	}
+
+	/* .entry h2 {
 		opacity: 0;
 		animation: fadein .4s 2.6s ease-out;
 		animation-fill-mode: forwards;
-	}
+	} */
 
 	/* .entry {
 		width: 100%;
@@ -246,6 +244,11 @@
 
 .entry:hover .arrow {
 		color: var(--background);
+	}
+
+	@keyframes blink {
+    from {  display: none; }
+    to   {  display:flex; }
 	}
 
 	@keyframes fadein {
