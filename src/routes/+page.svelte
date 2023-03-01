@@ -298,7 +298,7 @@
 	h1 {
 		/* height: 70px; */
 		/* line-height: 58px; */
-		font-size: 22px;
+		font-size: 20px;
 	}
 
 	h2, .entry:hover:before {
