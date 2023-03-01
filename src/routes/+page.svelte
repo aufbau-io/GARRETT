@@ -289,6 +289,11 @@
 		height: 76vw;
 	}
 
+	.icon {
+		height: 25px;
+		width: 25px;
+	}
+
 	picture, .square {
 		margin: 0 !important;
 		padding: 0 !important;
