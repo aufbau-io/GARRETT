@@ -106,7 +106,7 @@
 	header {
 		width: 100%;
 		height: 30px;
-		padding-bottom: 1rem;
+		padding-bottom: .5rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
