@@ -96,9 +96,9 @@
 		height: calc(var(--vh, 1vh) * 100);
 		overflow: hidden;
 	
-		opacity: 0;
-		animation: fadein .5s 2s ease;
-		animation-fill-mode: forwards;
+		/* opacity: 0;
+		animation: fadein 1s 1s ease;
+		animation-fill-mode: forwards; */
 	}
 
 	main {
