@@ -106,7 +106,7 @@
 
 	img {
 		opacity: 0;
-		animation: fadein 0s .5s ease-out;
+		animation: fadein 1s 1s ease;
 		animation-fill-mode: forwards;
 
 	}
@@ -121,7 +121,7 @@
 		color: var(--accent);
 
 		opacity: 0;
-		animation: fadein .5s 3.5s ease-out;
+		animation: fadein 1s 6s ease;
 		animation-fill-mode: forwards;
 	}
 
@@ -168,7 +168,7 @@
 		color: var(--background);
 
 		opacity: 0;
-		animation: fadein 0s .25s ease-out;
+		animation: fadein 1s 3s ease;
 		animation-fill-mode: forwards;
 		z-index: 10;
 	}
@@ -185,7 +185,7 @@
 		color: var(--primary);
 
 		opacity: 0;
-		animation: fadein .5s 3.5s ease-out;
+		animation: fadein 1s 6s ease;
 		animation-fill-mode: forwards;
 	}
 	
