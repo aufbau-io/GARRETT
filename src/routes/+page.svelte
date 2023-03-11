@@ -250,15 +250,19 @@
 	h1 {
 		/* height: 70px; */
 		/* line-height: 58px; */
-		font-size: 20px;
+		font-size: 22px;
 	}
 
 	h2, .entry:hover:before {
-		font-size: 14px;
+		font-size: 15px;
+	}
+
+	.main {
+		height: 10vh;
 	}
 
 	.entry {
-		height: 8.5vh;
+		height: 8vh;
 		margin-top: 2vh;
 
 	}
