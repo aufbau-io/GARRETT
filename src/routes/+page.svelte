@@ -17,7 +17,7 @@
 	<title>Garrett “All Business” Musar</title>
 	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
 
-	<link rel="preload" href={casual} as="image/jpg" />
+	<link rel="preload" href="{casual}" as="image/jpg" />
 
 	<link
 	rel="preload"
