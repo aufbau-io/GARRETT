@@ -82,7 +82,7 @@
 		width: 100vw;
 		
 		opacity: 0;
-		animation: fadein 1s 0s ease;
+		animation: fadein 0s 1s ease;
 		animation-fill-mode: forwards;
 	}
 
@@ -97,7 +97,7 @@
 		overflow: hidden;
 	
 		opacity: 0;
-		animation: fadein 1s 2s ease;
+		animation: fadein 0s 2s ease;
 		animation-fill-mode: forwards;
 	}
 
