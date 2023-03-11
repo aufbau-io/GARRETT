@@ -100,13 +100,13 @@
 		background: var(--background);
 		border: double 6px var(--primary);
 
-		margin-bottom: 1rem;
+		margin-bottom: 1.2rem;
 
 	}
 
 	img {
 		opacity: 0;
-		animation: fadein 4s .5s ease;
+		animation: fadein 4s 1s ease;
 		animation-fill-mode: forwards;
 
 	}
@@ -137,11 +137,11 @@
 	}
 
 	.headshot {
-		height: 48vh;
+		height: 46vh;
 		width: 48vh;
 		margin: auto;
 		object-fit: cover;
-		object-position: 0% 22.5%;
+		object-position: 0% 25%;
 		/* box-shadow: 0 0 10px var(--primary); */
 	}
 
@@ -168,16 +168,16 @@
 		color: var(--background);
 
 		opacity: 0;
-		animation: fadein 1s 2.5s ease-out;
+		animation: fadein .5s 3.5s ease-out;
 		animation-fill-mode: forwards;
 		z-index: 10;
 	}
 
 	.entry {
-		height: 64px;
+		height: 56px;
 
 		cursor: pointer;
-		min-width: 100%;
+		min-width: 80%;
 		transition: transform ease .1s, box-shadow ease .1s;
 	
 		background: var(--background);
