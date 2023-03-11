@@ -49,10 +49,10 @@
 		<header >
 			<h2>GARRETT MUSAR</h2>
 			<div class="icons tmp">
-				<img src={instagram} alt="instagram" class="icon fade-a" />
-				<img src={linkedin} alt="linkedin" class="icon fade-a" />
-				<img src={mail} alt="mail" class="icon fade-a" />
-				<img src={twitter} alt="twitter" class="icon fade-a" />
+				<img src={instagram} alt="instagram" class="icon" />
+				<img src={linkedin} alt="linkedin" class="icon" />
+				<img src={mail} alt="mail" class="icon" />
+				<img src={twitter} alt="twitter" class="icon" />
 			</div>
 		</header>
 	<picture>
@@ -104,9 +104,9 @@
 
 	}
 
-	img {
+	.headshot {
 		opacity: 0;
-		animation: fadein 4s 0s ease;
+		animation: fadein 0s 1s ease;
 		animation-fill-mode: forwards;
 
 	}
@@ -120,9 +120,9 @@
 		align-items: flex-start;
 		color: var(--accent);
 
-		opacity: 0;
+		/* opacity: 0;
 		animation: fadein 1s 6s ease;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards; */
 	}
 
 	.icons {
@@ -166,10 +166,10 @@
 		background: var(--primary);
 		border: double 6px var(--background);
 		color: var(--background);
-
-		opacity: 0;
+		
+/* opacity: 0;
 		animation: fadein .5s 3.5s ease-out;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards; */
 		z-index: 10;
 	}
 
@@ -185,7 +185,7 @@
 		color: var(--primary);
 
 		opacity: 0;
-		animation: fadein 1s 6s ease;
+		animation: fadein 0s 3s ease;
 		animation-fill-mode: forwards;
 	}
 	
