@@ -111,7 +111,7 @@
 		margin-bottom: .25rem;
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		color: var(--accent);
 
 	}
