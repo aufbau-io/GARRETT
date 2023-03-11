@@ -114,10 +114,10 @@
 	header {
 		width: 100%;
 		height: 30px;
-		padding-bottom: .6rem;
+		margin-bottom: .25rem;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		color: var(--accent);
 
 		opacity: 0;
