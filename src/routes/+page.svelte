@@ -106,7 +106,7 @@
 
 	img {
 		opacity: 0;
-		animation: fadein 4s 1s ease;
+		animation: fadein 4s 0 ease;
 		animation-fill-mode: forwards;
 
 	}
