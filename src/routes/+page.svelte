@@ -182,7 +182,7 @@
 		color: var(--primary);
 
 		opacity: 0;
-		animation: fadein 0s 5s ease;
+		animation: fadein 1s 2s ease;
 		animation-fill-mode: forwards;
 	}
 	
