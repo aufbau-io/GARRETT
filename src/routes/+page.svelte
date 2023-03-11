@@ -56,16 +56,16 @@
 			</div>
 		</header>
 	<picture>
-		<div class="entry">
+		<div class="main">
 			<h1 class="fade"><span>Business&nbsp;In&nbsp;The&nbsp;Front</span></h1>
 		</div>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
 		<img src={casual} alt="Headshot" class="headshot fade-a" />
 	</picture>
 
-
-	<!-- <div class="entry fase-a">
-	</div> -->
+	<div class="entry button fase-a">
+		<h2>COME ON BACK</h2>
+	</div>
 
 
 
@@ -100,7 +100,15 @@
 		background: var(--background);
 		border: double 6px var(--primary);
 
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
+
+	}
+
+	img {
+		opacity: 0;
+		animation: fadein 0s .5s ease-out;
+		animation-fill-mode: forwards;
+
 	}
 
 	header {
@@ -111,6 +119,10 @@
 		justify-content: space-between;
 		align-items: center;
 		color: var(--accent);
+
+		opacity: 0;
+		animation: fadein .5s 3.5s ease-out;
+		animation-fill-mode: forwards;
 	}
 
 	.icons {
@@ -133,30 +145,48 @@
 		/* box-shadow: 0 0 10px var(--primary); */
 	}
 
-	.entry {
-		/* height: 50vh;
-		width: 50vh; */
-		background: var(--primary);
-		border: double 6px var(--background);
-		
+	.entry, .main {
 		min-width: 120%;
-		height: 80px;
+		height: 72px;
 		line-height: 0;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-				
+
+		text-transform: uppercase;
+	}
+
+	.main {
 		position: absolute;
 		bottom: 10%;
 		left: -10%;
 
-		text-transform: uppercase;
+		background: var(--primary);
+		border: double 6px var(--background);
 		color: var(--background);
-		cursor: pointer;
 
+		opacity: 0;
+		animation: fadein 0s .25s ease-out;
+		animation-fill-mode: forwards;
+		z-index: 10;
+	}
+
+	.entry {
+		height: 64px;
+
+		cursor: pointer;
+		min-width: 100%;
 		transition: transform ease .1s, box-shadow ease .1s;
+	
+		background: var(--background);
+		border: double 6px var(--primary);
+		color: var(--primary);
+
+		opacity: 0;
+		animation: fadein .5s 3.5s ease-out;
+		animation-fill-mode: forwards;
 	}
 	
 	h1 {
@@ -166,48 +196,6 @@
 		font-size: 26px;
 		letter-spacing: 3px;
 	}
-
-	.entry:hover span {
-		display: none
-	}
-
-
-	.entry:hover:before {
-		color: var(--primary);
-		content: "COME ON BACK";
-		position: absolute;
-
-		font-size: 20px;
-			color: inherit;
-			letter-spacing: 3px;
-			font-family: untitled, sans-serif;
-			font-weight: 400;
-
-	}
-
-	/* .entry h2 {
-		opacity: 0;
-		animation: fadein .4s 2.6s ease-out;
-		animation-fill-mode: forwards;
-	} */
-
-	/* .entry {
-		width: 100%;
-		margin-top: 1.25vh;
-		height: 6vh;
-		background: var(--background);
-		border: double 6px var(--primary);
-
-		margin-bottom: 30px;
-
-
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-
-		color: var(--primary);
-		cursor: pointer;
-	} */
 
 	.entry:hover {
 		background-color: var(--background);
@@ -219,10 +207,6 @@
 	}
 
 	.entry:active {
-		background: var(--primary);
-		color: var(--background);
-		border-color: var(--background);
-
 		box-shadow: none;
 		transform: translateY(0px);
 	}
@@ -243,11 +227,6 @@
 
 .entry:hover .arrow {
 		color: var(--background);
-	}
-
-	@keyframes blink {
-    from {  display: none; }
-    to   {  display:flex; }
 	}
 
 	@keyframes fadein {
