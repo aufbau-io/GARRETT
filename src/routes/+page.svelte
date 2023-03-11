@@ -209,7 +209,7 @@
 	}
 
 	h2 {
-		font-size: 18px;
+		font-size: 16px;
 		color: inherit;
 		letter-spacing: 3px;
 		font-family: untitled, sans-serif;
