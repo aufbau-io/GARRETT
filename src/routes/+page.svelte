@@ -101,14 +101,6 @@
 		border: double 6px var(--primary);
 
 		margin-bottom: 1.1rem;
-
-	}
-
-	.headshot {
-		opacity: 0;
-		animation: fadein 0s 1s ease;
-		animation-fill-mode: forwards;
-
 	}
 
 	header {
@@ -143,6 +135,10 @@
 		object-fit: cover;
 		object-position: 0% 25%;
 		/* box-shadow: 0 0 10px var(--primary); */
+
+		opacity: 0;
+		animation: fadein 0s .5s ease;
+		animation-fill-mode: forwards;
 	}
 
 	.entry, .main {
@@ -166,11 +162,12 @@
 		background: var(--primary);
 		border: double 6px var(--background);
 		color: var(--background);
-		
-/* opacity: 0;
-		animation: fadein .5s 3.5s ease-out;
-		animation-fill-mode: forwards; */
+
 		z-index: 10;
+
+		opacity: 0;
+		animation: fadein 0s 1s ease;
+		animation-fill-mode: forwards;
 	}
 
 	.entry {
@@ -185,7 +182,7 @@
 		color: var(--primary);
 
 		opacity: 0;
-		animation: fadein 0s 3s ease;
+		animation: fadein 0s 2s ease;
 		animation-fill-mode: forwards;
 	}
 	
