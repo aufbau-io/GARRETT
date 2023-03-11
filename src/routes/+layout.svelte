@@ -80,6 +80,10 @@
 		overflow: hidden;
 
 		width: 100vw;
+		
+		opacity: 0;
+		animation: fadein 1s 1s ease;
+		animation-fill-mode: forwards;
 	}
 
 	.webgl {
@@ -91,6 +95,10 @@
 		height: 100%;
 		height: calc(var(--vh, 1vh) * 100);
 		overflow: hidden;
+	
+		opacity: 0;
+		animation: fadein 1s 2.5s ease;
+		animation-fill-mode: forwards;
 	}
 
 	main {
@@ -103,5 +111,6 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
+
 
 </style>
