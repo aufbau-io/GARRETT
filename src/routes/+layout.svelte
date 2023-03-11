@@ -81,9 +81,9 @@
 
 		width: 100vw;
 		
-		opacity: 0;
+		/* opacity: 0;
 		animation: fadein 0s 1s ease;
-		animation-fill-mode: forwards;
+		animation-fill-mode: forwards; */
 	}
 
 	.webgl {
