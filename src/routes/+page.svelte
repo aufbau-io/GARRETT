@@ -100,7 +100,7 @@
 		background: var(--background);
 		border: double 6px var(--primary);
 
-		margin-bottom: 1.2rem;
+		margin-bottom: 1.1rem;
 
 	}
 
