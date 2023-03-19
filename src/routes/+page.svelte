@@ -6,10 +6,10 @@
 	// import casual from '$lib/images/casual.png';
 	import casual from '$lib/images/casual-removebg.png';
 
-	import instagram from '$lib/images/icons/instagram_icon.svg';
-	import linkedin from '$lib/images/icons/linkedin_icon.svg';
-	import mail from '$lib/images/icons/gmail_icon.svg';
-	import twitter from '$lib/images/icons/twitter_icon.svg';
+	import instagram from '$lib/images/icons/instagram.svg';
+	import linkedin from '$lib/images/icons/linkedin.svg';
+	import mail from '$lib/images/icons/gmail.svg';
+	import twitter from '$lib/images/icons/twitter.svg';
 	
 </script>
 
