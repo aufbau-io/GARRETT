@@ -203,6 +203,7 @@
 		opacity: 0;
 		animation: fadein 0s 2s ease;
 		animation-fill-mode: forwards;
+		margin-bottom: 1.1rem;
 	}
 	
 	h1 {
