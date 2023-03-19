@@ -11,7 +11,7 @@ export default class World {
 		this.scene = this.experience.scene;
 		this.resources = this.experience.resources;
 
-		this.n_cubes = 30;
+		this.n_cubes = 24;
 		let third_cubes = this.n_cubes / 3;
 		this.positions = this.make_positions(this.n_cubes);
 		let positions_1 = [];
