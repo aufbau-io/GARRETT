@@ -64,13 +64,13 @@ export default class World {
 			// }
 
 			let xi = Math.floor(Math.random() * a.length);
-			let x = a[xi] / 6;
+			let x = a[xi] / 4;
 
 			// let x = a[i % 6];
 			x = x - 1;
 			a.splice(xi, 1);
 
-			let y = i / (n_cubes / 10) - 3.5;
+			let y = (i / n_cubes) * 7 - 3.5;
 
 			let z = i % 3;
 			// let z = Math.floor(Math.random() * 3);
