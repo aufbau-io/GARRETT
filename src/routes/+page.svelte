@@ -6,10 +6,10 @@
 	// import casual from '$lib/images/casual.png';
 	import casual from '$lib/images/casual-removebg.png';
 
-	import instagram from '$lib/images/icons/Instagram.svg';
-	import linkedin from '$lib/images/icons/LinkedIn.svg';
-	import mail from '$lib/images/icons/Mail.svg';
-	import twitter from '$lib/images/icons/Twitter.svg';
+	import instagram from '$lib/images/icons/instagram.svg';
+	import linkedin from '$lib/images/icons/linkedin.svg';
+	import mail from '$lib/images/icons/gmail.svg';
+	import twitter from '$lib/images/icons/twitter.svg';
 	
 </script>
 
@@ -49,10 +49,18 @@
 		<header >
 			<h2>GARRETT MUSAR</h2>
 			<div class="icons tmp">
-				<img src={instagram} alt="instagram" class="icon" />
+			<a href="https://www.linkedin.com/in/garrettallbusinessmusar/" target="_blank" rel="noreferrer">
 				<img src={linkedin} alt="linkedin" class="icon" />
+			</a>
+			<a href="mailto: garyxmustard@gmail.com">
 				<img src={mail} alt="mail" class="icon" />
+			</a>
+			<a href="https://www.instagram.com/garymustard_fanclub/" target="_blank" rel="noreferrer">
+				<img src={instagram} alt="instagram" class="icon" />
+			</a>
+			<a href="https://twitter.com/LL_Croix" target="_blank" rel="noreferrer">
 				<img src={twitter} alt="twitter" class="icon" />
+			</a>
 			</div>
 		</header>
 	<picture>
@@ -119,14 +127,22 @@
 
 	.icons {
 		display: flex;
-		gap: 4px;
+		gap: 10px;
 		justify-content: space-evenly;
 	}
 
+
 	.icon {
-		height: 30px;
-		width: 30px;
+		height: 24px;
+		width: 24px;
+
+		cursor: pointer;
+		opacity: 1;
 	}
+
+	.icon:hover{
+		opacity:.5;
+		}
 
 	.headshot {
 		height: 46vh;
