@@ -67,7 +67,7 @@ export default class World {
 			let x = a[xi] / 6;
 
 			// let x = a[i % 6];
-			x = x - 2;
+			x = x - 1;
 			a.splice(xi, 1);
 
 			let y = i / (n_cubes / 10) - 3.5;
