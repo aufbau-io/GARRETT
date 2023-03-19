@@ -11,7 +11,7 @@ export default class World {
 		this.scene = this.experience.scene;
 		this.resources = this.experience.resources;
 
-		this.n_cubes = 18;
+		this.n_cubes = 30;
 		let third_cubes = this.n_cubes / 3;
 		this.positions = this.make_positions(this.n_cubes);
 		let positions_1 = [];
@@ -51,32 +51,26 @@ export default class World {
 	}
 
 	make_positions(n_cubes) {
-		let a = [...Array(n_cubes / 3).keys()];
-
-		// a = a.flatMap((i) => [i, i, i]);
-
-		// let b = [...Array(n_cubes).keys()];
-		// b = b.flatMap((i) => [i, i, i]);
-
-		// let c = [...Array(n_cubes).keys()];
-		// c = c.flatMap((i) => [i, i, i]);
+		let a = [...Array(n_cubes).keys()];
 
 		let positions = [];
 		for (let i = 0; i <= n_cubes; i++) {
-			if (i == 6) {
-				a = [...Array(n_cubes / 3).keys()];
-			}
+			// if (i == n_cubes / 3) {
+			// 	a = [...Array(n_cubes / 3).keys()];
+			// }
 
-			if (i == 12) {
-				a = [...Array(n_cubes / 3).keys()];
-			}
+			// if (i == (n_cubes / 3) * 2) {
+			// 	a = [...Array(n_cubes / 3).keys()];
+			// }
 
 			let xi = Math.floor(Math.random() * a.length);
-			let x = a[xi];
-			x = x * 0.75 - 1;
+			let x = a[xi] / 6;
+
+			// let x = a[i % 6];
+			x = x - 2;
 			a.splice(xi, 1);
 
-			let y = i / (18 / 7) - 3.5;
+			let y = i / (n_cubes / 10) - 3.5;
 
 			let z = i % 3;
 			// let z = Math.floor(Math.random() * 3);

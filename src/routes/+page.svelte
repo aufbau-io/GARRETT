@@ -79,6 +79,7 @@
 		align-items: center;
 	
 		width: 48vh;
+		min-width: 500px;
 		height: 100%;
 		/* opacity: 0; */
 	}
@@ -130,6 +131,8 @@
 	.headshot {
 		height: 46vh;
 		width: 48vh;
+		min-width: 500px;
+		min-height: 500px;
 		margin: auto;
 		object-fit: cover;
 		object-position: 0% 25%;
@@ -227,13 +230,17 @@
 	}
 
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
 	section {
-		width: 80vw;
+		max-width: 80vw;
+		min-width: 0px;
+		min-height: 0px;
 	}
 	
 .headshot {
 		height: 76vw;
+		min-width: 0px;
+		min-height: 0px;
 	}
 
 	.icon {
@@ -245,6 +252,8 @@
 		margin: 0 !important;
 		padding: 0 !important;
 		background: var(--background-50);
+
+
 	}
 
 	h1 {
@@ -253,8 +262,8 @@
 		font-size: 22px;
 	}
 
-	h2, .entry:hover:before {
-		font-size: 15px;
+	h2 {
+		font-size: 14px;
 	}
 
 	.main {
