@@ -230,7 +230,7 @@
 	h2 {
 		font-size: 16px;
 		color: inherit;
-		letter-spacing: 3px;
+		letter-spacing: 2px;
 		font-family: untitled, sans-serif;
 		font-weight: 400;
 	}
@@ -260,8 +260,8 @@
 	}
 
 	.icon {
-		height: 25px;
-		width: 25px;
+		height: 20px;
+		width: 20px;
 	}
 
 	picture, .square {
