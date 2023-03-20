@@ -64,7 +64,7 @@ export default class World {
 			// }
 
 			let xi = Math.floor(Math.random() * a.length);
-			let x = a[xi] / 4;
+			let x = a[xi] / 4 - 1;
 
 			// let x = a[i % 6];
 			x = x - 1;
