@@ -290,7 +290,7 @@
 	.entry {
 		height: 8vh;
 		margin-top: 2vh;
-
+		margin-bottom: 0;
 	}
 
 	.entry:active {
