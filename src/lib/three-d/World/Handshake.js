@@ -34,7 +34,7 @@ export default class Handshake {
 		this.gradientTexture.magFilter = THREE.NearestFilter;
 
 		let material = new THREE.MeshToonMaterial({
-			color: 0xe0e0d0,
+			color: 0x1b1b1b,
 			gradientMap: this.gradientTexture
 		});
 
