@@ -8,7 +8,7 @@ export default class Environment {
 		this.resources = this.experience.resources;
 		this.debug = this.experience.debug;
 
-		this.scene.fog = new THREE.FogExp2(0xe0e0d0, 0.06);
+		this.scene.fog = new THREE.FogExp2(0xe0e0d0, 0.05);
 
 		// Debug
 		if (this.debug.active) {
@@ -20,13 +20,14 @@ export default class Environment {
 	}
 
 	setSunLight() {
+		this.light = new THREE.AmbientLight('#ffffff', 0.5);
 		this.sunLight = new THREE.DirectionalLight('#ffffff', 1);
-		this.sunLight.castShadow = true;
-		this.sunLight.shadow.camera.far = 15;
-		this.sunLight.shadow.mapSize.set(1024, 1024);
-		this.sunLight.shadow.normalBias = 0.05;
+		// this.sunLight.castShadow = true;
+		// this.sunLight.shadow.camera.far = 15;
+		// this.sunLight.shadow.mapSize.set(1024, 1024);
+		// this.sunLight.shadow.normalBias = 0.05;
 		this.sunLight.position.set(3.5, 2, -1.25);
-		this.scene.add(this.sunLight);
+		this.scene.add(this.sunLight, this.light);
 
 		// Debug
 		if (this.debug.active) {

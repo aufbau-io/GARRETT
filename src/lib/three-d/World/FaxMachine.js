@@ -22,7 +22,7 @@ export default class FaxMachine {
 		// this.size = 1 / this.positions[0][2];
 
 		this.model = this.resource.scene;
-		this.model.scale.set(0.8, 0.8, 0.8);
+		this.model.scale.set(1, 1, 1);
 		this.scene.add(this.model);
 		this.models = [this.model];
 
