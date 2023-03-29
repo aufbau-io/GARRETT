@@ -8,7 +8,7 @@ export default class Environment {
 		this.resources = this.experience.resources;
 		this.debug = this.experience.debug;
 
-		this.scene.fog = new THREE.FogExp2(0xe0e0d0, 0.07);
+		this.scene.fog = new THREE.FogExp2(0xe0e0d0, 0.09);
 
 		// Debug
 		if (this.debug.active) {

@@ -33,16 +33,16 @@ export default class FaxMachine {
 		this.gradientTexture = this.resources.items.gradientTexture;
 		this.gradientTexture.magFilter = THREE.NearestFilter;
 
-		let material = new THREE.MeshToonMaterial({
-			color: 0xe0e0d0,
-			gradientMap: this.gradientTexture
-		});
+		// let material = new THREE.MeshToonMaterial({
+		// 	color: 0xe0e0d0,
+		// 	gradientMap: this.gradientTexture
+		// });
 
-		this.model.traverse(function (child) {
-			if (child.material) {
-				child.material = material;
-			}
-		});
+		// this.model.traverse(function (child) {
+		// 	if (child.material) {
+		// 		child.material = material;
+		// 	}
+		// });
 
 		for (let i = 1; i < this.n_models; i++) {
 			let model_clone = this.model.clone();
