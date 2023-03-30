@@ -97,7 +97,7 @@ export default class World {
 
 	update() {
 		// if (this.mac) this.mac.update();
-		if (this.handshake) this.handshake.update();
+		if (this.plant) this.plant.update();
 		if (this.briefcase) this.briefcase.update();
 		if (this.fax_machine) this.fax_machine.update();
 
