@@ -11,7 +11,7 @@ export default class World {
 		this.scene = this.experience.scene;
 		this.resources = this.experience.resources;
 
-		this.n_cubes = 24;
+		this.n_cubes = 18;
 		let third_cubes = this.n_cubes / 3;
 		this.positions = this.make_positions(this.n_cubes);
 		let positions_1 = [];
@@ -67,7 +67,7 @@ export default class World {
 			let x = a[xi] / 4 - 1;
 
 			// let x = a[i % 6];
-			x = x - 1;
+			x = x - 2;
 			a.splice(xi, 1);
 
 			let y = (i / n_cubes) * 7 - 3.5;

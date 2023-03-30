@@ -22,7 +22,7 @@ export default class Handshake {
 		// this.size = 1 / this.positions[0][2];
 
 		this.model = this.resource.scene;
-		this.model.scale.set(1, 1, 1);
+		this.model.scale.set(0.06, 0.06, 0.06);
 		this.scene.add(this.model);
 		this.models = [this.model];
 
