@@ -22,7 +22,7 @@ export default class Briefcase {
 		// this.size = 1 / this.positions[0][2];
 
 		this.model = this.resource.scene;
-		this.model.scale.set(0.016, 0.016, 0.016);
+		this.model.scale.set(0.02, 0.02, 0.02);
 		this.scene.add(this.model);
 		this.models = [this.model];
 

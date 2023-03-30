@@ -47,44 +47,12 @@ export default class World {
 	}
 
 	make_positions(n_cubes) {
-		// let a = [...Array(n_cubes / 3).keys()];
-		// let b = [...Array(n_cubes / 3).keys()];
-		// let c = [...Array(n_cubes / 3).keys()];
-
 		let positions = [];
 		for (let i = 0; i <= n_cubes; i++) {
-			// if (i == n_cubes / 3) {
-			// 	a = [...Array(n_cubes / 3).keys()];
-			// }
-
-			// if (i == (n_cubes / 3) * 2) {
-			// 	a = [...Array(n_cubes / 3).keys()];
-			// }
-
-			// let xi, x;
-
-			// if (i % 3 == 0) {
-			// 	xi = Math.floor(Math.random() * a.length);
-			// 	x = a[xi] / 2;
-			// 	x = x - 2;
-			// 	a.splice(xi, 1);
-			// } else if (i % 3 == 1) {
-			// 	xi = Math.floor(Math.random() * b.length);
-			// 	x = b[xi] / 2;
-			// 	x = x - 2;
-			// 	b.splice(xi, 1);
-			// } else {
-			// 	xi = Math.floor(Math.random() * c.length);
-			// 	x = c[xi] / 2;
-			// 	x = x - 2;
-			// 	c.splice(xi, 1);
-			// }
-
 			let x = (i % 4) * 1.5 - 2.5;
 			let y = (i / n_cubes) * 10 - 5;
 
 			let z = -(i % 3);
-			// let z = Math.floor(Math.random() * 3);
 
 			positions.push([x, y, z]);
 		}
