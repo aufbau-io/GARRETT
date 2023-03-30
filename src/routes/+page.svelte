@@ -201,7 +201,7 @@
 		color: var(--primary);
 
 		opacity: 0;
-		animation: fadein 0s 2s ease;
+		animation: fadein 0s 2s linear, goBlack 0s 3s linear;
 		animation-fill-mode: forwards;
 		margin-bottom: 1.1rem;
 	}
@@ -252,10 +252,11 @@
 		max-width: 80vw;
 		min-width: 0px;
 		min-height: 0px;
+
 	}
 	
 .headshot {
-		height: 76vw;
+
 		min-width: 0px;
 		min-height: 0px;
 	}
@@ -306,7 +307,7 @@
 
 	picture {
 		min-width: none;
-		min-height: 80vw;
+		height: 48vh;
 		padding: calc(1 * var(--margin));
 	}
 

@@ -116,6 +116,8 @@ button:focus:not(:focus-visible) {
 	}
 }
 
+/* FADE IN */
+
 /* Firefox < 16 */
 @-moz-keyframes fadein {
 	from {
@@ -153,6 +155,122 @@ button:focus:not(:focus-visible) {
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+/* GO BLACK */
+
+/* Firefox < 16 */
+@-moz-keyframes goBlack {
+	from {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+	to {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes goBlack {
+	from {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+	to {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes goBlack {
+	from {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+	to {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes goBlack {
+	from {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+	to {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+}
+
+/* GO BACK */
+
+/* Firefox < 16 */
+@-moz-keyframes goBack {
+	from {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+	to {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes goBack {
+	from {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+	to {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes goBack {
+	from {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+	to {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes goBack {
+	from {
+		background: var(--primary);
+		color: var(--background);
+		border-color: var(--background);
+	}
+	to {
+		background: var(--background);
+		color: var(--primary);
+		border-color: var(--primary);
 	}
 }
 
