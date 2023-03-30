@@ -40,9 +40,9 @@ export default class World {
 			console.log(positions_2);
 			console.log(positions_3);
 
-			this.fax_machine = new FaxMachine(third_cubes, positions_3);
-			this.briefcase = new Briefcase(third_cubes, positions_1);
-			this.handshake = new Handshake(third_cubes, positions_2);
+			this.fax_machine = new FaxMachine(third_cubes, positions_1);
+			this.briefcase = new Briefcase(third_cubes, positions_2);
+			this.handshake = new Handshake(third_cubes, positions_3);
 
 			for (let i = 0; i < this.n_cubes; i++) {
 				// this.cubes[i] = new Cube();
@@ -72,13 +72,12 @@ export default class World {
 
 			let y = (i / n_cubes) * 7 - 3.5;
 
-			let z = i % 3;
+			let z = -(i % 3);
 			// let z = Math.floor(Math.random() * 3);
 
 			positions.push([x, y, z]);
 			console.log(a);
 		}
-
 		return positions;
 	}
 
