@@ -162,7 +162,7 @@ button:focus:not(:focus-visible) {
 
 @keyframes goBlack {
 	from {
-		background: var(--background);
+		background: var(--background-50);
 		color: var(--primary);
 		border-color: var(--primary);
 	}
@@ -182,7 +182,7 @@ button:focus:not(:focus-visible) {
 		border-color: var(--background);
 	}
 	to {
-		background: var(--background);
+		background: var(--background-50);
 		color: var(--primary);
 		border-color: var(--primary);
 	}
