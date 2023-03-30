@@ -10,9 +10,9 @@ export default [
 		path: 'models/briefcase.glb'
 	},
 	{
-		name: 'handshake',
+		name: 'plant',
 		type: 'gltfModel',
-		path: 'models/handshake.glb'
+		path: 'models/plant.glb'
 	},
 	{
 		name: 'gradientTexture',

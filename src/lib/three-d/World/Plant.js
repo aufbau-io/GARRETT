@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import Experience from '../Experience.js';
 
-export default class Handshake {
+export default class Plant {
 	constructor(n_models, positions) {
 		this.experience = new Experience();
 		this.scene = this.experience.scene;
@@ -12,7 +12,7 @@ export default class Handshake {
 		this.n_models = n_models;
 
 		// Resource
-		this.resource = this.resources.items.handshake;
+		this.resource = this.resources.items.plant;
 		this.setModel();
 	}
 

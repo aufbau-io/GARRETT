@@ -3,7 +3,7 @@ import Environment from './Environment.js';
 
 import FaxMachine from './FaxMachine.js';
 import Briefcase from './Briefcase.js';
-import Handshake from './Handshake.js';
+import Plant from './Plant.js';
 
 export default class World {
 	constructor() {
@@ -42,7 +42,7 @@ export default class World {
 
 			this.fax_machine = new FaxMachine(third_cubes, positions_1);
 			this.briefcase = new Briefcase(third_cubes, positions_2);
-			this.handshake = new Handshake(third_cubes, positions_3);
+			this.plant = new Plant(third_cubes, positions_3);
 
 			for (let i = 0; i < this.n_cubes; i++) {
 				// this.cubes[i] = new Cube();
