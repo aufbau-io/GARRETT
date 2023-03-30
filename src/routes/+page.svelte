@@ -215,7 +215,7 @@
 	}
 
 	.entry:hover {
-		background-color: var(--background);
+		background: var(--background);
 		color: var(--primary);
 		border-color: var(--primary);
 
