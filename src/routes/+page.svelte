@@ -201,7 +201,7 @@
 		color: var(--primary);
 
 		opacity: 0;
-		animation: fadein 0s 2s linear, goBlack 0s 5s linear, goBack 0s 5.33s linear, goBlack 0s 5.66s linear, goBack 0s 5.99s linear;
+		animation: fadein 0s 2s linear, goBlack 0s 4s linear, goBack 0s 4.25s linear, goBlack 0s 4.5s linear, goBack 0s 4.75s linear;
 		animation-fill-mode: forwards;
 		margin-bottom: 1.1rem;
 	}
