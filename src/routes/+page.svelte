@@ -233,7 +233,7 @@
 		color: inherit;
 		letter-spacing: 2px;
 		font-family: untitled, sans-serif;
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 .arrow {
@@ -281,6 +281,7 @@
 
 	h2 {
 		font-size: 14px;
+
 	}
 
 	.main {
