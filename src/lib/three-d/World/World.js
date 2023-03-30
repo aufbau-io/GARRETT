@@ -36,13 +36,9 @@ export default class World {
 			// this.mac = new Mac();
 			this.environment = new Environment();
 
-			console.log(positions_1);
-			console.log(positions_2);
-			console.log(positions_3);
-
 			this.fax_machine = new FaxMachine(third_cubes, positions_1);
-			this.briefcase = new Briefcase(third_cubes, positions_2);
-			this.plant = new Plant(third_cubes, positions_3);
+			this.plant = new Plant(third_cubes, positions_2);
+			this.briefcase = new Briefcase(third_cubes, positions_3);
 
 			for (let i = 0; i < this.n_cubes; i++) {
 				// this.cubes[i] = new Cube();
@@ -84,7 +80,7 @@ export default class World {
 			// 	c.splice(xi, 1);
 			// }
 
-			let x = (i % 6) - 3;
+			let x = (i % 6) - 2.5;
 			let y = (i / n_cubes) * 7 - 3.5;
 
 			let z = -(i % 3);
