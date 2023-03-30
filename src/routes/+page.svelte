@@ -196,7 +196,7 @@
 		min-width: 80%;
 		transition: transform ease .1s, box-shadow ease .1s;
 	
-		background: var(--background-50);
+		background: var(--background);
 		border: double 6px var(--primary);
 		color: var(--primary);
 
