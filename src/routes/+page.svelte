@@ -190,7 +190,7 @@
 	}
 
 	.entry {
-		height: 56px;
+		height: 60px;
 
 		cursor: pointer;
 		min-width: 80%;
