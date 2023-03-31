@@ -252,13 +252,12 @@
 		max-width: 80vw;
 		min-width: 0px;
 		min-height: 0px;
-
 	}
 	
 .headshot {
-
 		min-width: 0px;
 		min-height: 0px;
+
 	}
 
 	.icon {
@@ -270,8 +269,7 @@
 		margin: 0 !important;
 		padding: 0 !important;
 		background: var(--background-50);
-
-
+		overflow: hidden;
 	}
 
 	h1 {
@@ -307,12 +305,13 @@
 
 	picture {
 		min-width: none;
-		height: 48vh;
+		height: 46vh;
 		padding: calc(1 * var(--margin));
+
 	}
 
 	 img {
-		height: 80vw;
+		height: 46vh;
 		width: 80vw;
 	}
 }
