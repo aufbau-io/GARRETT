@@ -63,11 +63,11 @@
 			</a>
 			</div>
 		</header>
+
+	<picture>
 		<div class="main">
 			<h1><span>Business&nbsp;In&nbsp;The&nbsp;Front</span></h1>
 		</div>
-	<picture>
-
 		<!-- <source srcset={casual} type="image/webp"  /> -->
 		<img src={casual} alt="Headshot" class="headshot fade-a" />
 	</picture>
@@ -161,9 +161,8 @@
 		animation-fill-mode: forwards; */
 	}
 
-
-
-	.main {
+.main, .entry {
+		min-width: 120%;
 		height: 72px;
 		line-height: 0;
 
@@ -173,11 +172,13 @@
 		justify-content: center;
 
 		text-transform: uppercase;
+}
 
+	.main {
 		position: absolute;
-		top: %;
-		left: 50%;
-		transform: translate(-50%, 0%);
+		bottom: 10%;
+		left:50%;
+		transform: translate(-50%);
 		width: 66%;
 		max-width: 600px;
 
@@ -193,17 +194,6 @@
 	}
 
 	.entry {
-		min-width: 120%;
-		height: 72px;
-		line-height: 0;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		text-transform: uppercase;
-
 		height: 60px;
 
 		cursor: pointer;
