@@ -227,8 +227,8 @@
 		z-index: 10;
 		color: var(--background);
 		width: 100%;
-		font-size: 26px;
-		letter-spacing: 3px;
+		font-size: 30px;
+		letter-spacing: 4px;
 	}
 
 	.entry:hover {
