@@ -71,7 +71,11 @@
 
 	<picture>
 		<div class="main">
-			<h1><span>Business&nbsp;In&nbsp;The&nbsp;Front</span></h1>
+			<h1>
+				<span>◉</span>
+				<span>Business&nbsp;In&nbsp;The&nbsp;Front</span>
+				<span>◉</span>
+			</h1>
 		</div>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
 		{#if index == 1}
@@ -229,6 +233,9 @@
 		width: 100%;
 		font-size: 28px;
 		letter-spacing: 4px;
+
+		display: flex;
+		justify-content: space-around;
 	}
 
 	.entry:hover {
