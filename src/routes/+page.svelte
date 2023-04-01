@@ -310,8 +310,8 @@
 	
 		min-width: none;
 
-		height: calc(var(--vh, 1vh));
-		width: calc(var(--vh, 1vh));
+		height: calc(var(--vh, 1vh) * 100);
+		width: calc(var(--vh, 1vh) * 100);
 		max-width: 80vw;
 		max-height: 80vw;
 		padding: calc(1 * var(--margin));
