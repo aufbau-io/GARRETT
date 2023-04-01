@@ -298,11 +298,6 @@
 		margin-bottom: 0;
 	}
 
-	.entry:active {
-		background-color: var(--background);
-		color: var(--primary);
-		border-color: var(--primary);
-	}
 
 	header {
 		margin-bottom: .4vh;;
@@ -315,8 +310,8 @@
 	
 		min-width: none;
 
-		height: 46vh;
-		width: 46vh;
+		height: calc(var(--vh, 1vh));
+		width: calc(var(--vh, 1vh));
 		max-width: 80vw;
 		max-height: 80vw;
 		padding: calc(1 * var(--margin));
@@ -327,7 +322,7 @@
 		min-width: 0px;
 		min-height: 0px;
 
-		max-height: calc(var(--vh, 1vh) * 100 - 12px);
+		max-height: calc(var(--vh, 1vh) * 80 - 12px);
 
 	}
 
