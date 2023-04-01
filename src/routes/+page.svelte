@@ -227,7 +227,7 @@
 		z-index: 10;
 		color: var(--background);
 		width: 100%;
-		font-size: 30px;
+		font-size: 28px;
 		letter-spacing: 4px;
 	}
 
