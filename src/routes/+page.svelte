@@ -7,6 +7,8 @@
 	import linkedin from '$lib/images/icons/linkedin.svg';
 	import mail from '$lib/images/icons/gmail.svg';
 	import twitter from '$lib/images/icons/twitter.svg';
+
+	import { screenType } from '$lib/store/store';
 	
 	let index = Math.floor(Math.random() * 3) +1 ;
 	
@@ -72,9 +74,13 @@
 	<picture>
 		<div class="main">
 			<h1>
+				{#if $screenType == 3}
 				<span>◉</span>
+				{/if}
 				<span>Business&nbsp;In&nbsp;The&nbsp;Front</span>
+				{#if $screenType == 3}
 				<span>◉</span>
+				{/if}
 			</h1>
 		</div>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
