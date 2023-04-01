@@ -171,27 +171,27 @@ button:focus:not(:focus-visible) {
 		background: var(--background);
 		color: var(--primary);
 	}
-	30% {
+	25% {
 		opacity: 1;
 		background: var(--primary);
 		color: var(--background);
+	}
+	30% {
+		opacity: 1;
+		background: var(--background);
+		color: var(--primary);
 	}
 	40% {
 		opacity: 1;
 		background: var(--background);
 		color: var(--primary);
 	}
-	50% {
-		opacity: 1;
-		background: var(--background);
-		color: var(--primary);
-	}
-	60% {
+	45% {
 		opacity: 1;
 		background: var(--primary);
 		color: var(--background);
 	}
-	70% {
+	50% {
 		opacity: 1;
 		background: var(--background);
 		color: var(--primary);
