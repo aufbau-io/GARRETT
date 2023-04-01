@@ -175,7 +175,6 @@
 
 .main, .entry {
 		min-width: 120%;
-		height: 72px;
 		line-height: 0;
 
 		display: flex;
@@ -191,7 +190,9 @@
 		bottom: 10%;
 		left:50%;
 		transform: translate(-50%);
+		
 		width: 66%;
+		height: 80px;
 		max-width: 600px;
 
 		background: var(--primary);
