@@ -149,6 +149,7 @@
 		width: 48vh;
 		min-width: 500px;
 		min-height: 500px;
+
 		margin: auto;
 		object-fit: cover;
 		object-position: 0% 25%;
@@ -252,31 +253,16 @@
 	}
 
 
-@media (max-width: 800px) {
+@media (max-width: 760px) {
 	section {
 		max-width: 80vw;
 		min-width: 0px;
 		min-height: 0px;
 	}
-	
-.headshot {
-		min-width: 0px;
-		min-height: 0px;
-
-	}
 
 	.icon {
 		height: 20px;
 		width: 20px;
-	}
-
-	picture, .square {
-		margin: 0 !important;
-		padding: 0 !important;
-		background: var(--background-50);
-
-
-
 	}
 
 	h1 {
@@ -311,16 +297,50 @@
 	}
 
 	picture {
+		margin: 0 !important;
+		padding: 0 !important;
+		background: var(--background-50);
+	
 		min-width: none;
+
 		height: 46vh;
+		width: 46vh;
+		max-width: 80vw;
+		max-height: 80vw;
 		padding: calc(1 * var(--margin));
 
 	}
 
-	 img {
-		height: 46vh;
-		width: 80vw;
+	.headshot {
+		min-width: 0px;
+		min-height: 0px;
+
+		max-height: calc(46vh - 12px);
+
+	}
+
+}
+
+@media (max-width: 500px) and (min-height: 600px) {
+	.headshot {
+		max-height: calc(80vw - 12px);
 	}
 }
+
+@media (max-width: 350px) {
+
+	h1 {
+		font-size: 16px;
+	}
+	h2 {
+		font-size: 10px;
+	}
+	.icon {
+		height: 16px;
+		width: 16px;
+	}
+
+}
+
 
 </style>
