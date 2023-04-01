@@ -74,11 +74,11 @@
 	<picture>
 		<div class="main">
 			<h1>
-				{#if $screenType == 3}
+				{#if $screenType != 1}
 				<span>◎</span>
 				{/if}
 				<span>Business&nbsp;In&nbsp;The&nbsp;Front</span>
-				{#if $screenType == 3}
+				{#if $screenType != 1}
 				<span>◎</span>
 				{/if}
 			</h1>
@@ -279,7 +279,7 @@
 	}
 
 
-@media (max-width: 760px) {
+@media (max-width: 760px)  {
 	section {
 		max-width: 80vw;
 		min-width: 0px;
