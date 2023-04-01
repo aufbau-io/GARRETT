@@ -27,7 +27,7 @@
 	<link
 	rel="preload"
 	as="font"
-	href="/fonts/test-financier-display-medium.woff2"
+	href="/fonts/test-financier-display-semibold.woff2"
 	type="font/woff2"
 	crossorigin="anonymous"
 	/>
