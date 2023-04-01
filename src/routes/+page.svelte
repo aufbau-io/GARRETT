@@ -315,7 +315,7 @@
 		min-width: 0px;
 		min-height: 0px;
 
-		max-height: calc(46vh - 12px);
+		max-height: calc(var(--vh, 1vh) * 100 - 12px);
 
 	}
 
