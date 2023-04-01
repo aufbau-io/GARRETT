@@ -11,12 +11,12 @@ export default class Environment {
 		this.scene.fog = new THREE.FogExp2(0xe0e0d0, 0.05);
 
 		// grid
-		// const size = 10;
-		// const divisions = 10;
+		const size = 100;
+		const divisions = 100;
 
-		// const gridHelper = new THREE.GridHelper(size, divisions, 0x232323, 0x232323);
-
-		// this.scene.add(gridHelper);
+		const gridHelper = new THREE.GridHelper(size, divisions, 0x232323, 0x232323);
+		gridHelper.position.y = -2;
+		this.scene.add(gridHelper);
 
 		// Debug
 		if (this.debug.active) {
