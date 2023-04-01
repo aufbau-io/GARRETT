@@ -75,11 +75,11 @@
 		<div class="main">
 			<h1>
 				{#if $screenType == 3}
-				<span>◉</span>
+				<span>◎</span>
 				{/if}
 				<span>Business&nbsp;In&nbsp;The&nbsp;Front</span>
 				{#if $screenType == 3}
-				<span>◉</span>
+				<span>◎</span>
 				{/if}
 			</h1>
 		</div>
