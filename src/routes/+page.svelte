@@ -1,15 +1,14 @@
 <script>	
-	// import { darkMode } from '$lib/store/store';
-	// import headshot from '$lib/images/headshot.webp';
-	// import headshot_fallback from '$lib/images/headshot.jpg';
-	
-	// import casual from '$lib/images/casual.png';
-	import casual from '$lib/images/casual-removebg.png';
+	import headshot_1 from '$lib/images/1.png';
+	import headshot_2 from '$lib/images/2.png';
+	import headshot_3 from '$lib/images/3.png';
 
 	import instagram from '$lib/images/icons/instagram.svg';
 	import linkedin from '$lib/images/icons/linkedin.svg';
 	import mail from '$lib/images/icons/gmail.svg';
 	import twitter from '$lib/images/icons/twitter.svg';
+	
+	let index = Math.floor(Math.random() * 3) +1 ;
 	
 </script>
 
@@ -17,7 +16,13 @@
 	<title>Garrett “All Business” Musar</title>
 	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
 
-	<link rel="preload" href="{casual}" as="image/jpg" />
+	{#if index == 1}
+	<link rel="preload" href="{headshot_1}" as="image/png" />
+	{:else if index == 2}
+	<link rel="preload" href="{headshot_2}" as="image/png" />
+	{:else if index ==3}
+	<link rel="preload" href="{headshot_3}" as="image/png" />
+	{/if}
 
 	<link
 	rel="preload"
@@ -69,7 +74,14 @@
 			<h1><span>Business&nbsp;In&nbsp;The&nbsp;Front</span></h1>
 		</div>
 		<!-- <source srcset={casual} type="image/webp"  /> -->
-		<img src={casual} alt="Headshot" class="headshot fade-a" />
+		{#if index == 1}
+		<img src={headshot_1} alt="Headshot" class="headshot fade-a" />
+		{:else if index == 2}
+		<img src={headshot_2} alt="Headshot" class="headshot fade-a" />
+		{:else if index ==3}
+		<img src={headshot_3} alt="Headshot" class="headshot fade-a" />
+		{/if}
+
 	</picture>
 
 	<div class="entry button fase-a">
