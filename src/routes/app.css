@@ -166,20 +166,15 @@ button:focus:not(:focus-visible) {
 		background: var(--background);
 		color: var(--primary);
 	}
-	10% {
+	20% {
 		opacity: 1;
 		background: var(--background);
 		color: var(--primary);
-	}
-	20% {
-		opacity: 1;
-		background: var(--primary);
-		color: var(--background);
 	}
 	30% {
 		opacity: 1;
-		background: var(--background);
-		color: var(--primary);
+		background: var(--primary);
+		color: var(--background);
 	}
 	40% {
 		opacity: 1;
@@ -188,10 +183,15 @@ button:focus:not(:focus-visible) {
 	}
 	50% {
 		opacity: 1;
+		background: var(--background);
+		color: var(--primary);
+	}
+	60% {
+		opacity: 1;
 		background: var(--primary);
 		color: var(--background);
 	}
-	60% {
+	70% {
 		opacity: 1;
 		background: var(--background);
 		color: var(--primary);
