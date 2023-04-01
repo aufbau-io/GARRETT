@@ -200,6 +200,7 @@
 		bottom: 10%;
 		left:50%;
 		transform: translate(-50%);
+		padding: 0 2px;
 		
 		width: 66%;
 		height: 80px;
