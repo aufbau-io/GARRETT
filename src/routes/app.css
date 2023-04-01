@@ -161,15 +161,45 @@ button:focus:not(:focus-visible) {
 /* GO BLACK */
 
 @keyframes goBlack {
-	from {
+	0% {
+		opacity: 1;
 		background: var(--background);
 		color: var(--primary);
-		border-color: var(--primary);
 	}
-	to {
+	10% {
+		opacity: 1;
+		background: var(--background);
+		color: var(--primary);
+	}
+	20% {
+		opacity: 1;
 		background: var(--primary);
 		color: var(--background);
-		border-color: var(--background);
+	}
+	30% {
+		opacity: 1;
+		background: var(--background);
+		color: var(--primary);
+	}
+	40% {
+		opacity: 1;
+		background: var(--background);
+		color: var(--primary);
+	}
+	50% {
+		opacity: 1;
+		background: var(--primary);
+		color: var(--background);
+	}
+	60% {
+		opacity: 1;
+		background: var(--background);
+		color: var(--primary);
+	}
+	100% {
+		opacity: 1;
+		background: var(--background);
+		color: var(--primary);
 	}
 }
 
