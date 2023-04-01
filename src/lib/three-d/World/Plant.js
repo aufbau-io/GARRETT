@@ -74,9 +74,9 @@ export default class Plant {
 				this.models[i].position.y = -this.base_size;
 			}
 
-			this.models[i].rotation.x += 0.0002;
+			// this.models[i].rotation.x += 0.0002;
 			this.models[i].rotation.y += 0.0002;
-			this.models[i].rotation.z += 0.0002;
+			// this.models[i].rotation.z += 0.0002;
 
 			// console.log('x', this.models[i].position.x);
 			// console.log('y', this.models[i].position.y);
