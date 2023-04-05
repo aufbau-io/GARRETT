@@ -295,7 +295,7 @@
 	h1 {
 		/* height: 70px; */
 		/* line-height: 58px; */
-		font-size: 22px;
+		font-size: 5.5vw;
 	}
 
 	h2 {
@@ -311,6 +311,7 @@
 		height: 8vh;
 		margin-top: 2vh;
 		margin-bottom: 0;
+
 	}
 
 
