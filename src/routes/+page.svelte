@@ -94,9 +94,11 @@
 
 	</picture>
 
-	<div class="entry button fase-a">
-		<h2>COME ON BACK</h2>
-	</div>
+	<a href="https://garrettmusar.work">
+		<div class="entry button fase-a">
+			<h2>COME ON BACK</h2>
+		</div>
+	</a>
 
 
 
