@@ -94,8 +94,8 @@
 
 	</picture>
 
-	<a href="https://garrettmusar.work">
-		<div class="entry button fase-a">
+	<a class="entry button fase-a" href="https://garrettmusar.work">
+		<div >
 			<h2>COME ON BACK</h2>
 		</div>
 	</a>
@@ -251,6 +251,7 @@
 		background: var(--primary) !important;
 		color: var(--background) !important;
 		border-color: var(--background) !important;
+		text-decoration: none;
 		/* box-shadow: 5px 5px var(--primary) ;
 		transform: translate(-5px, -5px); */
 	}
