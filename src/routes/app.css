@@ -113,12 +113,12 @@ button:focus:not(:focus-visible) {
 @keyframes goBlack {
 	0% {
 		opacity: 1;
-		background: var(--button);
+		background: var(--background-50);
 		color: var(--primary);
 	}
 	20% {
 		opacity: 1;
-		background: var(--button);
+		background: var(--background-50);
 		color: var(--primary);
 	}
 	25% {
@@ -128,12 +128,12 @@ button:focus:not(:focus-visible) {
 	}
 	30% {
 		opacity: 1;
-		background: var(--button);
+		background: var(--background-50);
 		color: var(--primary);
 	}
 	40% {
 		opacity: 1;
-		background: var(--button);
+		background: var(--background-50);
 		color: var(--primary);
 	}
 	45% {
@@ -143,12 +143,12 @@ button:focus:not(:focus-visible) {
 	}
 	50% {
 		opacity: 1;
-		background: var(--button);
+		background: var(--background-50);
 		color: var(--primary);
 	}
 	100% {
 		opacity: 1;
-		background: var(--button);
+		background: var(--background-50);
 		color: var(--primary);
 	}
 }
