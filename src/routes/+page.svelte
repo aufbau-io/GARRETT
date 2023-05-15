@@ -131,7 +131,7 @@
 		padding: calc(2 * var(--margin));
 		border: solid 1px var(--primary); */
 		position: relative;
-		background: var(--background);
+		background: var(--background-50);
 		border: double 6px var(--primary);
 
 		margin-bottom: 1.1rem;
@@ -325,7 +325,6 @@
 	picture {
 		margin: 0 !important;
 		padding: 0 !important;
-		background: var(--background-50);
 	
 		min-width: none;
 
