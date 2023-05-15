@@ -94,7 +94,7 @@
 
 	</picture>
 
-	<a class="entry button fase-a" href="https://garrettmusar.work">
+	<a class="entry button fase-a" href="https://work.garrettmusar.work">
 		<div >
 			<h2>COME ON BACK</h2>
 		</div>
