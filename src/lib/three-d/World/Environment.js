@@ -14,9 +14,12 @@ export default class Environment {
 		// const size = 100;
 		// const divisions = 100;
 
-		// const gridHelper = new THREE.GridHelper(size, divisions, 0x232323, 0x232323);
-		// gridHelper.position.y = -2;
-		// this.scene.add(gridHelper);
+		let gridHelper = new THREE.GridHelper(20, 50, 0x232323, 0x232323);
+		gridHelper.position.x = -3;
+		gridHelper.position.z = -3;
+		gridHelper.position.y = -3;
+		this.scene.add(gridHelper);
+		// this.setEnvironmentMap();
 
 		// Debug
 		if (this.debug.active) {
