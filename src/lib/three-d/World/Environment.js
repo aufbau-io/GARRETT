@@ -15,9 +15,9 @@ export default class Environment {
 		// const divisions = 100;
 
 		let gridHelper = new THREE.GridHelper(20, 50, 0x232323, 0x232323);
-		gridHelper.position.x = -3;
-		gridHelper.position.z = -3;
-		gridHelper.position.y = -3;
+		gridHelper.position.x = -4;
+		gridHelper.position.z = -4;
+		gridHelper.position.y = -4;
 		this.scene.add(gridHelper);
 		// this.setEnvironmentMap();
 
