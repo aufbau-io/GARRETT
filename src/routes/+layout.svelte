@@ -20,29 +20,33 @@
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		});
 
-		const experience = new Experience(document.querySelector('canvas.webgl'))
-
 		// ---------------------------------------------------------------------------
 		// SCREEN
 		// ---------------------------------------------------------------------------
 		const ua = navigator.userAgent;
+		let screenTypeENUM;
 		if (
 			/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
 		) {
 			// phone
-			screenType.set(1);
+			screenTypeENUM = 1;
+			screenType.set(screenTypeENUM);
 		} else if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
 			// tablet
-			screenType.set(2);
+			screenTypeENUM = 2;
+			screenType.set(screenTypeENUM);
 		} else {
 			//laptop
-			screenType.set(3);
+			screenTypeENUM = 3;
+			screenType.set(screenTypeENUM);
 		}
 
 		if (window.location !== window.parent.location) {
 			// The page is in an iframe
 			iframe.set(true);
 		}
+
+		const experience = new Experience(document.querySelector('canvas.webgl'), screenTypeENUM)
 	});
 </script>
 

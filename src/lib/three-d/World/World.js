@@ -50,7 +50,7 @@ export default class World {
 		let positions = [];
 		for (let i = 0; i <= n_cubes; i++) {
 			let x = (i % 4) * 1.5 - 2.5; // should be: let x = (i % 4) * 1.5 - 3;
-			let y = (i / n_cubes) * 10 - 5;
+			let y = (i / n_cubes) * 10 - 4;
 
 			let z = -(i % 3);
 

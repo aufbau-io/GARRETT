@@ -2,14 +2,15 @@ import * as THREE from 'three';
 import Experience from './Experience.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-let FACTOR = 1;
-
 export default class Camera {
-	constructor() {
+	constructor(screenTypeENUM) {
 		this.experience = new Experience();
 		this.sizes = this.experience.sizes;
 		this.scene = this.experience.scene;
 		this.canvas = this.experience.canvas;
+		this.scaleFactor = screenTypeENUM == 3 ? 1 : 1.5;
+
+		console.log('screenTypeENUM', screenTypeENUM);
 
 		this.setInstance();
 		this.setControls();
@@ -18,10 +19,10 @@ export default class Camera {
 	setInstance() {
 		const aspectRatio = this.sizes.width / this.sizes.height;
 		this.instance = new THREE.OrthographicCamera(
-			-FACTOR * aspectRatio,
-			FACTOR * aspectRatio,
-			FACTOR,
-			-FACTOR,
+			-this.scaleFactor * aspectRatio,
+			this.scaleFactor * aspectRatio,
+			this.scaleFactor,
+			-this.scaleFactor,
 			0.1,
 			100
 		);
@@ -36,10 +37,10 @@ export default class Camera {
 
 	resize() {
 		this.instance.aspect = this.sizes.width / this.sizes.height;
-		this.instance.left = -FACTOR * this.instance.aspect;
-		this.instance.right = FACTOR * this.instance.aspect;
-		this.instance.top = FACTOR;
-		this.instance.bottom = -FACTOR;
+		this.instance.left = -this.scaleFactor * this.instance.aspect;
+		this.instance.right = this.scaleFactor * this.instance.aspect;
+		this.instance.top = this.scaleFactor;
+		this.instance.bottom = -this.scaleFactor;
 
 		this.instance.updateProjectionMatrix();
 	}

@@ -1,101 +1,88 @@
-import * as THREE from 'three'
+import * as THREE from 'three';
 
-import Debug from './Utils/Debug.js'
-import Sizes from './Utils/Sizes.js'
-import Time from './Utils/Time.js'
-import Camera from './Camera.js'
-import Renderer from './Renderer.js'
-import World from './World/World.js'
-import Resources from './Utils/Resources.js'
+import Debug from './Utils/Debug.js';
+import Sizes from './Utils/Sizes.js';
+import Time from './Utils/Time.js';
+import Camera from './Camera.js';
+import Renderer from './Renderer.js';
+import World from './World/World.js';
+import Resources from './Utils/Resources.js';
 
-import sources from './sources.js'
+import sources from './sources.js';
 
-let instance = null
+let instance = null;
 
-export default class Experience
-{
-    constructor(_canvas)
-    {
-        // Singleton
-        if(instance)
-        {
-            return instance
-        }
-        instance = this
-        
-        // Global access
-        window.experience = this
+export default class Experience {
+	constructor(_canvas, screenTypeENUM) {
+		// Singleton
+		if (instance) {
+			return instance;
+		}
+		instance = this;
 
-        // Options
-        this.canvas = _canvas
+		// Global access
+		window.experience = this;
 
-        // Setup
-        this.debug = new Debug()
-        this.sizes = new Sizes()
-        this.time = new Time()
-        this.scene = new THREE.Scene()
-        this.resources = new Resources(sources)
-        this.camera = new Camera()
-        this.renderer = new Renderer()
-        this.world = new World()
+		// Options
+		this.canvas = _canvas;
 
-        // Resize event
-        this.sizes.on('resize', () =>
-        {
-            this.resize()
-        })
+		// Setup
+		this.debug = new Debug();
+		this.sizes = new Sizes();
+		this.time = new Time();
+		this.scene = new THREE.Scene();
+		this.resources = new Resources(sources);
+		this.camera = new Camera(screenTypeENUM);
+		this.renderer = new Renderer();
+		this.world = new World();
 
-        // Time tick event
-        this.time.on('tick', () =>
-        {
-            this.update()
-        })
-    }
+		// Resize event
+		this.sizes.on('resize', () => {
+			this.resize();
+		});
 
-    resize()
-    {
-        this.camera.resize()
-        this.renderer.resize()
-    }
+		// Time tick event
+		this.time.on('tick', () => {
+			this.update();
+		});
+	}
 
-    update()
-    {
-        this.camera.update()
-        this.world.update()
-        this.renderer.update()
-    }
+	resize() {
+		this.camera.resize();
+		this.renderer.resize();
+	}
 
-    destroy()
-    {
-        this.sizes.off('resize')
-        this.time.off('tick')
+	update() {
+		this.camera.update();
+		this.world.update();
+		this.renderer.update();
+	}
 
-        // Traverse the whole scene
-        this.scene.traverse((child) =>
-        {
-            // Test if it's a mesh
-            if(child instanceof THREE.Mesh)
-            {
-                child.geometry.dispose()
+	destroy() {
+		this.sizes.off('resize');
+		this.time.off('tick');
 
-                // Loop through the material properties
-                for(const key in child.material)
-                {
-                    const value = child.material[key]
+		// Traverse the whole scene
+		this.scene.traverse((child) => {
+			// Test if it's a mesh
+			if (child instanceof THREE.Mesh) {
+				child.geometry.dispose();
 
-                    // Test if there is a dispose function
-                    if(value && typeof value.dispose === 'function')
-                    {
-                        value.dispose()
-                    }
-                }
-            }
-        })
+				// Loop through the material properties
+				for (const key in child.material) {
+					const value = child.material[key];
 
-        this.camera.controls.dispose()
-        this.renderer.instance.dispose()
+					// Test if there is a dispose function
+					if (value && typeof value.dispose === 'function') {
+						value.dispose();
+					}
+				}
+			}
+		});
 
-        if(this.debug.active)
-            this.debug.ui.destroy()
-    }
+		this.camera.controls.dispose();
+		this.renderer.instance.dispose();
+
+		if (this.debug.active) this.debug.ui.destroy();
+	}
 }
