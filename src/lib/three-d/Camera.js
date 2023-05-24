@@ -2,6 +2,10 @@ import * as THREE from 'three';
 import Experience from './Experience.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
+import { screenType } from '$lib/store/store';
+
+const FACTOR = screenType == 1 ? 1 : 1.5;
+
 export default class Camera {
 	constructor() {
 		this.experience = new Experience();
@@ -16,10 +20,10 @@ export default class Camera {
 	setInstance() {
 		const aspectRatio = this.sizes.width / this.sizes.height;
 		this.instance = new THREE.OrthographicCamera(
-			-1 * aspectRatio,
-			1 * aspectRatio,
-			1,
-			-1,
+			-FACTOR * aspectRatio,
+			FACTOR * aspectRatio,
+			FACTOR,
+			-FACTOR,
 			0.1,
 			100
 		);
@@ -34,10 +38,10 @@ export default class Camera {
 
 	resize() {
 		this.instance.aspect = this.sizes.width / this.sizes.height;
-		this.instance.left = -1 * this.instance.aspect;
-		this.instance.right = 1 * this.instance.aspect;
-		this.instance.top = 1;
-		this.instance.bottom = -1;
+		this.instance.left = -FACTOR * this.instance.aspect;
+		this.instance.right = FACTOR * this.instance.aspect;
+		this.instance.top = FACTOR;
+		this.instance.bottom = -FACTOR;
 
 		this.instance.updateProjectionMatrix();
 	}
