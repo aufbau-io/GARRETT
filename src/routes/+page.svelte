@@ -19,7 +19,7 @@
 	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
 
 	{#if index == 1}
-	<link rel="preload" href="{headshot_1}" as="image/png" />
+	<link rel="preload"  href="{headshot_1}" as="image/png" />
 	{:else if index == 2}
 	<link rel="preload" href="{headshot_2}" as="image/png" />
 	{:else if index ==3}
@@ -115,14 +115,6 @@
 		min-width: 500px;
 		height: 100%;
 		/* opacity: 0; */
-	}
-
-	.square {
-		width: 100%;
-		height: 100%;
-		background: none;
-		border: solid 2px var(--primary);
-		position: relative;
 	}
 
 	picture {
@@ -271,17 +263,6 @@
 		font-family: untitled, sans-serif;
 		font-weight: 600;
 	}
-
-.arrow {
-		font-family: financier, serif;
-		font-size: 30px;
-		color: var(--primary);
-	}
-
-.entry:hover .arrow {
-		color: var(--background);
-	}
-
 
 @media (max-width: 760px)  {
 	section {

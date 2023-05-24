@@ -2,9 +2,7 @@ import * as THREE from 'three';
 import Experience from './Experience.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-import { screenType } from '$lib/store/store';
-
-const FACTOR = screenType == 1 ? 1 : 1.5;
+let FACTOR = 1.5;
 
 export default class Camera {
 	constructor() {

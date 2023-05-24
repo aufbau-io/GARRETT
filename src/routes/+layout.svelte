@@ -46,11 +46,12 @@
 	});
 </script>
 
+<!-- {#key $screenType}
+{#if $screenType} -->
 <canvas class="webgl"></canvas>
 
 <div class="app">
-	{#key $screenType}
-	{#if $screenType}
+
 	<!-- <header>
 		<Header />
 	</header> -->
@@ -62,10 +63,10 @@
 	<!-- <footer>
 		<Footer />
 	</footer> -->
-	{/if}
-	{/key}
-</div>
 
+</div>
+<!-- {/if}
+{/key} -->
 
 <style>
 	.app {

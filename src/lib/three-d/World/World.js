@@ -49,7 +49,7 @@ export default class World {
 	make_positions(n_cubes) {
 		let positions = [];
 		for (let i = 0; i <= n_cubes; i++) {
-			let x = (i % 4) * 1.5 - 2.5;
+			let x = (i % 4) * 1.5 - 3;
 			let y = (i / n_cubes) * 10 - 5;
 
 			let z = -(i % 3);
