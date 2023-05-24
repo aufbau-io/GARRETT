@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<title>Garrett “All Business” Musar</title>
+	<title>Garrett Musar</title>
 	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
 
 	{#if index == 1}
