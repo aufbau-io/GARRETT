@@ -7,11 +7,21 @@
 	import linkedin from '$lib/images/icons/linkedin.svg';
 	import mail from '$lib/images/icons/gmail.svg';
 	import twitter from '$lib/images/icons/twitter.svg';
+	import music from '$lib/images/icons/music.svg';
 
 	import { screenType } from '$lib/store/store';
 	
 	let index = Math.floor(Math.random() * 3) +1 ;
-	
+
+	let audio;
+	audio = new Audio('/office.mp3');
+	audio.loop = true;
+
+	function toggleAudio() {
+		audio.mute ? audio.pause() : audio.play();
+		audio.mute = !audio.mute;
+	}
+
 </script>
 
 <svelte:head>
@@ -68,6 +78,7 @@
 			<a href="https://twitter.com/LL_Croix" target="_blank" rel="noreferrer">
 				<img src={twitter} alt="twitter" class="icon" />
 			</a>
+			<img src={music} alt="linkedin" class="icon" on:click={toggleAudio} on:keydown={toggleAudio} />
 			</div>
 		</header>
 
