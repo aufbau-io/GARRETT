@@ -25,14 +25,16 @@
 	font-weight: 700;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
-	/* background: var(--background-50); */
 	background-attachment: fixed;
 	background-size: 100vw 100vh;
 	font-family: sans-serif;
 	font-weight: 400;
-
 	user-select: none;
 }
 
@@ -50,12 +52,18 @@ p,
 a {
 	color: var(--primary);
 	font-weight: 500;
+	margin: 0;
 }
 
 h1 {
 	font-family: 'financier', sans-serif;
 	font-weight: 500;
 	text-align: center;
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1rem;
 }
 
 p {
@@ -70,34 +78,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-h1 {
-	font-size: 2rem;
-	text-align: center;
-}
-
-h2 {
-	font-size: 1rem;
-}
-
-pre {
-	font-size: 16px;
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--color-text);
-}
-
-.text-column {
-	display: flex;
-	max-width: 48rem;
-	flex: 0.6;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-}
-
 input,
 button {
 	font-size: inherit;
@@ -108,63 +88,28 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-/* GO BLACK */
-
+/* Animation */
 @keyframes goBlack {
-	0% {
-		opacity: 1;
-		background: var(--background-50);
-		color: var(--primary);
-	}
-	20% {
+	0%, 20% {
 		opacity: 1;
 		background: var(--background-50);
 		color: var(--primary);
 	}
 	25% {
-		opacity: 1;
 		background: var(--primary);
 		color: var(--background);
 	}
-	30% {
-		opacity: 1;
-		background: var(--background-50);
-		color: var(--primary);
-	}
-	40% {
-		opacity: 1;
+	30%, 40% {
 		background: var(--background-50);
 		color: var(--primary);
 	}
 	45% {
-		opacity: 1;
 		background: var(--primary);
 		color: var(--background);
 	}
-	50% {
-		opacity: 1;
+	50%, 100% {
 		background: var(--background-50);
 		color: var(--primary);
-	}
-	100% {
-		opacity: 1;
-		background: var(--background-50);
-		color: var(--primary);
-	}
-}
-
-/* GO BACK */
-
-@keyframes goBack {
-	from {
-		background: var(--primary);
-		color: var(--background);
-		border-color: var(--background);
-	}
-	to {
-		background: var(--background);
-		color: var(--primary);
-		border-color: var(--primary);
 	}
 }
 
@@ -172,6 +117,7 @@ button:focus:not(:focus-visible) {
 	:root {
 		--button: #e0e0d080;
 	}
+
 	h1 {
 		font-size: 2.4rem;
 	}
