@@ -61,7 +61,7 @@
 {#if !$isLoaded}
 	<div class="loader">
 		<div class="loader-content">
-			<div class="loader-text">LOADING</div>
+			<div class="loader-text">BUSINESS LOADING</div>
 			<div class="loader-bar">
 				<div class="loader-fill" style="width: {loadProgress * 100}%"></div>
 			</div>
