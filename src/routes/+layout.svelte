@@ -67,7 +67,7 @@
 	<meta property="og:url" content="https://garrettmusar.work/" />
 	<meta property="og:title" content="Garrett Musar" />
 	<meta property="og:description" content="Freelance Copywriter. I have a degree from an accredited business school." />
-	<meta property="og:image" content="https://garrettmusar.work/images/2.png" />
+	<meta property="og:image" content="https://www.garrettmusar.work/images/2.png" />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
