@@ -2,7 +2,7 @@
 	import './app.css';
 	import { onMount, onDestroy } from 'svelte';
 	import { screenType, iframe, isLoaded } from '$lib/store/store';
-	import { createExperience } from '$lib/three-d/experience.js';
+	import { createExperience } from '$lib/three-d/Experience.js';
 
 	let canvas;
 	let experience;
