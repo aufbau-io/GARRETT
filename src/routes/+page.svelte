@@ -63,13 +63,6 @@
 		type="font/woff2"
 		crossorigin="anonymous"
 	/>
-	<link
-		rel="preload"
-		as="font"
-		href="/fonts/test-untitled-sans-regular.woff2"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
 </svelte:head>
 
 <section>
@@ -137,9 +130,9 @@
 	}
 
 	header h2 {
-		font-family: untitled, sans-serif;
+		font-family: var(--font-sans);
 		font-size: clamp(12px, 3vw, 16px);
-		font-weight: 600;
+		font-weight: 400;
 		letter-spacing: 2px;
 		color: var(--accent);
 		margin: 0;
@@ -229,9 +222,9 @@
 		background: var(--background-50);
 		border: double 6px var(--primary);
 		color: var(--primary);
-		font-family: untitled, sans-serif;
+		font-family: var(--font-sans);
 		font-size: clamp(12px, 3vw, 16px);
-		font-weight: 600;
+		font-weight: 400;
 		letter-spacing: 2px;
 		text-decoration: none;
 		transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;

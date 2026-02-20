@@ -136,7 +136,7 @@
 	}
 
 	.loader-text {
-		font-family: untitled, sans-serif;
+		font-family: var(--font-sans);
 		font-size: 12px;
 		letter-spacing: 3px;
 		color: var(--primary);
