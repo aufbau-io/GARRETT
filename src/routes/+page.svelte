@@ -32,39 +32,6 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Garrett Musar</title>
-	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="keywords" content="freelance copywriter, brand copywriter, creative copywriter, web copywriter, advertising copywriter, content writer, brand voice, marketing copy, freelance writer for hire" />	
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://garrettmusar.work/" />
-	<meta property="og:title" content="Garrett Musar" />
-	<meta property="og:description" content="Freelance Copywriter. I have a degree from an accredited business school." />
-	<meta property="og:image" content="https://garrettmusar.work/images/2.png" />
-	
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@LL_Croix" />
-	<meta name="twitter:title" content="Garrett Musar | Freelance Copywriter" />
-	<meta name="twitter:description" content="Freelance copywriter specializing in brand voice, web copy, and creative campaigns." />
-	<meta name="twitter:image" content="https://garrettmusar.work/images/2.png" />
-
-	<!-- Canonical -->
-	<link rel="canonical" href="https://garrettmusar.work/" />
-	
-	<!-- Fonts -->
-	<link
-		rel="preload"
-		as="font"
-		href="/fonts/test-financier-display-semibold.woff2"
-		type="font/woff2"
-		crossorigin="anonymous"
-	/>
-</svelte:head>
-
 <section>
 	<header>
 		<h2>GARRETT MUSAR</h2>
