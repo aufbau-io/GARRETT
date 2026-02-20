@@ -14,9 +14,9 @@
 	onMount(async () => {
 		// Dynamically import random headshot
 		const headshots = await Promise.all([
-			import('$lib/images/1.png'),
-			import('$lib/images/2.png'),
-			import('$lib/images/3.png')
+			import('/images/1.png'),
+			import('/images/2.png'),
+			import('/images/3.png')
 		]);
 		const index = Math.floor(Math.random() * 3);
 		headshot = headshots[index].default;
@@ -38,9 +38,17 @@
 </script>
 
 <svelte:head>
-	<title>GARRETT MUSAR</title>
+	<title>Garrett Musar</title>
 	<meta name="description" content="Freelance Copywriter. I have a degree from an accredited business school." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="freelance copywriter, brand copywriter, creative copywriter, web copywriter, advertising copywriter, content writer, brand voice, marketing copy, freelance writer for hire" />	
 
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://garrettmusar.work/" />
+	<meta property="og:title" content="Garrett Musar" />
+	<meta property="og:description" content="Freelance Copywriter. I have a degree from an accredited business school." />
+	<meta property="og:image" content="https://garrettmusar.work/images/2.png" />
+	
 	<link
 		rel="preload"
 		as="font"
