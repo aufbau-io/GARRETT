@@ -26,10 +26,6 @@
 	}
 </script>
 
-<svelte:head>
-	<link rel="preload" as="image" href={headshot} />
-</svelte:head>
-
 <section>
 	<header>
 		<h2>GARRETT MUSAR</h2>
