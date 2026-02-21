@@ -8,54 +8,41 @@
 	let experience;
 	let loadProgress = 0;
 
-	// Preload a random headshot
-	function preloadHeadshot() {
-		return new Promise((resolve) => {
-			const index = Math.floor(Math.random() * 3) + 1;
-			const img = new Image();
-			img.onload = () => resolve(index);
-			img.onerror = () => resolve(index);
-			img.src = `/images/${index}.png`;
-		});
-	}
-
 	onMount(async () => {
+		// Set viewport height CSS variable
 		const setVh = () => {
 			document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
 		};
 		setVh();
 		window.addEventListener('resize', setVh);
 
+		// Detect screen type
 		const ua = navigator.userAgent;
 		let screenTypeENUM;
 		
 		if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-			screenTypeENUM = 1;
+			screenTypeENUM = 1; // phone
 		} else if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-			screenTypeENUM = 2;
+			screenTypeENUM = 2; // tablet
 		} else {
-			screenTypeENUM = 3;
+			screenTypeENUM = 3; // desktop
 		}
 		screenType.set(screenTypeENUM);
 
+		// Check iframe
 		if (window.location !== window.parent.location) {
 			iframe.set(true);
 		}
 
+		// Initialize Three.js experience
 		const isMobile = screenTypeENUM !== 3;
 		experience = createExperience(canvas, isMobile);
 		
-		// Load 3D models AND headshot in parallel
-		const [headshotIndex] = await Promise.all([
-			preloadHeadshot(),
-			experience.init((progress) => {
-				loadProgress = progress;
-			})
-		]);
+		await experience.init((progress) => {
+			loadProgress = progress;
+		});
 		
-		// Store which headshot to use
-		window.__headshotIndex = headshotIndex;
-		
+		// Small delay to ensure smooth transition
 		await new Promise(r => setTimeout(r, 100));
 		isLoaded.set(true);
 
