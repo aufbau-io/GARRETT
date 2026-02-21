@@ -1,12 +1,19 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import instagram from '$lib/images/icons/instagram.svg';
 	import linkedin from '$lib/images/icons/linkedin.svg';
 	import mail from '$lib/images/icons/gmail.svg';
 	import twitter from '$lib/images/icons/twitter.svg';
 	import music from '$lib/images/icons/music.svg';
 
-	const headshots = ['/images/1.png', '/images/2.png', '/images/3.png'];
-	const headshot = headshots[Math.floor(Math.random() * 3)];
+	let headshot = '/images/2.png'; // fallback
+	
+	onMount(() => {
+		if (window.__headshotIndex) {
+			headshot = `/images/${window.__headshotIndex}.png`;
+		}
+	});
 
 	let audio;
 	let audioPlaying = false;
