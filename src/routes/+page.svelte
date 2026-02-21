@@ -1,21 +1,15 @@
 <script>
-	import { onMount } from 'svelte';
-
 	import instagram from '$lib/images/icons/instagram.svg';
 	import linkedin from '$lib/images/icons/linkedin.svg';
 	import mail from '$lib/images/icons/gmail.svg';
 	import twitter from '$lib/images/icons/twitter.svg';
 	import music from '$lib/images/icons/music.svg';
 
-	let headshot = '';
+	const headshots = ['/images/1.png', '/images/2.png', '/images/3.png'];
+	const headshot = headshots[Math.floor(Math.random() * 3)];
+
 	let audio;
 	let audioPlaying = false;
-
-	onMount(() => {
-		const headshots = ['/images/1.png', '/images/2.png', '/images/3.png'];
-		const index = Math.floor(Math.random() * 3);
-		headshot = headshots[index];
-	});
 
 	function toggleAudio() {
 		if (!audio) {
@@ -31,6 +25,10 @@
 		audioPlaying = !audioPlaying;
 	}
 </script>
+
+<svelte:head>
+	<link rel="preload" as="image" href={headshot} />
+</svelte:head>
 
 <section>
 	<header>
@@ -56,9 +54,7 @@
 
 	<div class="card-wrapper">
 		<div class="card">
-			{#if headshot}
-				<img src={headshot} alt="Garrett Musar" class="headshot" />
-			{/if}
+			<img src={headshot} alt="Garrett Musar" class="headshot" />
 		</div>
 		<div class="banner">
 			<h1>
