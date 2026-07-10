@@ -191,10 +191,8 @@
 	}
 
 	.cta:hover {
-		background: var(--primary);
-		color: var(--background);
-		border-color: var(--background);
-		text-decoration: none;
+		background: var(--primary) !important;
+		color: var(--background) !important;
 	}
 
 	.cta:active {
