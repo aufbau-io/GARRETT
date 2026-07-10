@@ -21,7 +21,7 @@ const BG_VARIANTS = ['flatwall', 'sunburst', 'horizon', 'blobs', 'halftone'];
 //   'horizon'  – warm gradient sky with a low sun and a ground line
 //   'blobs'    – big out-of-focus tonal shapes drifting behind everything
 //   'halftone' – risograph dot-screen gradient, densest low, faint shimmer
-const BG_VARIANT = 'sunburst';
+const BG_VARIANT = 'flatwall';
 
 const BG_VERTEX = /* glsl */ `
 	varying vec2 vUv;
