@@ -64,7 +64,7 @@ const BG_FRAGMENT = /* glsl */ `
 			vec2 dir = (p - vec2(0.5, 0.52)) * vec2(aspect, 1.0);
 			float ang = atan(dir.y, dir.x) + uTime * 0.05;
 			float wedge = smoothstep(0.42, 0.58, 0.5 + 0.5 * sin(ang * 14.0));
-			col = mix(BG, TAN, wedge * 0.55);
+			col = mix(BG, TAN, wedge * 0.5);
 			float dist = length(dir);
 			col = mix(col, BG, 1.0 - smoothstep(0.0, 0.5, dist));
 		} else if (uVariant == 2) {
