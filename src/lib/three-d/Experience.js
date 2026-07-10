@@ -95,15 +95,16 @@ const BG_FRAGMENT = /* glsl */ `
 				col = mix(col, cols[i], w);
 			}
 		} else {
-			// risograph halftone — dot screen, denser/bigger toward the bottom
-			float gap = 16.0 * (res.x / 900.0) + 6.0;
-			vec2 gp = mod(fc, gap) - gap * 0.5;
+			// risograph halftone — dot screen; dots grow from tiny (top) to
+			// nearly touching (bottom). Cell + dot both scale with the viewport.
+			float gap = res.y / 64.0;
+			vec2 gp = mod(fc, gap) - gap * 1.0;
 			vec2 idx = floor(fc / gap);
-			float shim = 0.5 + 0.5 * sin(uTime * 0.8 + idx.x * 0.5 + idx.y * 0.5);
-			float radius = (0.6 + tTop * 3.4) * (0.7 + 0.3 * shim);
-			float dot = 1.0 - smoothstep(radius - 1.0, radius, length(gp));
-			float alpha = 0.35 + tTop * 0.4;
-			col = mix(BG, TAN, dot * alpha);
+			float shim = 0.9 + 0.1 * sin(uTime * 0.8 + idx.x * 0.6 + idx.y * 0.6);
+			float fill = (0.1 + tTop * 0.42) * shim; // radius as a fraction of the cell
+			float radius = fill * gap;
+			float dot = 1.0 - smoothstep(radius - 1.5, radius + 0.5, length(gp));
+			col = mix(BG, mix(TAN, DEEP, tTop), dot);
 		}
 
 		gl_FragColor = vec4(col, 1.0);
