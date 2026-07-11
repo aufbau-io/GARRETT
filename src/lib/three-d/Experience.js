@@ -12,18 +12,12 @@ const MODELS = [
 const TOTAL_OBJECTS = 24;
 const OBJECTS_PER_TYPE = TOTAL_OBJECTS / 3;
 
-// ─── Master background control ────────────────────────────────────────────────
-// The background is a full-screen shader drawn behind the floating objects, so it
-// stays pixel-locked to the viewport (never angled or fogged out). Pick a look:
-const BG_VARIANTS = ['flatwall', 'sunburst', 'horizon', 'blobs', 'halftone'];
-//   'flatwall' – solid cream with faint panel seams (the old, boring one)
-//   'sunburst' – soft radial rays turning slowly (corporate-optimism halo)
-//   'horizon'  – warm gradient sky with a low sun and a ground line
-//   'blobs'    – big out-of-focus tonal shapes drifting behind everything
-//   'halftone' – risograph dot-screen gradient, densest low, faint shimmer
-const BG_VARIANT = 'flatwall';
+// ─── Office backdrop ──────────────────────────────────────────────────────────
+// A full-screen shader behind the floating objects, pixel-locked to the viewport.
+// Old painted wall on top, dirty carpet below — they meet at `floorY` (~1/3 up),
+// which is exactly where the old horizon line sat.
 
-const BG_VERTEX = /* glsl */ `
+const BG_VERTEX = `
 	varying vec2 vUv;
 	void main() {
 		vUv = uv;
@@ -31,81 +25,46 @@ const BG_VERTEX = /* glsl */ `
 	}
 `;
 
-const BG_FRAGMENT = /* glsl */ `
+const BG_FRAGMENT = `
 	varying vec2 vUv;
 	uniform vec2 uResolution;
-	uniform float uTime;
-	uniform int uVariant;
 
-	const vec3 BG    = vec3(0.8784, 0.8784, 0.8157); // #e0e0d0
-	const vec3 WARM  = vec3(0.8471, 0.8314, 0.7490); // #d8d4bf
-	const vec3 TAN   = vec3(0.8039, 0.7804, 0.6706); // #cdc7ab
-	const vec3 DEEP  = vec3(0.7608, 0.7412, 0.6314); // #c2bda1
-	const vec3 LINE  = vec3(0.7255, 0.7137, 0.6353); // #b9b6a2
-	const vec3 WHITE = vec3(0.9569, 0.9412, 0.8784); // #f4f0e0
+	const vec3 BG    = vec3(0.8784, 0.8784, 0.8157); // #e0e0d0  wall (light)
+	const vec3 WARM  = vec3(0.8471, 0.8314, 0.7490); // #d8d4bf  wall (warm, top)
+	const vec3 DEEP  = vec3(0.7608, 0.7412, 0.6314); // #c2bda1  wall (shaded, low)
+	const vec3 LINE  = vec3(0.7255, 0.7137, 0.6353); // #b9b6a2  seam / baseboard
+    const vec3 RUG   = vec3(0.7333, 0.7098, 0.6039); // #bbb59a  carpet (near wall)
+	const vec3 RUGLO = vec3(0.6706, 0.6471, 0.5451); // #aba58b  carpet (slightly deeper)
 
 	void main() {
 		vec2 res = uResolution;
-		vec2 fc = vUv * res;          // pixel coords
-		vec2 p = vUv;                 // 0..1
+		vec2 fc = vUv * res;
+		vec2 p = vUv;
 		float aspect = res.x / res.y;
-		float tTop = 1.0 - p.y;       // 0 at top, 1 at bottom
-		vec3 col = BG;
+		float tTop = 1.0 - p.y;          // 0 at top → 1 at bottom
 
-		if (uVariant == 0) {
-			// flat wall — faint square grid
-			float cell = res.x / 9.0;
-			vec2 gp = mod(fc + cell * 0.5, cell);
-			float d = min(min(gp.x, cell - gp.x), min(gp.y, cell - gp.y));
-			float l = 1.0 - smoothstep(0.0, 1.5, d);
-			col = mix(BG, LINE, l * 0.5);
-		} else if (uVariant == 1) {
-			// sunburst — alternating soft wedges, bright center, slow spin
-			vec2 dir = (p - vec2(0.5, 0.52)) * vec2(aspect, 1.0);
-			float ang = atan(dir.y, dir.x) + uTime * 0.05;
-			float wedge = smoothstep(0.42, 0.58, 0.5 + 0.5 * sin(ang * 14.0));
-			col = mix(BG, TAN, wedge * 0.5);
-			float dist = length(dir);
-			col = mix(col, BG, 1.0 - smoothstep(0.0, 0.5, dist));
-		} else if (uVariant == 2) {
-			// letterhead horizon — gradient sky, low sun, ground line
-			vec3 sky = mix(WARM, BG, smoothstep(0.0, 0.62, tTop));
-			sky = mix(sky, DEEP, smoothstep(0.62, 1.0, tTop));
-			col = sky;
-			float sd = length((p - vec2(0.5, 0.34)) * vec2(aspect, 1.0));
-			col = mix(col, WHITE, (1.0 - smoothstep(0.0, 0.5, sd)) * 0.85);
-			float ground = 1.0 - smoothstep(0.0, 0.004, abs(tTop - 0.72));
-			col = mix(col, LINE, ground * 0.7);
-		} else if (uVariant == 3) {
-			// soft blobs — drifting out-of-focus tonal shapes
-			vec2 centers[4];
-			float radii[4];
-			vec3 cols[4];
-			centers[0] = vec2(0.25, 0.65); radii[0] = 0.45; cols[0] = WARM;
-			centers[1] = vec2(0.72, 0.40); radii[1] = 0.50; cols[1] = TAN;
-			centers[2] = vec2(0.50, 0.15); radii[2] = 0.40; cols[2] = DEEP;
-			centers[3] = vec2(0.85, 0.80); radii[3] = 0.32; cols[3] = WARM;
-			for (int i = 0; i < 4; i++) {
-				vec2 off = vec2(
-					sin(uTime * 0.03 + float(i)) * 0.06,
-					cos(uTime * 0.025 + float(i)) * 0.06
-				);
-				float dd = length((p - centers[i] - off) * vec2(aspect, 1.0));
-				float w = (1.0 - smoothstep(0.0, radii[i], dd)) * 0.75;
-				col = mix(col, cols[i], w);
-			}
-		} else {
-			// risograph halftone — dot screen; dots grow from tiny (top) to
-			// nearly touching (bottom). Cell + dot both scale with the viewport.
-			float gap = res.y / 64.0;
-			vec2 gp = mod(fc, gap) - gap * 1.0;
-			vec2 idx = floor(fc / gap);
-			float shim = 0.9 + 0.1 * sin(uTime * 0.8 + idx.x * 0.6 + idx.y * 0.6);
-			float fill = (0.1 + tTop * 0.42) * shim; // radius as a fraction of the cell
-			float radius = fill * gap;
-			float dot = 1.0 - smoothstep(radius - 1.5, radius + 0.5, length(gp));
-			col = mix(BG, mix(TAN, DEEP, tTop), dot);
-		}
+		const float floorY = 0.85;       // carpet meets wall here (~1/3 up)
+
+        // ── wall: old paint gradient + subtle tile grid ─────────────
+		vec3 wall = mix(WARM, BG, smoothstep(0.0, 0.62, tTop));
+		wall = mix(wall, DEEP, smoothstep(0.62, 1.0, tTop));
+
+		float tile = res.x / 15.0;                       // tile size (px)
+		vec2 gp = mod(fc + tile * 1.5, tile);
+		float gd = min(min(gp.x, tile - gp.x), min(gp.y, tile - gp.y));
+		float grid = 1.0 - smoothstep(0.0, 2.5, gd);
+		wall = mix(wall, LINE, grid * 0.52);            // faint seams
+
+		// ── carpet: flat, near wall tone ────────────────────────────
+		float d = clamp((tTop - floorY) / (1.0 - floorY), 0.0, 1.0);
+		vec3 rug = mix(RUG, RUGLO, d * 0.0);            // eases a touch darker as it nears you
+
+		// ── composite ───────────────────────────────────────────────
+		float floorMask = smoothstep(floorY - 0.002, floorY + 0.002, tTop);
+		vec3 col = mix(wall, rug, floorMask);
+
+		float seam = 1.0 - smoothstep(0.0, 0.0025, abs(tTop - floorY));
+		col = mix(col, LINE * 0.82, seam * 0.6);        // baseboard / contact shadow
 
 		gl_FragColor = vec4(col, 1.0);
 	}
@@ -121,9 +80,7 @@ function createBackground() {
 		depthTest: false,
 		depthWrite: false,
 		uniforms: {
-			uTime: { value: 0 },
-			uResolution: { value: new THREE.Vector2(1, 1) },
-			uVariant: { value: Math.max(0, BG_VARIANTS.indexOf(BG_VARIANT)) }
+			uResolution: { value: new THREE.Vector2(1, 1) }
 		}
 	});
 	const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material);
@@ -136,7 +93,6 @@ export function createExperience(canvas, isMobile = false) {
 	let animationId = null;
 	let isDestroyed = false;
 	const objects = [];
-	const clock = new THREE.Clock();
 
 	const scene = new THREE.Scene();
 	scene.fog = new THREE.FogExp2(0xe0e0d0, 0.05);
@@ -226,8 +182,6 @@ export function createExperience(canvas, isMobile = false) {
 	function animate() {
 		if (isDestroyed) return;
 		animationId = requestAnimationFrame(animate);
-
-		background.material.uniforms.uTime.value = clock.getElapsedTime();
 
 		for (const obj of objects) {
 			obj.position.y += 0.002;
