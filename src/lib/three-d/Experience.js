@@ -138,15 +138,26 @@ export function createExperience(canvas, isMobile = false) {
 			if (animationId) cancelAnimationFrame(animationId);
 			window.removeEventListener('resize', handleResize);
 
+			const disposeMaterial = (material) => {
+				// material.dispose() doesn't free textures — release them first
+				for (const key of Object.keys(material)) {
+					const value = material[key];
+					if (value && value.isTexture) value.dispose();
+				}
+				material.dispose();
+			};
+
 			scene.traverse((child) => {
 				child.geometry?.dispose();
 				const m = child.material;
-				if (Array.isArray(m)) m.forEach((x) => x.dispose());
-				else m?.dispose();
+				if (!m) return;
+				if (Array.isArray(m)) m.forEach(disposeMaterial);
+				else disposeMaterial(m);
 			});
 
 			controls.dispose();
 			renderer.dispose();
+			renderer.forceContextLoss();
 		}
 	};
 }
