@@ -30,32 +30,19 @@ const BG_FRAGMENT = `
 	uniform vec2 uResolution;
 
 	const vec3 BG    = vec3(0.8784, 0.8784, 0.8157); // #e0e0d0  wall (light)
-	const vec3 WARM  = vec3(0.8471, 0.8314, 0.7490); // #d8d4bf  wall (warm, top)
-	const vec3 DEEP  = vec3(0.7608, 0.7412, 0.6314); // #c2bda1  wall (shaded, low)
-	const vec3 LINE  = vec3(0.7255, 0.7137, 0.6353); // #b9b6a2  seam / baseboard
-    const vec3 RUG   = vec3(0.7333, 0.7098, 0.6039); // #bbb59a  carpet (near wall)
-	const vec3 RUGLO = vec3(0.6706, 0.6471, 0.5451); // #aba58b  carpet (slightly deeper)
-
-    float hash(vec2 p) {
-		return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
-	}
 
     void main() {
 		vec2 res = uResolution;
 		vec2 fc = vUv * res;
-		float tTop = 1.0 - vUv.y;
 
-		// ── flat wall + tile grid + grain ───────────────────────────
+		// ── flat wall + tile grid ───────────────────────────────────
 		vec3 wall = BG;
 
-		float tile = res.x / 15.0;                   // tile size (px)
+		float tile = min(res.x, res.y) / 8.5;        // consistent size, portrait & landscape
 		vec2 gp = mod(fc, tile);
 		float gd = min(min(gp.x, tile - gp.x), min(gp.y, tile - gp.y));
 		float grid = 1.0 - smoothstep(0.0, 2.5, gd);
 		wall = mix(wall, LINE, grid * 0.52);
-
-		float wspeck = hash(floor(fc / 2.0));        // 2px grain
-		wall += (wspeck - 0.5) * 0.04;
 
 		gl_FragColor = vec4(wall, 1.0);
 	}
