@@ -12,62 +12,6 @@ const MODELS = [
 const TOTAL_OBJECTS = 24;
 const OBJECTS_PER_TYPE = TOTAL_OBJECTS / 3;
 
-// ─── Office backdrop ──────────────────────────────────────────────────────────
-// A full-screen shader behind the floating objects, pixel-locked to the viewport.
-// Old painted wall on top, dirty carpet below — they meet at `floorY` (~1/3 up),
-// which is exactly where the old horizon line sat.
-
-const BG_VERTEX = `
-	varying vec2 vUv;
-	void main() {
-		vUv = uv;
-		gl_Position = vec4(position.xy, 0.0, 1.0);
-	}
-`;
-
-const BG_FRAGMENT = `
-	varying vec2 vUv;
-	uniform vec2 uResolution;
-
-	const vec3 BG    = vec3(0.8784, 0.8784, 0.8157); // #e0e0d0  wall (light)
-	const vec3 LINE  = vec3(0.7255, 0.7137, 0.6353); // #b9b6a2  seam / baseboard
-
-    void main() {
-		vec2 res = uResolution;
-		vec2 fc = vUv * res;
-
-		// ── flat wall + tile grid ───────────────────────────────────
-		vec3 wall = BG;
-
-		float tile = min(res.x, res.y) / 8.5;        // consistent size, portrait & landscape
-		vec2 gp = mod(fc, tile);
-		float gd = min(min(gp.x, tile - gp.x), min(gp.y, tile - gp.y));
-		float grid = 1.0 - smoothstep(0.0, 2.5, gd);
-		wall = mix(wall, LINE, grid * 0.52);
-
-		gl_FragColor = vec4(wall, 1.0);
-	}
-`;
-
-// Full-screen background pass rendered before the main scene.
-function createBackground() {
-	const scene = new THREE.Scene();
-	const camera = new THREE.Camera();
-	const material = new THREE.ShaderMaterial({
-		vertexShader: BG_VERTEX,
-		fragmentShader: BG_FRAGMENT,
-		depthTest: false,
-		depthWrite: false,
-		uniforms: {
-			uResolution: { value: new THREE.Vector2(1, 1) }
-		}
-	});
-	const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material);
-	mesh.frustumCulled = false;
-	scene.add(mesh);
-	return { scene, camera, material, mesh };
-}
-
 export function createExperience(canvas, isMobile = false) {
 	let animationId = null;
 	let isDestroyed = false;
@@ -88,7 +32,6 @@ export function createExperience(canvas, isMobile = false) {
 	renderer.toneMapping = THREE.CineonToneMapping;
 	renderer.toneMappingExposure = 1.75;
 	renderer.setClearColor(0x000000, 0);
-	renderer.autoClear = false;
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
@@ -106,9 +49,6 @@ export function createExperience(canvas, isMobile = false) {
 	const sunLight = new THREE.DirectionalLight(0xe0e0d0, 1);
 	sunLight.position.set(3.5, 2, -1.25);
 	scene.add(sunLight);
-
-	const background = createBackground();
-	renderer.getDrawingBufferSize(background.material.uniforms.uResolution.value);
 
 	function generatePositions() {
 		const positions = [[], [], []];
@@ -169,9 +109,6 @@ export function createExperience(canvas, isMobile = false) {
 		}
 
 		controls.update();
-
-		renderer.clear();
-		renderer.render(background.scene, background.camera);
 		renderer.render(scene, camera);
 	}
 
@@ -187,7 +124,6 @@ export function createExperience(canvas, isMobile = false) {
 		camera.updateProjectionMatrix();
 		renderer.setSize(width, height);
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-		renderer.getDrawingBufferSize(background.material.uniforms.uResolution.value);
 	}
 
 	window.addEventListener('resize', handleResize);
@@ -201,9 +137,6 @@ export function createExperience(canvas, isMobile = false) {
 			isDestroyed = true;
 			if (animationId) cancelAnimationFrame(animationId);
 			window.removeEventListener('resize', handleResize);
-
-			background.mesh.geometry.dispose();
-			background.material.dispose();
 
 			scene.traverse((child) => {
 				child.geometry?.dispose();

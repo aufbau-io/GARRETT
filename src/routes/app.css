@@ -19,6 +19,29 @@
 	--font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+:root {
+	/* ── office wall / tile grid ─────────────────────────────── */
+	--wall: var(--background);   /* #e0e0d0  base wall (was BG)      */
+	--seam: #b9b6a2;             /* seam / grout colour (was LINE)   */
+	--seam-strength: 52%;        /* seam opacity (was grid * 0.52)   */
+	--tile-count: 8.5;           /* tiles across short edge (was /8.5) */
+	--tile-line-width: 1.5px;    /* seam thickness                   */
+
+	--tile-size: calc(100vmin / var(--tile-count));
+	--tile-line: color-mix(in srgb, var(--seam) var(--seam-strength), transparent);
+}
+
+html {
+	background-color: var(--wall);
+	background-image:
+		linear-gradient(to right,  var(--tile-line) var(--tile-line-width), transparent var(--tile-line-width)),
+		linear-gradient(to bottom, var(--tile-line) var(--tile-line-width), transparent var(--tile-line-width));
+	background-size: var(--tile-size) var(--tile-size);
+	/* centre the seam on the cell boundary, like the shader did */
+	background-position: calc(var(--tile-line-width) / -2) calc(var(--tile-line-width) / -2);
+	background-attachment: fixed; /* viewport-locked, matching the old screen-space shader */
+}
+
 @font-face {
 	font-family: untitled;
 	src: url(/fonts/test-untitled-sans-regular.woff2) format('woff2');
@@ -42,10 +65,6 @@ body {
 	font-family: sans-serif;
 	font-weight: 400;
 	user-select: none;
-}
-
-html {
-	background: var(--background);
 }
 
 h1,
