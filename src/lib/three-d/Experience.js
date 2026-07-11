@@ -36,39 +36,28 @@ const BG_FRAGMENT = `
     const vec3 RUG   = vec3(0.7333, 0.7098, 0.6039); // #bbb59a  carpet (near wall)
 	const vec3 RUGLO = vec3(0.6706, 0.6471, 0.5451); // #aba58b  carpet (slightly deeper)
 
-	void main() {
+    float hash(vec2 p) {
+		return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+	}
+
+    void main() {
 		vec2 res = uResolution;
 		vec2 fc = vUv * res;
-		vec2 p = vUv;
-		float aspect = res.x / res.y;
-		float tTop = 1.0 - p.y;          // 0 at top → 1 at bottom
+		float tTop = 1.0 - vUv.y;
 
-		const float floorY = 0.84;       // carpet meets wall here (~1/3 up)
+		// ── flat wall + tile grid + grain ───────────────────────────
+		vec3 wall = BG;
 
-        // ── wall: old paint gradient + subtle tile grid ─────────────
-		vec3 wall = mix(WARM, BG, smoothstep(0.0, 0.62, tTop));
-		wall = mix(wall, DEEP, smoothstep(0.62, 1.0, tTop));
-
-        float tile = res.x / 15.0;                   // tile size (px)
-		float seamY = (1.0 - floorY) * res.y;        // seam position, px from bottom
-		vec2 gc = vec2(fc.x, fc.y - seamY);          // anchor vertical grid to the seam
-		vec2 gp = mod(gc, tile);
+		float tile = res.x / 15.0;                   // tile size (px)
+		vec2 gp = mod(fc, tile);
 		float gd = min(min(gp.x, tile - gp.x), min(gp.y, tile - gp.y));
 		float grid = 1.0 - smoothstep(0.0, 2.5, gd);
 		wall = mix(wall, LINE, grid * 0.52);
 
-		// ── carpet: flat, near wall tone ────────────────────────────
-		float d = clamp((tTop - floorY) / (1.0 - floorY), 0.0, 1.0);
-		vec3 rug = mix(RUG, RUGLO, d * 0.0);            // eases a touch darker as it nears you
+		float wspeck = hash(floor(fc / 2.0));        // 2px grain
+		wall += (wspeck - 0.5) * 0.04;
 
-		// ── composite ───────────────────────────────────────────────
-		float floorMask = smoothstep(floorY - 0.002, floorY + 0.002, tTop);
-		vec3 col = mix(wall, rug, floorMask);
-
-		float seam = 1.0 - smoothstep(0.0, 0.0025, abs(tTop - floorY));
-		col = mix(col, LINE * 0.82, seam * 0.6);        // baseboard / contact shadow
-
-		gl_FragColor = vec4(col, 1.0);
+		gl_FragColor = vec4(wall, 1.0);
 	}
 `;
 
