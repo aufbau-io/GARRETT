@@ -43,17 +43,19 @@ const BG_FRAGMENT = `
 		float aspect = res.x / res.y;
 		float tTop = 1.0 - p.y;          // 0 at top → 1 at bottom
 
-		const float floorY = 0.85;       // carpet meets wall here (~1/3 up)
+		const float floorY = 0.84;       // carpet meets wall here (~1/3 up)
 
         // ── wall: old paint gradient + subtle tile grid ─────────────
 		vec3 wall = mix(WARM, BG, smoothstep(0.0, 0.62, tTop));
 		wall = mix(wall, DEEP, smoothstep(0.62, 1.0, tTop));
 
-		float tile = res.x / 15.0;                       // tile size (px)
-		vec2 gp = mod(fc + tile * 1.5, tile);
+        float tile = res.x / 15.0;                   // tile size (px)
+		float seamY = (1.0 - floorY) * res.y;        // seam position, px from bottom
+		vec2 gc = vec2(fc.x, fc.y - seamY);          // anchor vertical grid to the seam
+		vec2 gp = mod(gc, tile);
 		float gd = min(min(gp.x, tile - gp.x), min(gp.y, tile - gp.y));
 		float grid = 1.0 - smoothstep(0.0, 2.5, gd);
-		wall = mix(wall, LINE, grid * 0.52);            // faint seams
+		wall = mix(wall, LINE, grid * 0.52);
 
 		// ── carpet: flat, near wall tone ────────────────────────────
 		float d = clamp((tTop - floorY) / (1.0 - floorY), 0.0, 1.0);
