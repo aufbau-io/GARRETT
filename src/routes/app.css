@@ -14,7 +14,7 @@
 :root {
 	/* --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
 	--font-serif: 'Times New Roman', Times, Georgia, serif;
-	
+
 	/* or for a more modern feel */
 	--font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -31,7 +31,23 @@
 	--tile-line: color-mix(in srgb, var(--seam) var(--seam-strength), transparent);
 }
 
+/* Base colour propagates behind the iOS toolbar */
 html {
+	background-color: var(--wall);
+}
+
+/* Grid lives on a fixed, large-viewport-tall layer so it reaches
+   full-screen bottom on iOS (behind the browser controls). */
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;   /* fallback  */
+	height: 100lvh;  /* large viewport: covers behind the toolbar */
+	z-index: -20;    /* behind the canvas at -10 */
+
 	background-color: var(--wall);
 	background-image:
 		linear-gradient(to right,  var(--tile-line) var(--tile-line-width), transparent var(--tile-line-width)),
@@ -39,7 +55,6 @@ html {
 	background-size: var(--tile-size) var(--tile-size);
 	/* centre the seam on the cell boundary, like the shader did */
 	background-position: calc(var(--tile-line-width) / -2) calc(var(--tile-line-width) / -2);
-	background-attachment: fixed; /* viewport-locked, matching the old screen-space shader */
 }
 
 @font-face {
@@ -60,8 +75,6 @@ html {
 
 body {
 	margin: 0;
-	background-attachment: fixed;
-	background-size: 100vw 100vh;
 	font-family: sans-serif;
 	font-weight: 400;
 	user-select: none;
