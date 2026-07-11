@@ -30,10 +30,7 @@ const BG_FRAGMENT = `
 	uniform vec2 uResolution;
 
 	const vec3 BG    = vec3(0.8784, 0.8784, 0.8157); // #e0e0d0  wall (light)
-
-    float hash(vec2 p) {
-		return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
-	}
+	const vec3 LINE  = vec3(0.7255, 0.7137, 0.6353); // #b9b6a2  seam / baseboard
 
     void main() {
 		vec2 res = uResolution;
